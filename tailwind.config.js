@@ -4,6 +4,9 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      width: {
+        "0.1": "1px",
+      },
       fontFamily: {
         'sarpanch': ['Sarpanch', 'sans-serif'],
         'orbitron': ['Orbitron', 'sans-serif'],
