@@ -1,0 +1,39 @@
+name: deploy to gh pages
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: setup and runs tw
+        run: |
+             npm install -D tailwindcss
+             npx tailwindcss -i ./src/app.css -o ./dist/app.css
+      
+      - name: Add .nojekyll file
+        run: touch ./src/.nojekyll 
+        
+      - name: Commit wwwroot to GitHub Pages 
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          BRANCH: gh-pages
+          FOLDER: ./src 
+       
