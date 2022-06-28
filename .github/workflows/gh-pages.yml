@@ -19,21 +19,21 @@ jobs:
 
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
       - name: setup and runs tw
         run: |
              npm install -D tailwindcss
-             npx tailwindcss -i ./src/app.css -o ./dist/app.css
+             npx tailwindcss -i ./wwwroot/css/app.css -o ./wwwroot/css/app.min.css --minify
       
       - name: Add .nojekyll file
-        run: touch ./src/.nojekyll 
+        run: touch ./wwwroot/.nojekyll 
         
       - name: Commit wwwroot to GitHub Pages 
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           BRANCH: gh-pages
-          FOLDER: ./src 
+          FOLDER: ./wwwroot 
        
