@@ -18,3 +18,13 @@
         @apply text-xs md:text-sm;
     }
 } 
+
+@layer components {
+    .btn {
+        @apply py-1.5 px-4 text-center max-w-fit text-white hover:opacity-80 hover:text-neutral-100 rounded-md focus:ring-2 focus:ring-opacity-75 focus:outline-none;
+    }
+
+    .btn-outline {
+        @apply py-1.5 px-4 border-[1px] text-center max-w-fit hover:opacity-80 hover:text-neutral-100 rounded-md  focus:outline-none;
+    }
+}
