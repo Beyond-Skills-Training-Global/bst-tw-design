@@ -687,6 +687,30 @@ h5 {
   }
 }
 
+.btn-outline {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+.btn-outline:hover {
+  --tw-text-opacity: 1;
+  color: rgb(245 245 245 / var(--tw-text-opacity));
+  opacity: 0.8;
+}
+
+.btn-outline:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .absolute {
   position: absolute;
 }
@@ -738,6 +762,16 @@ h5 {
   margin-right: 1.5rem;
 }
 
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -784,6 +818,10 @@ h5 {
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .flex {
@@ -897,6 +935,10 @@ h5 {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -937,8 +979,16 @@ h5 {
   border-radius: 0.375rem;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .border {
   border-width: 1px;
+}
+
+.border-b-4 {
+  border-bottom-width: 4px;
 }
 
 .border-gold-600 {
@@ -949,6 +999,11 @@ h5 {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-b-gold-600 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(251 176 59 / var(--tw-border-opacity));
 }
 
 .bg-black {
@@ -975,12 +1030,37 @@ h5 {
   background-color: rgb(38 38 38 / var(--tw-bg-opacity));
 }
 
+.bg-neutral-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(115 115 115 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-900\/50 {
+  background-color: rgb(23 23 23 / 0.5);
+}
+
+.bg-neutral-900\/60 {
+  background-color: rgb(23 23 23 / 0.6);
+}
+
 .bg-\[image\:linear-gradient\(rgba\(0\2c 0\2c 0\2c 0\.3\)_3\%\2c rgba\(0\2c 0\2c 0\2c 0\.3\)\2c rgba\(0\2c 0\2c 0\2c 0\.3\)_97\%\)\2c url\(\'https\:\/\/i\.imgur\.com\/X3UfjBq\.jpg\'\)\] {
   background-image: linear-gradient(rgba(0,0,0,0.3) 3%,rgba(0,0,0,0.3),rgba(0,0,0,0.3) 97%),url('https://i.imgur.com/X3UfjBq.jpg');
 }
 
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.bg-\[image\:url\(img\/hands-crossed-1080-low\.jpg\)\] {
+  background-image: url(img/hands-crossed-1080-low.jpg);
+}
+
+.bg-\[image\:url\(\.\/img\/hands-crossed-1080-low\.jpg\)\] {
+  background-image: url(./img/hands-crossed-1080-low.jpg);
+}
+
+.bg-\[image\:url\(\.\.\/img\/hands-crossed-1080-low\.jpg\)\] {
+  background-image: url(../img/hands-crossed-1080-low.jpg);
 }
 
 .from-neutral-800\/10 {
@@ -1055,6 +1135,11 @@ h5 {
   padding-right: 1.5rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -1116,6 +1201,14 @@ h5 {
   font-size: 10px;
 }
 
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -1175,6 +1268,11 @@ h5 {
 .hover\:text-neutral-800:hover {
   --tw-text-opacity: 1;
   color: rgb(38 38 38 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .group:hover .group-hover\:border {
@@ -1384,11 +1482,45 @@ h5 {
     font-size: 3rem;
     line-height: 1;
   }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 
 @media (min-width: 1280px) {
+  .xl\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .xl\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .xl\:grid {
+    display: grid;
+  }
+
   .xl\:max-w-6xl {
     max-width: 72rem;
+  }
+
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .xl\:place-content-center {
+    place-content: center;
   }
 
   .xl\:items-center {
@@ -1405,4 +1537,4 @@ h5 {
     padding-left: 0px;
     padding-right: 0px;
   }
-} 
+}
