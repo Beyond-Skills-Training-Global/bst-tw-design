@@ -4,6 +4,9 @@ module.exports = {
     content: ["./wwwroot/**/*.{html,js}"],
     theme: {
         extend: {
+            fontSize: {
+                xxs: '10px'
+            },
             width: {
                 "0.1": "1px",
             },
@@ -19,7 +22,7 @@ module.exports = {
                 // 'img2': "url('https://i.imgur.com/T1wN7yx.jpg')",
                 // 'boxer': "url('https://i.imgur.com/X3UfjBq.jpg')",
                 // 'lion': "url('https://i.imgur.com/9gOEvIN.png')",
-                gradient: 'linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(51,51,51,.8) 40%, rgba(51,51,51,.6) 60%, rgba(0,0,0,0) 100%)',
+                'hero': 'url("img/hero-section.png")',
             }),
             colors: {
                 neutral: {
