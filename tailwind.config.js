@@ -22,7 +22,6 @@ module.exports = {
                 // 'img2': "url('https://i.imgur.com/T1wN7yx.jpg')",
                 // 'boxer': "url('https://i.imgur.com/X3UfjBq.jpg')",
                 // 'lion': "url('https://i.imgur.com/9gOEvIN.png')",
-                hero: 'url("/img/hero-section.png")',
                 'review-frame': 'url("/img/review-frame.svg")',
             }),
             colors: {
