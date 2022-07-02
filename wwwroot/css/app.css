@@ -40,7 +40,8 @@
 }
 
 .swiper-desktop {
-    /* width: 80%; */
+    width: 100%;
+    max-width: 100vw;
     height: 300px;
 }
 
