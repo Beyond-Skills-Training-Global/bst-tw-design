@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/app.min.css" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Michroma&family=Noto+Emoji:wght@300&family=Orbitron:wght@700&family=Sarpanch&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Noto+Emoji:wght@300&family=Orbitron:wght@700&family=Sarpanch&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/data.js"></script>
 </head>
 
 <body class="bg-black">
@@ -35,24 +34,17 @@
                     </div>
                 </a>
                 <div class="hidden md:flex flex-1">
-                    <div
-                        class="flex flex-wrap items-center uppercase text-sm justify-around gap-4 flex-1 font-sarpanch ">
-                        <a href="#"
-                            class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">Home</a>
-                        <a href="#"
-                            class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">features</a>
-                        <a href="#"
-                            class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">services</a>
-                        <a href="#"
-                            class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">pricing</a>
+                    <div class="flex flex-wrap items-center uppercase text-sm justify-around gap-4 flex-1 font-sarpanch ">
+                        <a href="#" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">Home</a>
+                        <a href="#" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">features</a>
+                        <a href="#" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">services</a>
+                        <a href="#" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">pricing</a>
                         <div class="group">
-                            <div
-                                class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
+                            <div class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
                                 about us
                             </div>
                             <div class="absolute hidden transition-all duration-200 ease-linear group-hover:block">
-                                <div
-                                    class="flex flex-col space-y-1 bg-gold-600 text-neutral-750 p-2 shadow-lg transition-all duration-200 ease-linear">
+                                <div class="flex flex-col space-y-1 bg-gold-600 text-neutral-750 p-2 shadow-lg transition-all duration-200 ease-linear">
                                     <a href="#" target="_blank" class="hover:underline">
                                         GET TO KNOW US
                                     </a>
@@ -68,14 +60,12 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#"
-                            class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">contact
+                        <a href="#" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">contact
                             us</a>
                         <a href="#" class="text-gold-600 border border-gold-600 px-3">join us</a>
                     </div>
                     <hr class="w-0.1 h-6 md:h-8 bg-white self-center mx-3" />
-                    <a href="#"
-                        class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log
+                    <a href="#" class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log
                         in</a>
                 </div>
             </div>
@@ -86,8 +76,7 @@
                         <a href="#" class="border-b border-neutral-500">services</a>
                         <a href="#" class="border-b border-neutral-500">features</a>
                         <a href="#" class="border-b border-neutral-500">principles</a>
-                        <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);"
-                            onclick="toggleAboutMenu()">
+                        <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleAboutMenu()">
                             <span>about us</span>
                             <img src="img/about-menu.svg" class="w-6" id="about-menu">
                             <img src="img/about-menu-close.svg" class="hidden w-6" id="about-menu-close">
@@ -110,8 +99,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="bg-neutral-800 text-white font-sarpanch uppercase px-6 pb-6" id="secondary-section-menu"
-                    style="margin-top: 16px">
+                <div class="bg-neutral-800 text-white font-sarpanch uppercase px-6 pb-6" id="secondary-section-menu" style="margin-top: 16px">
                     <div class="flex flex-col space-y-4 ml-4">
                         <a href="#" class="border-b border-neutral-500">contact us</a>
                     </div>
@@ -125,10 +113,9 @@
                     sports </br> platform
                 </h1>
                 <span class="text-left text-xxs md:text-xs lg:text-sm tracking-widest text-gold-600 mt-2">
-                    helping develope future olympians
+                    helping develop future olympians
                 </span>
-                <button
-                    class="btn-outline uppercase text-xxs max-w-max px-6 py-2 mt-4 hidden sm:block border border-white rounded">
+                <button class="btn-outline uppercase text-xxs max-w-max px-6 py-2 mt-4 hidden sm:block border border-white rounded">
                     start here
                 </button>
                 <button class="bg-gold-600 uppercase text-xxs max-w-max px-4 py-2 mx-auto mt-14 sm:hidden">
@@ -175,10 +162,8 @@
                         <img src="img/horizontal-orange.svg" class="w-full" />
                     </div>
                     <div class="h-full flex flex-col items-center md:pt-12 pb-16">
-                        <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10"
-                            src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-                            title="WHAT IS BST.COACH?"></iframe>
+                        <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10" src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                            allowfullscreen title="WHAT IS BST.COACH?"></iframe>
                         <script src="https://player.vimeo.com/api/player.js"></script>
                         <h3 class="font-sarpanch text-white text-center mt-8 z-10">
                             OUR TRAINING PLATFORM LETS COACHES
@@ -192,8 +177,7 @@
                 <div class="bg-white hover:bg-gold-600 group flex flex-col items-center py-9 px-4 md:px-16">
                     <h2 class="text-center font-michroma">
                         BST.COACH<br class="md:hidden" /> IS OPEN FOR COACHES!</h2>
-                    <button
-                        class="w-full max-w-4xl bg-gold-600 py-2.5 md:py-2 mt-6 font-michroma border border-gold-600 group-hover:border-neutral-800">
+                    <button class="w-full max-w-4xl bg-gold-600 py-2.5 md:py-2 mt-6 font-michroma border border-gold-600 group-hover:border-neutral-800">
                         JOIN BST.COACH NOW
                     </button>
                 </div>
@@ -238,8 +222,7 @@
                         <span class="font-michroma text-xs md:text-base text-gold-600">stay in charge of your
                             training plans</span>
                         <h3 class="font-michroma leading-snug mt-1 lg:mt-3 uppercase">
-                            BUILD
-                            YOUR OWN<br />TRAINING PROGRAM</h3>
+                            BUILD YOUR OWN<br />TRAINING PROGRAM</h3>
                         <p class="text-xs md:text-sm lg:text-base font-sarpanch mt-2 lg:mt-4 uppercase">
                             CREATE TRAINING PLANS USING BST.COACH RESOURCES OR BUILD YOUR OWN TRAINING FROM SCRATCH
                         </p>
@@ -300,8 +283,7 @@
                 </div>
 
                 <div class="flex justify-center mt-8 mx-6 md:mx-0">
-                    <button
-                        class="w-full md:w-auto md:px-6 py-2 md:py-4 text-white border border-white hover:border-gold-600 hover:bg-gold-600 hover:text-neutral-800 transition-all ease-in-out duration-300">
+                    <button class="w-full md:w-auto md:px-6 py-2 md:py-4 text-white border border-white hover:border-gold-600 hover:bg-gold-600 hover:text-neutral-800 transition-all ease-in-out duration-300">
                         <span class="text-sm md:text-2xl lg:text-5xl word-spacing-10 font-michroma uppercase">more
                             on
                             features</span>
@@ -390,8 +372,7 @@
                                         soon</span>
                                 </div>
                             </div>
-                            <div
-                                class="hidden md:flex flex-col items-center bg-gold-600 z-10 p-8 md:p-10 xl:p-14 rounded-lg">
+                            <div class="hidden md:flex flex-col items-center bg-gold-600 z-10 p-8 md:p-10 xl:p-14 rounded-lg">
                                 <img src="img/open-library.svg" />
                                 <div class="flex-1 flex flex-col items-center justify-between">
                                     <span class="font-michroma text-neutral-750">Open Library</span>
@@ -434,37 +415,8 @@
 
             <section class="overflow-hidden md:hidden py-4">
                 <div class="swiper relative">
-                    <div class="swiper-wrapper">
-                        <div
-                            class="h-full flex flex-col items-center justify-between swiper-slide bg-gold-600 rounded-2xl p-6">
-                            <img src="img/review.png" class="w-2/3 h-32 object-cover object-top">
-                            <p class="text-xxs font-michroma text-center mt-6">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ex ipsum,
-                                aliquet
-                                rutrum euismod at, placerat et erat."
-                            </p>
-                            <span class="font-michroma text-sm mt-4">BETHAN TERRELL</span>
-                        </div>
-                        <div
-                            class="h-full flex flex-col items-center justify-between swiper-slide bg-gold-600 rounded-2xl p-6">
-                            <img src="img/review.png" class="w-2/3 h-32 object-cover object-top">
-                            <p class="text-xxs font-michroma text-center mt-6">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ex ipsum,
-                                aliquet
-                                rutrum euismod at, placerat et erat."
-                            </p>
-                            <span class="font-michroma text-sm mt-4">BETHAN TERRELL</span>
-                        </div>
-                        <div
-                            class="h-full flex flex-col items-center justify-between swiper-slide bg-gold-600 rounded-2xl p-6">
-                            <img src="img/review.png" class="w-2/3 h-32 object-cover object-top">
-                            <p class="text-xxs font-michroma text-center mt-6">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ex ipsum,
-                                aliquet
-                                rutrum euismod at, placerat et erat."
-                            </p>
-                            <span class="font-michroma text-sm mt-4">BETHAN TERRELL</span>
-                        </div>
+                    <div id="testimonial_container_mobile" class="swiper-wrapper">
+                        <!-- this will be filled from json -->
                     </div>
                     <div class="flex items-center justify-center absolute button-prev top-1/2 left-0 z-10">
                         <img src="img/arrow.svg" class="w-6 h-6 rotate-180" />
@@ -476,55 +428,10 @@
             </section>
 
             <section class="relative bg-gold-600 hidden md:flex swiper-desktop">
-                <div class="swiper-wrapper">
-                    <div class="flex swiper-slide">
-                        <div class="flex-1 flex flex-col items-center justify-center rounded-2xl pl-24 pr-44">
-                            <p class="font-sarpanch text-center line-clamp-4 -mb-4">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit mattis
-                                facilisis. Praesent aliquet ullamcorper congue. Fusce sagittis sapien eu velit
-                                sagittis
-                                lobortis. Aenean porta justo nec lacus interdum, a tempor sapien pellentesque.
-                                Quisque
-                                ac rutrum diam. Nullam aliquet congue eros eget aliquet"
-                            </p>
-                            <h3 class="text-center font-michroma mt-8">BETHAN TERRELL</h3>
-                        </div>
-                        <div class="bg-[url('../img/review-frame.svg')] bg-contain bg-no-repeat scale-150 p-4 z-20 -translate-x-20 static">
-                            <img src="img/review.png" alt="" srcset="" class="h-64">
-                        </div>
-                    </div>
-                    <div class="flex swiper-slide">
-                        <div class="flex-1 flex flex-col items-center justify-center rounded-2xl pl-24 pr-44">
-                            <p class="font-sarpanch text-center line-clamp-4 -mb-4">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit mattis
-                                facilisis. Praesent aliquet ullamcorper congue. Fusce sagittis sapien eu velit
-                                sagittis
-                                lobortis. Aenean porta justo nec lacus interdum, a tempor sapien pellentesque.
-                                Quisque
-                                ac rutrum diam. Nullam aliquet congue eros eget aliquet"
-                            </p>
-                            <h3 class="text-center font-michroma mt-8">BETHAN TERRELL</h3>
-                        </div>
-                        <div class="bg-[url('../img/review-frame.svg')] bg-contain bg-no-repeat scale-150 p-4 z-20 -translate-x-20 static">
-                            <img src="img/review.png" alt="" srcset="" class="h-64">
-                        </div>
-                    </div>
-                    <div class="flex swiper-slide">
-                        <div class="flex-1 flex flex-col items-center justify-center rounded-2xl pl-24 pr-44">
-                            <p class="font-sarpanch text-center line-clamp-4 -mb-4">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit mattis
-                                facilisis. Praesent aliquet ullamcorper congue. Fusce sagittis sapien eu velit
-                                sagittis
-                                lobortis. Aenean porta justo nec lacus interdum, a tempor sapien pellentesque.
-                                Quisque
-                                ac rutrum diam. Nullam aliquet congue eros eget aliquet"
-                            </p>
-                            <h3 class="text-center font-michroma mt-8">BETHAN TERRELL</h3>
-                        </div>
-                        <div class="bg-[url('../img/review-frame.svg')] bg-contain bg-no-repeat scale-150 p-4 z-20 -translate-x-20 static">
-                            <img src="img/review.png" alt="" srcset="" class="h-64">
-                        </div>
-                    </div>
+                <div id="testimonial_container_desktop" class="swiper-wrapper">
+
+                    <!-- this will be filled from json -->
+
                 </div>
                 <div class="absolute left-[29%] lg:left-1/3 bottom-4 flex items-center justify-center space-x-8 my-4 -translate-x-24 z-10">
                     <div class="flex items-center justify-center button-prev z-10">
@@ -550,8 +457,7 @@
                             <use xlink:href='img/claw-mark.svg#claw' color="#333333"></use>
                         </svg>
                     </div>
-                    <div
-                        class="absolute md:relative inset-x-0 font-michroma text-white text-center md:text-start z-20 md:-ml-80">
+                    <div class="absolute md:relative inset-x-0 font-michroma text-white text-center md:text-start z-20 md:-ml-80">
                         <h1>JOIN <span class="text-gold-600">BST</span></h1>
                         <h1 class="md:ml-16 mt-1">ALREADY NOW</h1>
                     </div>
@@ -624,6 +530,44 @@
     </footer>
 
     <script>
+        let testimonial_mobile = ``;
+        let testimonial_desktop = ``;
+        for (const x of testimonials) //defined in data.js
+        {
+            testimonial_mobile +=
+                `   <div class="h-full flex flex-col items-center justify-between swiper-slide bg-gold-600 rounded-2xl p-6">
+                        <img src="${x.img}" class="w-2/3 h-32 object-cover object-top">
+                        <p class="text-xxs font-michroma text-center mt-6">
+                            "${x.text}"
+                        </p>
+                        <span class="font-michroma text-sm mt-4 uppercase">${x.name}</span>
+                        <span class="font-michroma text-xs mt-2">${x.bio}</span>
+                    </div>
+                    `;
+
+            testimonial_desktop += `<div class="flex swiper-slide">
+                    <div class="flex-1 flex flex-col items-center justify-center rounded-2xl pl-24 pr-44">
+                        <p class="font-sarpanch text-center line-clamp-4 -mb-4">
+                            "${x.text}"
+                        </p>
+                        <h3 class="text-center font-michroma mt-8 uppercase">${x.name}</h3>
+                        <span class="text-center font-michroma mt-2">${x.bio}</h3>
+
+                    </div>
+                    <div class="bg-[url('../img/review-frame.svg')] bg-contain bg-no-repeat scale-150 p-4 z-20 -translate-x-20 static">
+                        <img src="${x.img}" alt="" srcset="" class="h-64">
+                    </div>
+                </div>
+                 
+                `;
+
+        }
+        document.getElementById("testimonial_container_mobile").innerHTML = testimonial_mobile;
+        document.getElementById("testimonial_container_desktop").innerHTML = testimonial_desktop;
+    </script>
+
+
+    <script>
         const swiperMobile = new Swiper('.swiper', {
             effect: "cards",
             loop: true,
@@ -638,7 +582,7 @@
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
-                renderBullet: function (index, className) {
+                renderBullet: function(index, className) {
                     return '<span class="' + className + '"></span>';
                 },
             },
@@ -648,6 +592,9 @@
             },
         });
     </script>
+
+
+
 
     <script>
         function toggleMenu() {
