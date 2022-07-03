@@ -532,11 +532,18 @@
     <script>
         let testimonial_mobile = ``;
         let testimonial_desktop = ``;
+        let ii = 0;
         for (const x of testimonials) //defined in data.js
         {
+            ii++;
+            var imgDesktop = 'img/testimonials/testimonial' + String(ii).padStart(2, '0') + '.jpg';
+            var imgMobile = imgDesktop;
+            if (x.imgDesktop) imgDesktop = x.imgDesktop;
+            if (x.imgMobile) imgMobile = x.imgMobile;
+
             testimonial_mobile +=
                 `   <div class="h-full flex flex-col items-center justify-between swiper-slide bg-gold-600 rounded-2xl p-6">
-                        <img src="${x.img}" class="w-2/3 h-32 object-cover object-top">
+                        <img src="${imgMobile}" class="w-2/3  object-cover object-top">
                         <p class="text-xxs font-michroma text-center mt-6">
                             "${x.text}"
                         </p>
@@ -555,7 +562,7 @@
 
                     </div>
                     <div class="bg-[url('../img/review-frame.svg')] bg-contain bg-no-repeat scale-150 p-4 z-20 -translate-x-20 static">
-                        <img src="${x.img}" alt="" srcset="" class="h-64">
+                        <img src="${imgDesktop}" alt="" srcset="" class="h-64  ">
                     </div>
                 </div>
                  
