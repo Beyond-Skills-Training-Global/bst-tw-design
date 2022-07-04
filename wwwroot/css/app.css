@@ -27,10 +27,6 @@
     .btn-outline {
         @apply py-1.5 px-4 border text-center max-w-fit hover:opacity-80 hover:text-neutral-100 rounded-md  focus:outline-none;
     }
-
-    .word-spacing-10 {
-        word-spacing: 8px;
-    }
 }
 
 .swiper {
@@ -56,8 +52,4 @@
 
 .swiper-pagination-bullet-active {
     background: #000 !important;
-}
-
-.font-caps {
-    font-variant-caps: small-caps;
 }
