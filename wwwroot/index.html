@@ -109,10 +109,10 @@
         </div>
         <div class="font-michroma h-full grid text-gray-100">
             <div class="mx-auto flex flex-col justify-center px-6 md:py-0 md:pl-0 md:pr-72">
-                <h1 class="font-michroma text-left uppercase tracking-widest text-white">
-                    sports </br> platform
+                <h1 class="font-michroma text-center sm:text-left uppercase tracking-widest text-white">
+                    sports <br class="sm:bg-cyan-300" /> platform
                 </h1>
-                <span class="text-left text-xxs md:text-xs lg:text-sm tracking-widest text-gold-600 mt-2">
+                <span class="text-center sm:text-left text-xxs md:text-xs lg:text-sm tracking-widest text-gold-600 mt-2">
                     helping develop future olympians
                 </span>
                 <button class="btn-outline uppercase text-xxs max-w-max px-6 py-2 mt-4 hidden sm:block border border-white rounded">
@@ -262,7 +262,7 @@
                             <img class="h-3/4" src="img/phone3.png" />
                         </div>
                     </div>
-                    <div class="flex-1 flex flex-col justify-center text-white">
+                    <div class="flex-1 flex flex-col justify-center text-white px-6 2xl:px-0">
                         <span class="font-michroma text-xs md:text-base text-gold-600">
                             apply your training to specific dates
                         </span>
@@ -542,14 +542,13 @@
             if (x.imgMobile) imgMobile = x.imgMobile;
 
             testimonial_mobile += `<div class="h-full flex flex-col items-center justify-between swiper-slide bg-gold-600 rounded-2xl p-6">
-                        <img src="${imgMobile}" class="w-2/3  object-cover object-top">
+                        <img src="${imgMobile}" class="w-2/3 rounded-xl object-cover object-top">
                         <p class="text-xxs font-michroma text-center mt-6">
                             "${x.text}"
                         </p>
-                        <span class="font-michroma text-sm mt-4 uppercase">${x.name}</span>
-                        <span class="font-michroma text-xs mt-2">${x.bio}</span>
-                    </div>
-                    `;
+                        <span class="text-center font-michroma text-sm mt-4 uppercase">${x.name}</span>
+                        <span class="text-center font-michroma text-xs mt-2">${x.bio}</span>
+                    </div>`;
 
             testimonial_desktop += `<div class="flex items-center swiper-slide">
                     <div class="flex-1 flex flex-col items-center justify-center rounded-2xl pl-16 lg:pl-24 pr-36 lg:pr-44 my-12 lg:my-4">
