@@ -4,36 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- https://metatags.io/ -->
+    <title>BST.coach</title>
+    <meta name="title" content="BST.coach">
+    <meta name="description" content="Sports training platform with a comprehensive exercise library that lets coaches scale their work."> =======
+
     <link href="css/app.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Noto+Emoji:wght@300&family=Orbitron:wght@700&family=Sarpanch&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/data.js"></script>
 </head>
 
 <body class="bg-black">
 
-    <section class="relative h-screen bg-cover sm:bg-center 
-    bg-[image:linear-gradient(rgba(0,0,0,0.9)_3%,rgba(0,0,0,0.2),rgba(0,0,0,1)_97%),url('../img/hero-section.png')]
+    <section class="relative h-screen bg-cover bg-center 
+    bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.95)_10%,rgba(64,64,64,0.3),rgba(0,0,0,1)_97%),url('../img/hero-boxer.jpg')]
     ">
-        <div class="max-w-6xl mx-auto absolute top-0 inset-x-0 flex flex-col justify-center" id="header">
-            <div class="flex-1 flex justify-between text-white pt-2 xl:pt-4 px-6 md:px-2 gap-3">
+        <div class=" fixed w-full z-50  top-0  inset-x-0 flex flex-col justify-center
+        bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_40%,rgba(0,0,0,0.3)_100%)]
+        " id="header">
+            <div class="max-w-6xl lg:mx-auto flex-1 flex justify-between text-white pt-2 xl:pt-4 px-6 md:px-2 gap-3">
+
                 <a class="flex items-center" href="/">
-                    <img class="self-center justify-self-center max-h-16 mr-3" src="img/lion-gold-600-200px.png">
-                    <div class="font-michroma text-xl sm:text-2xl md:text-3xl">BST.COACH</div>
+                    <img class="self-center justify-self-center max-h-16 mr-3" src="img/lion-gold-600-200px.png" loading="lazy">
+                    <div class="font-michroma text-xl sm:text-2xl xl:text-3xl">BST.COACH</div>
                 </a>
-                <a class="flex md:hidden flex-col justify-center" href="javascript:void(0);" onclick="toggleMenu()">
+                <a class="flex lg:hidden flex-col justify-center" href="javascript:void(0);" onclick="toggleMenu()">
                     <div class="flex flex-col items-center justify-center" id="openMenuSvg">
-                        <img src="img/menu.svg" class="w-8" />
+                        <img src="img/menu.svg" class="w-8" loading="lazy" />
 
                         <span class="text-[10px] font-sarpanch mt-1">MENU</span>
                     </div>
                     <div id="closeMenuSvg" style="display: none;">
-                        <img src="img/close.svg" class="w-6" />
+                        <img src="img/close.svg" class="w-6" loading="lazy" />
                     </div>
                 </a>
-                <div class="hidden md:flex flex-1">
-                    <div class="flex flex-wrap items-center uppercase text-sm justify-around gap-4 flex-1 font-sarpanch ">
+                <div class="hidden lg:flex flex-1">
+                    <div class="flex flex-wrap items-center uppercase text-sm justify-around gap-2 xl:gap-4 flex-1 font-sarpanch ">
                         <a href="#" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">Home</a>
                         <a href="#" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">features</a>
                         <a href="#" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">services</a>
@@ -64,7 +74,8 @@
                         <a href="#" class="text-gold-600 border border-gold-600 px-3">join us</a>
                     </div>
                     <hr class="w-0.1 h-6 md:h-8 bg-white self-center mx-3" />
-                    <a href="#" class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log in</a>
+                    <a href="#" class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log
+                        in</a>
                 </div>
             </div>
             <div class="hidden" id="menu">
@@ -76,8 +87,8 @@
                         <a href="#" class="border-b border-neutral-500">principles</a>
                         <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleAboutMenu()">
                             <span>about us</span>
-                            <img src="img/about-menu.svg" class="w-6" id="about-menu">
-                            <img src="img/about-menu-close.svg" class="hidden w-6" id="about-menu-close">
+                            <img src="img/about-menu.svg" class="w-6" id="about-menu" loading="lazy">
+                            <img src="img/about-menu-close.svg" class="hidden w-6" id="about-menu-close" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -106,23 +117,26 @@
             </div>
         </div>
         <div class="font-michroma h-full grid text-gray-100">
-            <div class="mx-auto  flex flex-col self-center">
-                <h1 class=" font-michroma text-left  uppercase tracking-widest text-white ">
-                    sports </br> platform
+            <div class="mx-auto flex flex-col justify-center md:py-0 md:pl-0 md:pr-72">
+                <h1 class="font-michroma  text-left uppercase tracking-widest text-white">
+
+                    sports <br /> platform
                 </h1>
-                <h3 class="text-[0.7rem] sm:text-base text-left tracking-widest text-gold-600 mt-2">
-                    helping develope future oplympians
-                </h3>
-                <button class="btn-outline uppercase text-[0.7rem] max-w-max px-4 py-1 mt-4 hidden sm:block border border-white rounded">start
-                    here</button>
-                <button class="bg-gold-600 uppercase text-[0.7rem] max-w-max px-4 py-2 mx-auto mt-14 sm:hidden">joint
-                    bst.coach now</button>
+                <span class="text-left text-xs md:text-sm lg:text-lg tracking-widest text-gold-600 mt-2">
+                    helping develop future olympians
+                </span>
+                <button class="btn-outline uppercase text-xxs max-w-max px-6 py-2 mt-4 hidden sm:block border border-white rounded">
+                    start here
+                </button>
+                <button class="bg-gold-600 uppercase text-xxs max-w-max px-4 py-2 mx-auto mt-14 sm:hidden">
+                    joint bst.coach now
+                </button>
             </div>
         </div>
     </section>
     <div class="bg-neutral-800 flex flex-col xl:items-center">
-        <div class="max-w-6xl mx-auto">
-            <section class="relative flex flex-col" id="video-platform">
+        <div class="max-w-6xl mx-auto overflow-x-hidden">
+            <section class="section-with-vimeo relative flex flex-col" id="video-platform">
                 <div class="relative flex flex-col items-center bg-neutral-800 py-32">
                     <div class="absolute flex items-center justify-center inset-0">
                         <div class="md:hidden">
@@ -144,37 +158,39 @@
 
                     <div class="flex flex-col items-center z-10">
                         <hr class="w-0.5 h-8 md:h-14 bg-gold-600" />
-                        <h2 class="font-michroma text-white text-center md:text-5xl mt-6">
+                        <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-6">
                             EXERCISE VIDEO PLATFORM
                         </h2>
-                        <h4 class="font-sarpanch text-gold-600 text-center text-xs md:text-2xl mt-1 md:mt-3">
-                            HUNDREDS OF EXERCISE VIDEOS AND SOFTWARE TO SCALE<br class="md:hidden" />YOUTH COACHING
+                        <h4 class="font-sarpanch text-gold-600 text-center mt-1 md:mt-3">
+                            HUNDREDS OF EXERCISE VIDEOS AND SOFTWARE TO SCALE<br class="md:hidden" /> YOUTH COACHING
                         </h4>
                     </div>
                 </div>
 
                 <div class="flex-1 relative text-neutral-800">
                     <div class="absolute inset-0 -top-1">
-                        <img src="img/horizontal-orange.svg" class="w-full" />
+                        <img src="img/horizontal-orange.svg" class="w-full" loading="lazy" />
                     </div>
                     <div class="h-full flex flex-col items-center md:pt-12 pb-16">
-                        <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10" src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                            allowfullscreen title="WHAT IS BST.COACH?"></iframe>
-                        <script src="https://player.vimeo.com/api/player.js"></script>
-                        <h3 class="font-sarpanch text-white text-center text-lg md:text-4xl mt-8 z-10">
+                        <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10" data-src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                            id="vimeoiframe" allowfullscreen title="WHAT IS BST.COACH?"></iframe>
+                        <h3 class="font-sarpanch text-white text-center mt-8 z-10">
                             OUR TRAINING PLATFORM LETS COACHES
                         </h3>
-                        <h5 class="font-sarpanch text-gold-600 text-center text-xs md:text-xl mt-0.5 z-10">
-                            CREATE, ORGANIZE AND SEND TRAINING TO THEIR ATHLETES
-                        </h5>
+                        <h4 class="font-sarpanch text-gold-600 text-center mt-0.5 z-10">
+                            CREATE, ORGANIZE, AND SEND TRAINING TO THEIR ATHLETES
+                        </h4>
                     </div>
                 </div>
 
                 <div class="bg-white hover:bg-gold-600 group flex flex-col items-center py-9 px-4 md:px-16">
-                    <span class="text-center text-xl md:text-4xl font-michroma">
-                        BST.COACH<br class="md:hidden" />IS OPEN FOR COACHES!</span>
-                    <button class="w-full max-w-4xl bg-gold-600 text-xs sm:text-sm py-2.5 md:py-2 mt-6 font-michroma group-hover:border group-hover:border-neutral-800">
+                    <h2 class="text-center font-michroma">
+                        BST.COACH<br class="md:hidden" /> IS OPEN FOR COACHES!</h2>
+                    <button class="w-full max-w-4xl bg-gold-600 py-2.5 md:py-2 mt-6 font-michroma hover:border  hover:border-neutral-800">
                         JOIN BST.COACH NOW
+                    </button>
+                    <button class="w-full max-w-4xl bg-neutral-800 text-white py-2.5 md:py-2 mt-6 font-michroma hover:text-neutral-800 hover:bg-white">
+                       VIEW DEMO TRAINING
                     </button>
                 </div>
             </section>
@@ -209,119 +225,78 @@
 
                 <div class="container mx-auto flex flex-col lg:flex-row lg:space-x-16">
                     <div class="flex-1 relative hidden lg:flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 561.15 647.98">
-                            <defs>
-                                <style>
-                                    .a {
-                                        fill: #fbb03b;
-                                    }
-                                </style>
-                            </defs>
-                            <polygon class="a" points="0 0 20.45 0 453.67 323.99 20.45 647.98 0 647.98 0 0" />
-                            <polygon class="a"
-                                points="54.44 0 74.69 0 507.93 323.99 74.69 647.98 54.44 647.98 487.65 323.99 54.44 0" />
-                            <polygon class="a"
-                                points="107.66 0 127.92 0 561.15 323.99 127.92 647.98 107.66 647.98 540.88 323.99 107.66 0" />
-                        </svg>
+                        <img src="img/sample.svg" loading="lazy" />
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <img class="h-3/4" src="img/phone1.png" />
+                            <img class="h-3/4" src="img/phone1.png" loading="lazy" />
                         </div>
                     </div>
                     <div class="flex-1 flex flex-col justify-center text-white px-6 2xl:px-0">
-                        <span class="font-michroma text-xs md:text-base lg:text-lg text-gold-600">stay in charge of your
+                        <span class="font-michroma text-xs md:text-base text-gold-600">stay in charge of your
                             training plans</span>
-                        <h2 class="text-lg md:text-2xl lg:text-4xl font-michroma leading-snug mt-1 lg:mt-3 uppercase">
-                            BUILD YOUR OWN<br />TRAINING PROGRAM</h2>
-                        <p class="text-xs md:text-base lg:text-lg font-sarpanch mt-2 lg:mt-4 uppercase">
+                        <h3 class="font-michroma leading-snug mt-1 lg:mt-3 uppercase">
+                            BUILD YOUR OWN<br />TRAINING PROGRAM</h3>
+                        <p class="text-xs md:text-sm lg:text-base font-sarpanch mt-2 lg:mt-4 uppercase">
                             CREATE TRAINING PLANS USING BST.COACH RESOURCES OR BUILD YOUR OWN TRAINING FROM SCRATCH
                         </p>
                     </div>
                     <div class="lg:hidden relative flex justify-center mt-8">
-                        <img class="w-1/2 z-20 mb-2" src="img/phone1.png" />
+                        <img class="w-1/2 z-20 mb-2" src="img/phone1.png" loading="lazy" />
                         <div class="h-24 bg-gold-600 absolute inset-x-0 rounded-md bottom-0"></div>
                     </div>
                 </div>
 
                 <div class="container mx-auto flex flex-col lg:flex-row lg:space-x-16 mt-8 lg:-mt-12">
                     <div class="flex-1 flex flex-col justify-center text-white px-6 2xl:px-0">
-                        <span class="font-michroma text-xs md:text-base lg:text-lg text-gold-600">take advantage of our
+                        <span class="font-michroma text-xs md:text-base text-gold-600">take advantage of our
                             video resources</span>
-                        <h2 class="text-lg md:text-2xl lg:text-4xl font-michroma leading-snug mt-1 md:mt-2 uppercase">
-                            Explore our<br />library</h2>
-                        <p class="text-xs md:text-base lg:text-lg font-sarpanch mt-4 uppercase">
+                        <h3 class="font-michroma leading-snug mt-1 md:mt-2 uppercase">
+                            Explore our<br />library</h3>
+                        <p class="text-xs md:text-sm lg:text-base font-sarpanch mt-4 uppercase">
                             use hundreds of our exercise video demos, training routines or training plan templates
                         </p>
                     </div>
                     <div class="lg:hidden relative flex justify-center mt-8">
-                        <img class="w-3/4 md:w-2/3 z-20 mb-6" src="img/phone2.png" />
+                        <img class="w-3/4 md:w-2/3 z-20 mb-6" src="img/phone2.png" loading="lazy" />
                         <div class="h-24 bg-gold-600 absolute inset-x-0 rounded-md bottom-0"></div>
                     </div>
                     <div class="flex-1 relative hidden lg:block">
-                        <div class="rotate-180">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 561.15 647.98">
-                                <defs>
-                                    <style>
-                                        .a {
-                                            fill: #fbb03b;
-                                        }
-                                    </style>
-                                </defs>
-                                <polygon class="a" points="0 0 20.45 0 453.67 323.99 20.45 647.98 0 647.98 0 0" />
-                                <polygon class="a"
-                                    points="54.44 0 74.69 0 507.93 323.99 74.69 647.98 54.44 647.98 487.65 323.99 54.44 0" />
-                                <polygon class="a"
-                                    points="107.66 0 127.92 0 561.15 323.99 127.92 647.98 107.66 647.98 540.88 323.99 107.66 0" />
-                            </svg>
-                        </div>
+                        <img src="img/sample.svg" class="rotate-180" loading="lazy" />
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <img class="h-2/4" src="img/phone2.png" />
+                            <img class="h-2/4" src="img/phone2.png" loading="lazy" />
                         </div>
                     </div>
                 </div>
 
                 <div class="container mx-auto flex flex-col lg:flex-row lg:space-x-16 mt-8 lg:-mt-12">
                     <div class="flex-1 relative hidden lg:block">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 561.15 647.98">
-                            <defs>
-                                <style>
-                                    .a {
-                                        fill: #fbb03b;
-                                    }
-                                </style>
-                            </defs>
-                            <polygon class="a" points="0 0 20.45 0 453.67 323.99 20.45 647.98 0 647.98 0 0" />
-                            <polygon class="a"
-                                points="54.44 0 74.69 0 507.93 323.99 74.69 647.98 54.44 647.98 487.65 323.99 54.44 0" />
-                            <polygon class="a"
-                                points="107.66 0 127.92 0 561.15 323.99 127.92 647.98 107.66 647.98 540.88 323.99 107.66 0" />
-                        </svg>
+                        <img src="img/sample.svg" loading="lazy" />
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <img class="h-3/4" src="img/phone3.png" />
+                            <img class="h-3/4" src="img/phone3.png" loading="lazy" />
                         </div>
                     </div>
                     <div class="flex-1 flex flex-col justify-center text-white px-6 2xl:px-0">
-                        <span class="font-michroma text-xs md:text-base lg:text-lg text-gold-600">apply your trainings
-                            to
-                            specific dates</span>
-                        <h2 class="text-lg md:text-2xl lg:text-4xl font-michroma leading-snug mt-1 md:mt-2 uppercase">
-                            AUTOMATE TRAINING</h2>
-                        <span class="font-sarpanch text-[10px] md:text-sm lg:text-xl uppercase mt-4 md:mt-8">1. apply
-                            start
-                            and end dates to your programs</span>
-                        <span class="font-sarpanch text-[10px] md:text-sm lg:text-xl uppercase mt-1 md:mt-3">2.
-                            pre-schedule
-                            training plans and save time</span>
+                        <span class="font-michroma text-xs md:text-base text-gold-600">
+                            apply your training to specific dates
+                        </span>
+                        <h3 class="font-michroma leading-snug mt-1 md:mt-2 uppercase">
+                            AUTOMATE TRAINING
+                        </h3>
+                        <span class="font-sarpanch text-xxs md:text-sm lg:text-base uppercase mt-4 md:mt-8">
+                            1 - apply start and end dates to your programs
+                        </span>
+                        <span class="font-sarpanch text-xxs md:text-sm lg:text-base uppercase mt-1 md:mt-3">
+                            2 - pre-schedule training plans and save time
+                        </span>
                     </div>
                     <div class="lg:hidden relative flex justify-center mt-8">
-                        <img class="w-3/4 md:w-1/2 z-20 mb-6" src="img/phone3.png" />
+                        <img class="w-3/4 md:w-1/2 z-20 mb-6" src="img/phone3.png" loading="lazy" />
                         <div class="h-24 bg-gold-600 absolute inset-x-0 rounded-md bottom-0"></div>
                     </div>
                 </div>
 
-
                 <div class="flex justify-center mt-8 mx-6 md:mx-0">
                     <button class="w-full md:w-auto md:px-6 py-2 md:py-4 text-white border border-white hover:border-gold-600 hover:bg-gold-600 hover:text-neutral-800 transition-all ease-in-out duration-300">
-                        <span class="text-sm md:text-2xl lg:text-5xl font-michroma uppercase">more on features</span>
+                        <span class="text-sm md:text-2xl lg:text-5xl [word-spacing:0.5rem] font-michroma uppercase">more on features</span> 
                     </button>
                 </div>
             </section>
@@ -349,88 +324,98 @@
 
                         <div class="flex flex-col items-center z-10 pb-12">
                             <hr class="w-0.5 h-8 md:h-14 bg-gold-600" />
-                            <h2 class="font-michroma text-white text-center text-2xl md:text-5xl mt-6">
+                            <h2 class="font-michroma text-white text-center text-2xl md:text-5xl [word-spacing:0.5rem] mt-6">
                                 MEMBERSHIP OPTIONS
                             </h2>
                         </div>
                     </div>
 
-                    <div class="relative">
+                    <div class="relative md:pb-12">
                         <div class="absolute md:hidden inset-x-0 top-14">
-                            <img src="img/horizontal-orange-mobile.svg" />
+                            <img src="img/horizontal-orange-mobile.svg" loading="lazy" />
                         </div>
                         <div class="absolute md:hidden inset-x-0 bottom-36">
-                            <img src="img/horizontal-orange-mobile.svg" class="rotate-180" />
+                            <img src="img/horizontal-orange-mobile.svg" class="rotate-180" loading="lazy" />
                         </div>
 
-                        <div class="hidden md:block absolute inset-0 top-44 -bottom-1">
-                            <img src="img/horizontal-white.svg" />
+                        <div class="hidden md:flex items-end absolute inset-0 -bottom-1">
+                            <img src="img/horizontal-white.svg" loading="lazy" />
                         </div>
 
                         <div class="h-full grid grid-cols-1 md:grid-cols-3 gap-4 md:pt-12 pb-8 md:pb-20 px-14">
                             <div class="flex md:hidden flex-col items-center bg-gold-600 z-10 p-8 rounded-lg">
-                                <img src="img/open-library.svg" />
+                                <img src="img/open-library.svg" loading="lazy" />
                                 <div class="flex-1 flex flex-col items-center justify-between">
-                                    <span class="font-michroma text-neutral-750">Open Library</span>
+                                    <span class="font-michroma text-center text-neutral-750">Open Library</span>
                                     <div class="flex items-start space-x-4 font-sarpanch mt-10">
-                                        <img src="img/tick-dark.svg" class="mt-2 w-5 h-4" />
-                                        <span class="uppercase text-xs"><span class="text-sm font-bold">F</span>ree Access to hundreds of bst exclusive videos</span>
+                                        <img src="img/tick-dark.svg" class="mt-2 w-5 h-4" loading="lazy" />
+                                        <span class="[font-variant-caps:small-caps] leading-4">Free access to hundreds of bst exclusive
+                                            videos</span>
                                     </div>
-                                    <span class="font-sarpanch text-neutral-750 uppercase mt-10">€ 0.00 / month</span>
+                                    <span class="font-sarpanch text-neutral-750 uppercase mt-10">€ 0.00 /
+                                        month</span>
                                     <button class="font-michroma text-xs bg-white px-4 py-2 rounded-2xl mt-8">LEARN
                                         MORE</button>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-center bg-neutral-750 z-10 p-8 md:p-14 rounded-lg">
-                                <img src="img/coach-plan.svg" />
+                            <div class="flex flex-col items-center bg-neutral-750 z-10 p-8 md:p-10 xl:p-14 rounded-lg">
+                                <img src="img/coach-plan.svg" loading="lazy" />
                                 <div class="flex-1 flex flex-col items-center justify-between mt-1">
-                                    <span class="font-michroma text-gold-600">Coach plan</span>
+                                    <span class="font-michroma text-center text-gold-600">Coach plan</span>
                                     <div class="flex flex-col space-y-2 text-gold-600 font-sarpanch mt-8">
                                         <div class="flex items-start space-x-4">
-                                            <img src="img/tick.svg" class="mt-2 w-5 h-4" />
-                                            <span class="uppercase text-xs"><span
-                                                    class="text-base font-bold">a</span>ccess to bst library: exercise, routines, training plans</span>
+                                            <img src="img/tick.svg" class="mt-2 w-5 h-4" loading="lazy" />
+                                            <span class="[font-variant-caps:small-caps] leading-4">Access to bst library: exercise,
+                                                routines,
+                                                training plans</span>
                                         </div>
                                         <div class="flex items-start space-x-4">
-                                            <img src="img/tick.svg" class="mt-2 w-5 h-4" />
-                                            <span class="uppercase text-xs">upto 5 training groups &amp; 20 athletes per
-                                                group</span>
+                                            <img src="img/tick.svg" class="mt-2 w-5 h-4" loading="lazy" />
+                                            <span class="text-xs leading-4">UP TO 5 TRAINING GROUPS &amp; 20
+                                                ATHLETES
+                                                PER
+                                                GROUP</span>
                                         </div>
                                     </div>
 
-                                    <span class="font-michroma text-white uppercase text-lg mt-16">coming soon</span>
+                                    <span class="font-michroma text-white text-center uppercase text-lg mt-16">coming
+                                        soon</span>
                                 </div>
                             </div>
-                            <div class="hidden md:flex flex-col items-center bg-gold-600 z-10 p-8 md:p-14 rounded-lg">
-                                <img src="img/open-library.svg" />
+                            <div class="hidden md:flex flex-col items-center bg-gold-600 z-10 p-8 md:p-10 xl:p-14 rounded-lg">
+                                <img src="img/open-library.svg" loading="lazy" />
                                 <div class="flex-1 flex flex-col items-center justify-between">
-                                    <span class="font-michroma text-neutral-750">Open Library</span>
+                                    <span class="font-michroma text-center text-neutral-750">Open Library</span>
                                     <div class="flex items-start space-x-4 font-sarpanch">
-                                        <img src="img/tick-dark.svg" class="mt-2 w-5 h-4" />
-                                        <span class="uppercase text-xs"><span class="text-base font-bold">F</span>ree Access to hundreds of bst exclusive videos</span>
+                                        <img src="img/tick-dark.svg" loading="lazy" class="mt-2 w-5 h-4" />
+                                        <span class="[font-variant-caps:small-caps] leading-4">Free access to hundreds of bst exercise
+                                            videos</span>
                                     </div>
-                                    <span class="font-sarpanch text-neutral-750 uppercase text-xl">€ 0.00 / month</span>
+                                    <span class="font-sarpanch text-neutral-750 uppercase text-xl text-center">€
+                                        0.00 /
+                                        month</span>
                                     <button class="font-michroma text-xs bg-white px-8 py-4 rounded-2xl">LEARN
                                         MORE</button>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-center bg-neutral-750 z-10 p-8 md:p-14 rounded-lg">
-                                <img src="img/team-plan.svg" />
+                            <div class="flex flex-col items-center bg-neutral-750 z-10 p-8 md:p-10 xl:p-14 rounded-lg">
+                                <img src="img/team-plan.svg" loading="lazy" />
                                 <div class="flex-1 flex flex-col items-center justify-between mt-1">
-                                    <span class="font-michroma text-gold-600">Coach plan</span>
+                                    <span class="font-michroma text-center text-gold-600">Team plan</span>
                                     <div class="flex flex-col space-y-2 text-gold-600 font-sarpanch mt-8">
                                         <div class="flex items-start space-x-4">
-                                            <img src="img/tick.svg" class="mt-2 w-5 h-4" />
-                                            <span class="uppercase text-xs"><span
-                                                    class="text-base font-bold">c</span>ustomized plan for teams and sports organizations</span>
+                                            <img src="img/tick.svg" class="mt-2 w-5 h-4" loading="lazy" />
+                                            <span class="[font-variant-caps:small-caps] leading-4">Customized plan for teams and sports
+                                                organizations</span>
                                         </div>
                                         <div class="flex items-start space-x-4">
-                                            <img src="img/tick.svg" class="mt-2 w-5 h-4" />
+                                            <img src="img/tick.svg" class="mt-2 w-5 h-4" loading="lazy" />
                                             <span class="uppercase text-xs">multiple coach accounts per team</span>
                                         </div>
                                     </div>
 
-                                    <span class="font-michroma text-white uppercase text-lg mt-16">coming soon</span>
+                                    <span class="font-michroma text-white text-center uppercase text-lg mt-16">coming
+                                        soon</span>
                                 </div>
                             </div>
                         </div>
@@ -438,81 +423,39 @@
                 </div>
             </section>
 
-            <section class="overflow-hidden md:hidden">
+            <section class="overflow-hidden md:hidden py-4">
                 <div class="swiper relative">
-                    <div class="swiper-wrapper">
-                        <div class="h-full flex flex-col items-center justify-between swiper-slide bg-gold-600 rounded-2xl p-6">
-                            <img src="img/review.png" class="w-2/3 h-32 object-cover object-top">
-                            <p class="text-xxs font-michroma text-center mt-6">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ex ipsum, aliquet rutrum euismod at, placerat et erat."
-                            </p>
-                            <span class="font-michroma text-sm mt-4">BETHAN TERRELL</span>
-                        </div>
-                        <div class="h-full flex flex-col items-center justify-between swiper-slide bg-gold-600 rounded-2xl p-6">
-                            <img src="img/review.png" class="w-2/3 h-32 object-cover object-top">
-                            <p class="text-xxs font-michroma text-center mt-6">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ex ipsum, aliquet rutrum euismod at, placerat et erat."
-                            </p>
-                            <span class="font-michroma text-sm mt-4">BETHAN TERRELL</span>
-                        </div>
-                        <div class="h-full flex flex-col items-center justify-between swiper-slide bg-gold-600 rounded-2xl p-6">
-                            <img src="img/review.png" class="w-2/3 h-32 object-cover object-top">
-                            <p class="text-xxs font-michroma text-center mt-6">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ex ipsum, aliquet rutrum euismod at, placerat et erat."
-                            </p>
-                            <span class="font-michroma text-sm mt-4">BETHAN TERRELL</span>
-                        </div>
+                    <div id="testimonial_container_mobile" class="swiper-wrapper">
+                        <!-- this will be filled from json -->
                     </div>
                     <div class="flex items-center justify-center absolute button-prev top-1/2 left-0 z-10">
-                        <img src="img/arrow.svg" class="w-6 h-6 rotate-180" />
+                        <img src="img/arrow.svg" class="w-6 h-6 rotate-180" loading="lazy" />
                     </div>
                     <div class="flex items-center justify-center absolute button-next top-1/2 right-0 z-10">
-                        <img src="img/arrow.svg" class="w-6 h-6" />
+                        <img src="img/arrow.svg" class="w-6 h-6" loading="lazy" />
                     </div>
                 </div>
             </section>
 
-            <section class="relative bg-gold-600 hidden md:flex mt-20 pr-16">
-                <div class="swiper-desktop flex flex-col overflow-hidden">
-                    <div class="swiper-wrapper">
-                        <div class="flex flex-col items-center justify-end swiper-slide rounded-2xl px-14">
-                            <p class="font-michroma text-center">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit mattis facilisis. Praesent aliquet ullamcorper congue. Fusce sagittis sapien eu velit sagittis lobortis. Aenean porta justo nec lacus interdum, a tempor sapien pellentesque. Quisque
-                                ac rutrum diam. Nullam aliquet congue eros eget aliquet"
-                            </p>
-                            <span class="font-michroma text-xl mt-8">BETHAN TERRELL</span>
-                        </div>
-                        <div class="flex flex-col items-center justify-end swiper-slide rounded-2xl px-14">
-                            <p class="font-michroma text-center">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit mattis facilisis. Praesent aliquet ullamcorper congue. Fusce sagittis sapien eu velit sagittis lobortis. Aenean porta justo nec lacus interdum, a tempor sapien pellentesque. Quisque
-                                ac rutrum diam. Nullam aliquet congue eros eget aliquet"
-                            </p>
-                            <span class="font-michroma text-xl mt-8">BETHAN TERRELL</span>
-                        </div>
-                        <div class="flex flex-col items-center justify-end swiper-slide rounded-2xl px-14">
-                            <p class="font-michroma text-center">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit mattis facilisis. Praesent aliquet ullamcorper congue. Fusce sagittis sapien eu velit sagittis lobortis. Aenean porta justo nec lacus interdum, a tempor sapien pellentesque. Quisque
-                                ac rutrum diam. Nullam aliquet congue eros eget aliquet"
-                            </p>
-                            <span class="font-michroma text-xl mt-8">BETHAN TERRELL</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-center space-x-8 mt-4">
-                        <div class="flex items-center justify-center button-prev z-10">
-                            <img src="img/arrow.svg" class="w-6 h-6 rotate-180" />
-                        </div>
-                        <div class="swiper-pagination !w-auto !relative !self-center !bottom-0 flex space-x-2"></div>
-                        <div class="flex items-center justify-center button-next z-10">
-                            <img src="img/arrow.svg" class="w-6 h-6" />
-                        </div>
-                    </div>
+            <section class="relative bg-gold-600 hidden md:flex swiper-desktop">
+                <div id="testimonial_container_desktop" class="swiper-wrapper">
+
+                    <!-- this will be filled from json -->
+
                 </div>
-                <div class="bg-review-frame p-8 scale-150 z-20">
-                    <img src="img/review.png" alt="" srcset="" class="h-64">
+                <div class="absolute left-[18.5%] lg:left-[24.5%] xl:left-[27.5%] bottom-0 flex items-center justify-center space-x-4 lg:space-x-8 my-4 -translate-x-24 z-10">
+                    <div class="flex items-center justify-center button-prev z-10">
+                        <img src="img/arrow.svg" class="w-6 h-6 rotate-180" loading="lazy" />
+                    </div>
+                    <div class="hidden md:flex swiper-pagination !w-auto !relative !self-center !bottom-0 space-x-2">
+                    </div>
+                    <div class="flex items-center justify-center button-next z-10">
+                        <img src="img/arrow.svg" class="w-6 h-6" loading="lazy" />
+                    </div>
                 </div>
             </section>
 
-            <section class="flex flex-col justify-center md:h-[80vh] p-6 md:p-0">
+            <section class="flex flex-col justify-center p-6 md:px-0 md:pt-32 md:pb-14">
                 <div class="flex justify-center md:justify-start items-center">
                     <div class="md:hidden">
                         <svg width="220px" height="220px">
@@ -524,7 +467,7 @@
                             <use xlink:href='img/claw-mark.svg#claw' color="#333333"></use>
                         </svg>
                     </div>
-                    <div class="absolute md:relative inset-x-0 font-michroma text-white text-center z-20 md:-ml-80">
+                    <div class="absolute md:relative inset-x-0 font-michroma text-white text-center md:text-start z-20 md:-ml-80">
                         <h1>JOIN <span class="text-gold-600">BST</span></h1>
                         <h1 class="md:ml-16 mt-1">ALREADY NOW</h1>
                     </div>
@@ -533,7 +476,8 @@
                 <div class="flex flex-col space-y-2 mt-6">
                     <span class="text-white text-center md:hidden font-michroma">
                         BST.COACH<br class="md:hidden" />IS OPEN FOR COACHES!</span>
-                    <button class="w-full max-w-4xl bg-gold-600 text-xs sm:text-sm py-2.5 md:py-2 font-michroma group-hover:border group-hover:border-neutral-800 self-center">
+
+                    <button class="w-full max-w-4xl bg-gold-600 py-2.5 md:py-2 mt-6 font-michroma self-center">
                         JOIN BST.COACH
                     </button>
                 </div>
@@ -544,61 +488,102 @@
     <footer class="bg-neutral-750 text-white flex flex-col lg:flex-row justify-center px-16 py-12">
         <div class="max-w-6xl w-full flex flex-col lg:flex-row">
             <div class="flex flex-col justify-between items-center">
-                <img src="img/footer-logo.svg" alt="" srcset="">
-                <div class="hidden md:flex flex-col items-center uppercase font-sarpanch font-medium">
-                    <span class="text-xs text-center">Passionate collaboration between</span>
-                    <span class="text-xs text-center">Latvian, Czech, Ukrainian and Swiss wisdom</span>
+                <img src="img/footer-logo.svg" loading="lazy">
+                <div class="hidden md:flex flex-col items-center font-sarpanch font-medium">
+                    <span class="[font-variant-caps:small-caps] text-xxs text-center">Passionate collaboration between</span>
+                    <span class="[font-variant-caps:small-caps] text-xxs text-center">Latvian, Czech, Ukrainian, and Swiss wisdom</span>
                     <div class="flex space-x-4 mt-2">
-                        <img src="img/flags/latvian.svg" alt="" srcset="">
-                        <img src="img/flags/czech.svg" alt="" srcset="">
-                        <img src="img/flags/ukrainian.svg" alt="" srcset="">
-                        <img src="img/flags/swiss.svg" alt="" srcset="">
+                        <img src="img/flags/latvian.svg" loading="lazy">
+                        <img src="img/flags/czech.svg" loading="lazy">
+                        <img src="img/flags/ukrainian.svg" loading="lazy">
+                        <img src="img/flags/swiss.svg" loading="lazy">
                     </div>
                 </div>
             </div>
             <div class="flex flex-col">
             </div>
-            <div class="lg:flex-1 flex items-center mt-4 md:mt-0">
+            <div class="lg:flex-1 flex items-center mt-8 lg:mt-0">
                 <a class="flex-1 flex items-center justify-center" href="#">
-                    <img src="img/socials/facebook.svg" class="w-8 lg:w-11">
+                    <img src="img/socials/instagram.svg" class="w-8 lg:w-11" loading="lazy">
                 </a>
                 <a class="flex-1 flex items-center justify-center" href="#">
-                    <img src="img/socials/facebook.svg" class="w-8 lg:w-11">
+                    <img src="img/socials/linkedin.svg" class="w-8 lg:w-11" loading="lazy">
                 </a>
                 <a class="flex-1 flex items-center justify-center" href="#">
-                    <img src="img/socials/facebook.svg" class="w-8 lg:w-11">
+                    <img src="img/socials/facebook.svg" class="w-8 lg:w-11" loading="lazy">
                 </a>
             </div>
         </div>
         <div class="flex flex-col text-center lg:text-start font-michroma">
             <h3 class="hidden lg:block">HELP</h3>
-            <div class="flex flex-col space-y-1 mt-8 uppercase text-xxs md:text-xs">
-                <span>contact us</span>
-                <span class="text-gold-600 text-sm font-sarpanch">
+            <div class="flex flex-col space-y-1 mt-8 text-xs md:text-sm">
+                <span class="[font-variant-caps:small-caps]">Contact us</span>
+                <a href="mailto:info@bst.coach" class="uppercase text-gold-600 text-xs font-sarpanch">
                     info@bst.coach
-                </span>
-                <span>support center/faq</span>
-                <span>terms and conditions</span>
-                <span>cookies</span>
+                </a>
+                <span class="[font-variant-caps:small-caps]">Support Center/FAQ</span>
+                <span class="[font-variant-caps:small-caps]">Terms and Conditions</span>
+                <span class="[font-variant-caps:small-caps]">Cookies</span>
             </div>
-            <div class="flex md:hidden flex-col items-center uppercase font-sarpanch font-medium mt-4">
-                <span class="text-xxs text-center">Passionate collaboration between</span>
-                <span class="text-xxs text-center">Latvian, Czech, Ukrainian and Swiss wisdom</span>
+            <div class="flex md:hidden flex-col items-center font-sarpanch font-medium mt-4">
+                <span class="[font-variant-caps:small-caps] text-xs text-center">Passionate collaboration between</span>
+                <span class="[font-variant-caps:small-caps] text-xs text-center">Latvian, Czech, Ukrainian, and Swiss wisdom</span>
                 <div class="flex space-x-4 mt-2">
-                    <img src="img/flags/latvian.svg" alt="" srcset="">
-                    <img src="img/flags/czech.svg" alt="" srcset="">
-                    <img src="img/flags/ukrainian.svg" alt="" srcset="">
-                    <img src="img/flags/swiss.svg" alt="" srcset="">
+                    <img src="img/flags/latvian.svg" loading="lazy">
+                    <img src="img/flags/czech.svg" loading="lazy">
+                    <img src="img/flags/ukrainian.svg" loading="lazy">
+                    <img src="img/flags/swiss.svg" loading="lazy">
                 </div>
             </div>
         </div>
         </div>
     </footer>
 
+    <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
     <script>
+        let testimonial_mobile = ``;
+        let testimonial_desktop = ``;
+        let ii = 0;
+        for (const x of testimonials) //defined in data.js
+        {
+            ii++;
+            var imgDesktop = 'img/testimonials/testimonial' + String(ii).padStart(2, '0') + '.jpg';
+            var imgMobile = imgDesktop;
+            if (x.imgDesktop) imgDesktop = x.imgDesktop;
+            if (x.imgMobile) imgMobile = x.imgMobile;
+
+            testimonial_mobile += `<div class="h-full flex flex-col items-center justify-between swiper-slide bg-gold-600 rounded-2xl p-6">
+                        <img src="${imgMobile}" class="w-2/3 rounded-xl object-cover object-top" loading="lazy">
+                        <p class="text-xxs font-michroma text-center mt-6">
+                            "${x.text}"
+                        </p>
+                        <span class="text-center font-michroma text-sm mt-4 uppercase">${x.name}</span>
+                        <span class="text-center font-michroma text-xs mt-2">${x.bio}</span>
+                    </div>`;
+
+            testimonial_desktop += `<div class="flex items-center swiper-slide">
+                    <div class="flex-1 flex flex-col items-center justify-center rounded-2xl pl-16 lg:pl-24 pr-36 lg:pr-44 my-12 lg:my-10">
+                        <p class="font-sarpanch text-center -mb-4">
+                            "${x.text}"
+                        </p>
+                        <h3 class="text-center font-michroma mt-8 uppercase">${x.name}</h3>
+                        <span class="text-center font-michroma mt-2">${x.bio}</h3>
+
+                    </div>
+                    <div class="-translate-x-20 relative scale-110">
+                        <img src="img/review-frame.svg" alt="" srcset="" class="w-44 h-64 object-contain absolute inset-0 scale-125" loading="lazy">
+                        <img src="${imgDesktop}" alt="" srcset="" class="w-44 h-64 object-cover z-20 scale-110" loading="lazy">
+                    </div>
+                </div>`;
+
+        }
+        document.getElementById("testimonial_container_mobile").innerHTML = testimonial_mobile;
+        document.getElementById("testimonial_container_desktop").innerHTML = testimonial_desktop;
+
         const swiperMobile = new Swiper('.swiper', {
             effect: "cards",
             loop: true,
+            lazy: true,
             navigation: {
                 nextEl: '.button-next',
                 prevEl: '.button-prev',
@@ -607,6 +592,8 @@
 
         const swiperDesktop = new Swiper('.swiper-desktop', {
             loop: true,
+            lazy: true,
+            autoHeight: true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -619,9 +606,7 @@
                 prevEl: '.button-prev',
             },
         });
-    </script>
 
-    <script>
         function toggleMenu() {
             var h = document.getElementById("header");
             var x = document.getElementById("menu");
@@ -669,6 +654,34 @@
                 d.style.marginTop = "0px";
             }
         }
+    </script>
+
+    <script>
+        // lazy load vimeo iframe
+        const callback = (entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    let vimeoiframe = document.getElementById("vimeoiframe");
+                    if (vimeoiframe) { //when section with .section-with-vimeo
+                        //starts to be in view, switch value from data-src to src
+                        //thus load the iframe
+                        let srcDatatext = vimeoiframe.getAttribute("data-src");
+                        if (srcDatatext) {
+                            vimeoiframe.setAttribute("src", srcDatatext);
+                            vimeoiframe.setAttribute("data-src", ""); //not loading again
+                        }
+                    }
+                }
+            });
+        };
+
+        const options = {
+            threshold: 0.01 //just when 1% of the element appears 
+        }
+
+        const observer = new IntersectionObserver(callback, options);
+
+        document.querySelectorAll(".section-with-vimeo").forEach(shape => observer.observe(shape));
     </script>
 </body>
 
