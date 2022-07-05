@@ -22,7 +22,6 @@ module.exports = {
                 // 'img2': "url('https://i.imgur.com/T1wN7yx.jpg')",
                 // 'boxer': "url('https://i.imgur.com/X3UfjBq.jpg')",
                 // 'lion': "url('https://i.imgur.com/9gOEvIN.png')",
-                'review-frame': 'url("/img/review-frame.svg")',
             }),
             colors: {
                 neutral: {
@@ -45,5 +44,5 @@ module.exports = {
         },
     },
     variants: {},
-    plugins: [],
+    plugins: [require('@tailwindcss/line-clamp')],
 }
