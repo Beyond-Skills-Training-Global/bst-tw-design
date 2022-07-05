@@ -666,8 +666,10 @@
                         //starts to be in view, switch value from data-src to src
                         //thus load the iframe
                         let srcDatatext = vimeoiframe.getAttribute("data-src");
-                        if (srcDatatext)
+                        if (srcDatatext) {
                             vimeoiframe.setAttribute("src", srcDatatext);
+                            vimeoiframe.setAttribute("data-src", ""); //not loading again
+                        }
                     }
                 }
             });
