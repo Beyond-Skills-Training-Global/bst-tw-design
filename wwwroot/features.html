@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BST.COACH</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>BST.coach</title>
+    <meta name="title" content="BST.coach">
+    <meta name="description"
+        content="Sports training platform with a comprehensive exercise library that lets coaches scale their work.">
     <link href="css/app.min.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Michroma&family=Noto+Emoji:wght@300&family=Orbitron:wght@700&family=Sarpanch&display=swap"
@@ -20,18 +24,19 @@
     <section class="relative h-screen bg-cover bg-center 
     bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.95)_10%,rgba(64,64,64,0.3),rgba(0,0,0,1)_97%),url('../img/hero-boxer.jpg')]
     ">
-        <div class="max-w-6xl mx-auto fixed z-50 top-0  inset-x-0 flex flex-col justify-center bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_40%,rgba(0,0,0,0.3)_100%)]"
-            id="header">
-            <div class="flex-1 flex justify-between text-white py-2 xl:py-4 px-6 md:px-2 gap-3">
+        <div class=" fixed w-full z-50  top-0  inset-x-0 flex flex-col justify-center
+                bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_40%,rgba(0,0,0,0.3)_100%)]
+                " id="header">
+            <div class="max-w-6xl lg:mx-auto flex-1 flex justify-between text-white py-2 xl:py-4 px-6 md:px-2 gap-3">
+        
                 <a class="flex items-center" href="/">
-                    <img class="self-center justify-self-center max-h-16 mr-3" src="img/lion-gold-600-200px.png"
-                        loading="lazy">
+                    <img class="self-center justify-self-center max-h-16 mr-3" src="img/lion-gold-600-200px.png" loading="lazy">
                     <div class="font-michroma text-xl sm:text-2xl xl:text-3xl">BST.COACH</div>
                 </a>
                 <a class="flex lg:hidden flex-col justify-center" href="javascript:void(0);" onclick="toggleMenu()">
                     <div class="flex flex-col items-center justify-center" id="openMenuSvg">
                         <img src="img/menu.svg" class="w-8" loading="lazy" />
-
+        
                         <span class="text-[10px] font-sarpanch mt-1">MENU</span>
                     </div>
                     <div id="closeMenuSvg" style="display: none;">
@@ -127,7 +132,7 @@
             <div class="mx-auto flex flex-col justify-center md:py-0 md:pl-0 md:pr-72">
                 <div class="hidden md:flex items-center space-x-1">
                     <hr class="w-6 h-0.5 bg-gold-600 border-gold-600 mt-1" />
-                    <span class="text-xs text-gold-600">all of BST.coach</span>
+                    <span class="text-xs md:text-sm lg:text-lg text-gold-600">all of BST.coach</span>
                 </div>
                 <h1 class="font-michroma text-left uppercase tracking-widest text-white">
                     OUR<br />FEATURES
