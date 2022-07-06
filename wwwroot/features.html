@@ -28,15 +28,16 @@
                 bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_40%,rgba(0,0,0,0.3)_100%)]
                 " id="header">
             <div class="max-w-6xl lg:mx-auto flex-1 flex justify-between text-white py-2 xl:py-4 px-6 md:px-2 gap-3">
-        
+
                 <a class="flex items-center" href="/">
-                    <img class="self-center justify-self-center max-h-16 mr-3" src="img/lion-gold-600-200px.png" loading="lazy">
+                    <img class="self-center justify-self-center max-h-16 mr-3" src="img/lion-gold-600-200px.png"
+                        loading="lazy">
                     <div class="font-michroma text-xl sm:text-2xl xl:text-3xl">BST.COACH</div>
                 </a>
                 <a class="flex lg:hidden flex-col justify-center" href="javascript:void(0);" onclick="toggleMenu()">
                     <div class="flex flex-col items-center justify-center" id="openMenuSvg">
                         <img src="img/menu.svg" class="w-8" loading="lazy" />
-        
+
                         <span class="text-[10px] font-sarpanch mt-1">MENU</span>
                     </div>
                     <div id="closeMenuSvg" style="display: none;">
@@ -46,10 +47,10 @@
                 <div class="hidden lg:flex flex-1">
                     <div
                         class="flex flex-wrap items-center uppercase text-sm justify-around gap-2 xl:gap-4 flex-1 font-sarpanch ">
-                        <a href="#"
+                        <a href="/"
                             class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">Home</a>
-                        <a href="#"
-                            class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">features</a>
+                        <a href="/features.html"
+                            class="px-2 py-1 bg-neutral-800/50 text-gold-600 transition-all ease-in-out duration-300">features</a>
                         <a href="#"
                             class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">services</a>
                         <a href="#"
@@ -91,9 +92,9 @@
             <div class="hidden" id="menu">
                 <div class="bg-neutral-800 text-white font-sarpanch uppercase px-6 pt-6">
                     <div class="flex flex-col space-y-4 ml-4">
-                        <a href="#" class="border-b border-neutral-500">home</a>
+                        <a href="/" class="border-b border-neutral-500">home</a>
+                        <a href="/features.html" class="border-b border-neutral-500">features</a>
                         <a href="#" class="border-b border-neutral-500">services</a>
-                        <a href="#" class="border-b border-neutral-500">features</a>
                         <a href="#" class="border-b border-neutral-500">principles</a>
                         <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);"
                             onclick="toggleAboutMenu()">
@@ -183,53 +184,102 @@
                             </div>
                             <h2 class="font-michroma text-center lg:text-start mt-1">BST.LIBRARY</h2>
                             <div class="flex text-[9px] md:text-sm lg:text-base self-center lg:self-start mt-4">
-                                <div
-                                    class="bg-white text-black px-2 cursor-pointer hover:bg-white hover:text-black transition-all ease-in-out duration-300">
-                                    EXERCISE VIDEOS</div>
-                                <div
-                                    class="bg-black text-white px-2 cursor-pointer hover:bg-white hover:text-black transition-all ease-in-out duration-300">
-                                    TRAINING ROUTINES</div>
-                                <div
-                                    class="bg-black text-white px-2 cursor-pointer hover:bg-white hover:text-black transition-all ease-in-out duration-300">
-                                    TRAINING PLANS</div>
+                                <a href="javascript:void(0);" onclick="selectSlide(1)" id="slide_one_selector"
+                                    class="bg-white text-black px-2 hover:bg-white hover:text-black transition-all ease-in-out duration-300">
+                                    EXERCISE VIDEOS
+                                </a>
+                                <a href="javascript:void(0);" onclick="selectSlide(2)" id="slide_two_selector"
+                                    class="bg-black text-white px-2 hover:bg-white hover:text-black transition-all ease-in-out duration-300">
+                                    TRAINING ROUTINES
+                                </a>
+                                <a href="javascript:void(0);" onclick="selectSlide(3)" id="slide_three_selector"
+                                    class="bg-black text-white px-2 hover:bg-white hover:text-black transition-all ease-in-out duration-300">
+                                    TRAINING PLANS
+                                </a>
                             </div>
-                            <div class="lg:hidden bg-gradient-to-t from-black/30 via-transparent rounded-2xl p-4 mt-4">
+                            <div class="lg:hidden bg-gradient-to-t from-black/30 via-transparent rounded-2xl flex flex-col space-y-8 p-4 mt-4">
                                 <img src="img/phone2.png" loading="lazy" />
+                                <div class="flex justify-center space-x-2">
+                                    <a href="javascript:void(0);" onclick="selectSlide(1)" id="slide_one_indicator_mobile"
+                                        class="bg-black w-10 h-1 cursor-pointer hover:!bg-black transition-all ease-in-out duration-300">
+                                    </a>
+                                    <a href="javascript:void(0);" onclick="selectSlide(2)" id="slide_two_indicator_mobile"
+                                        class="bg-white w-10 h-1 cursor-pointer hover:!bg-black transition-all ease-in-out duration-300">
+                                    </a>
+                                    <a href="javascript:void(0);" onclick="selectSlide(3)" id="slide_three_indicator_mobile"
+                                        class="bg-white w-10 h-1 cursor-pointer hover:!bg-black transition-all ease-in-out duration-300">
+                                    </a>
+                                </div>
                             </div>
-                            <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl mt-4">
-                                We have filmed and categorized our own high quality exercise video library ranging from
-                                very simple to quite advanced exercises. Currently BST.COACH has nearly 700 exercise
-                                videos that hits all aspects of general athleticism, including strength, power, speed,
-                                agility, mobility, balance and more. Since our primary audience are youth athletes, we
-                                have also made sure the exercises are fun and engaging. lots of crawling, skipping,
-                                jumping and rolling...
-                            </p>
-                            <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl mt-4">
-                                The vast majority of our exercises are body weight or require minimal equipment, such as
-                                jump rope, workout mat,
-                                resistance band or a stopwatch. Some of the more advanced exercises require dumbbells,
-                                hurdles, boxes,medicine balls or physio balls.
-                            </p>
-                            <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl mt-4">
-                                Our videos are purposely made in 8-12 second bite-size format to minimize time waste
-                                during training.
-                            </p>
-                            <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl mt-4">
-                                Our library is constantly growing
-                            </p>
+                            <div id="slide_one" class="flex flex-col">
+                                <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight mt-4">
+                                    We have filmed and categorized our own high quality exercise video library
+                                    ranging
+                                    from
+                                    very simple to quite advanced exercises. Currently BST.COACH has nearly 700
+                                    exercise
+                                    videos that hits all aspects of general athleticism, including strength, power,
+                                    speed,
+                                    agility, mobility, balance and more. Since our primary audience are youth
+                                    athletes,
+                                    we
+                                    have also made sure the exercises are fun and engaging. lots of crawling,
+                                    skipping,
+                                    jumping and rolling...
+                                </p>
+                                <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight mt-4">
+                                    The vast majority of our exercises are body weight or require minimal equipment,
+                                    such as
+                                    jump rope, workout mat,
+                                    resistance band or a stopwatch. Some of the more advanced exercises require
+                                    dumbbells,
+                                    hurdles, boxes,medicine balls or physio balls.
+                                </p>
+                                <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight mt-4">
+                                    Our videos are purposely made in 8-12 second bite-size format to minimize time
+                                    waste
+                                    during training.
+                                </p>
+                                <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight mt-4">
+                                    Our library is constantly growing
+                                </p>
+                            </div>
+                            <div id="slide_two" class="hidden flex-col">
+                                <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight mt-4">
+                                    Training routines are the backbone of our coaching philosophy. These are collections of exercises,  ordered intelligently, based on sports science &amp; years of coaching experience.
+                                </p>
+                                <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight mt-4">
+                                    Currently we have 150+ training routines, starting from warmups, balance routines,  strength circuits to acceleration routines, jump routines and even home-based training routines.
+                                </p>
+                                <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight mt-4">
+                                    Many of the exercises over lap across the routines. We have done it so that athletes can keep reinforcing what they have learned. It builds the desired movement library that is especially important at a young age.
+                                </p>
+                            </div>
+                            <div id="slide_three" class="hidden flex-col">
+                                <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight mt-4">
+                                    Coach and Team account users will have the privilege to apply our training plan templates. We have created 30+
+                                    weekly training plans for off season,pre-season and in-season needs.
+                                </p>
+                                <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight mt-4">
+                                    Our training plans are connected to one another through a form of block periodization model that goes from general strength &amp; capacity building to speed &amp; power to peak season training.
+                                </p>
+                                <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight mt-4">
+                                    Coaches have an ability to apply our pre-made training plans, edit them or create completely new plans.
+                                </p>
+                            </div>
                         </div>
                         <div class="hidden lg:flex flex-1 flex-col space-y-12">
                             <img class="flex-1" src="img/phone2.png" loading="lazy" />
                             <div class="flex justify-center space-x-2">
-                                <div
-                                    class="swiper-pagination-bullet swiper-pagination-bullet-active cursor-pointer hover:!bg-black hover:!text-white transition-all ease-in-out duration-300">
-                                </div>
-                                <div
-                                    class="swiper-pagination-bullet cursor-pointer hover:!bg-black hover:!text-white transition-all ease-in-out duration-300">
-                                </div>
-                                <div
-                                    class="swiper-pagination-bullet cursor-pointer hover:!bg-black hover:!text-white transition-all ease-in-out duration-300">
-                                </div>
+                                <a href="javascript:void(0);" onclick="selectSlide(1)" id="slide_one_indicator"
+                                    class="bg-black w-14 h-1.5 cursor-pointer hover:!bg-black transition-all ease-in-out duration-300">
+                                </a>
+                                <a href="javascript:void(0);" onclick="selectSlide(2)" id="slide_two_indicator"
+                                    class="bg-white w-14 h-1.5 cursor-pointer hover:!bg-black transition-all ease-in-out duration-300">
+                                </a>
+                                <a href="javascript:void(0);" onclick="selectSlide(3)" id="slide_three_indicator"
+                                    class="bg-white w-14 h-1.5 cursor-pointer hover:!bg-black transition-all ease-in-out duration-300">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -251,15 +301,15 @@
                                 <img src="img/phone2.png" loading="lazy" />
                             </div>
                             <p
-                                class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl lg:text-right mt-4 lg:mt-14">
+                                class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight lg:text-right mt-4 lg:mt-14">
                                 We encourages coaches to create there own unique library</p>
                             <p
-                                class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl lg:text-right mt-4">
+                                class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight lg:text-right mt-4">
                                 Coaches can add unlimited amounts of videos from YouTube or Vimeo links. BST
                                 training
                                 routines and plans can be edited and saved in my Library.</p>
                             <p
-                                class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl lg:text-right text-gold-600 mt-4">
+                                class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight lg:text-right text-gold-600 mt-4">
                                 My Library feature makes us accessible to all coaches including those out side of
                                 youth
                                 sports.In fact, we are currently the most affordable and one of the simplest-to-use
@@ -279,12 +329,12 @@
                             <div class="lg:hidden bg-gradient-to-t from-black/30 via-transparent rounded-2xl p-4 mt-4">
                                 <img src="img/phone2.png" loading="lazy" />
                             </div>
-                            <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-2xl mt-4 lg:mt-14">
+                            <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-2xl !leading-tight mt-4 lg:mt-14">
                                 After lots of trial and error we decided that people like scrolling these days.
                                 Scroll away because our videos conveniently open by themselves just like in TikTok
                                 or Instagram.
                             </p>
-                            <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-2xl mt-4">
+                            <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-2xl !leading-tight mt-4">
                                 Once you’ve found what you like, click Add and you have your exercise demo added to
                                 the plan. I hope it doesn’t create a new form of addiction for coaches.
                             </p>
@@ -306,7 +356,7 @@
                                 <img src="img/phone2.png" loading="lazy" />
                             </div>
                             <p
-                                class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl lg:text-right mt-4 lg:mt-14">
+                                class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight lg:text-right mt-4 lg:mt-14">
                                 This is where we shine. After two years of testing effectiveness of the platform, we
                                 came to conclusion that simple-stupid is the way to go. coach clicks send which
                                 immediately creates a homepage for your group. That simple.
@@ -326,7 +376,7 @@
                             <div class="lg:hidden bg-gradient-to-t from-black/30 via-transparent rounded-2xl p-4 mt-4">
                                 <img src="img/phone2.png" loading="lazy" />
                             </div>
-                            <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-2xl mt-4 lg:mt-14">
+                            <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-2xl !leading-tight mt-4 lg:mt-14">
                                 Automating training helps coaches plan ahead, saves time and money. Coaches can
                                 upload multiple plans in a row and add a date range when their athletes would be
                                 able to see each plan. Often it comes in handy when the training group is split and
@@ -351,7 +401,7 @@
                                 <img src="img/phone2.png" loading="lazy" />
                             </div>
                             <p
-                                class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl lg:text-right mt-4 lg:mt-14">
+                                class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight lg:text-right mt-4 lg:mt-14">
                                 Group page is a personalized extension from our platform where the coach can place
                                 everything he or she wants their athletes to see. It’s protected by a secure key
                                 coach hands out to the group athletes. It’s the homeroom for each training group.
@@ -371,7 +421,7 @@
                             <div class="lg:hidden bg-gradient-to-t from-black/30 via-transparent rounded-2xl p-4 mt-4">
                                 <img src="img/phone2.png" loading="lazy" />
                             </div>
-                            <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-2xl mt-4 lg:mt-14">
+                            <p class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-2xl !leading-tight mt-4 lg:mt-14">
                                 This feature allows Team Account users to share resources within the organization or
                                 between coaches.
                                 Often this is the missing link in sports institutions. Many resources but no unity
@@ -396,7 +446,7 @@
                                 <img src="img/phone2.png" loading="lazy" />
                             </div>
                             <p
-                                class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl lg:text-right mt-4 lg:mt-14">
+                                class="font-sarpanch [font-variant-caps:small-caps] text-base lg:text-xl !leading-tight lg:text-right mt-4 lg:mt-14">
                                 Every small feature we have on our platform was designed out of the necessity to
                                 solve personal coaching struggles. For example, the ability to <span
                                     class="text-gold-600">hide/unhide</span> training days from athletes, <span
@@ -518,6 +568,95 @@
                 b.style.display = "none";
                 c.style.display = "block";
                 d.style.marginTop = "0px";
+            }
+        }
+
+        function selectSlide(slide) {
+            var one = document.getElementById("slide_one");
+            var two = document.getElementById("slide_two");
+            var three = document.getElementById("slide_three");
+
+            var one_selector = document.getElementById("slide_one_selector");
+            var two_selector = document.getElementById("slide_two_selector");
+            var three_selector = document.getElementById("slide_three_selector");
+
+            var one_indicator_mobile = document.getElementById("slide_one_indicator_mobile");
+            var two_indicator_mobile = document.getElementById("slide_two_indicator_mobile");
+            var three_indicator_mobile = document.getElementById("slide_three_indicator_mobile");
+            var one_indicator = document.getElementById("slide_one_indicator");
+            var two_indicator = document.getElementById("slide_two_indicator");
+            var three_indicator = document.getElementById("slide_three_indicator");
+
+            switch (slide) {
+                case 1:
+                    one.style.display = "flex";
+                    two.style.display = "none";
+                    three.style.display = "none";
+                    one_selector.style.background = "white";
+                    one_selector.style.color = "black";
+                    two_selector.style.background = "black";
+                    two_selector.style.color = "white";
+                    three_selector.style.background = "black";
+                    three_selector.style.color = "white";
+                    one_indicator.style.background = "black";
+                    two_indicator.style.background = "white";
+                    three_indicator.style.background = "white";
+                    one_indicator_mobile.style.background = "black";
+                    two_indicator_mobile.style.background = "white";
+                    three_indicator_mobile.style.background = "white";
+                    break;
+                case 2:
+                    one.style.display = "none";
+                    two.style.display = "flex";
+                    three.style.display = "none";
+                    one_selector.style.background = "black";
+                    one_selector.style.color = "white";
+                    two_selector.style.background = "white";
+                    two_selector.style.color = "black";
+                    three_selector.style.background = "black";
+                    three_selector.style.color = "white";
+                    one_indicator.style.background = "white";
+                    two_indicator.style.background = "black";
+                    three_indicator.style.background = "white";
+                    one_indicator_mobile.style.background = "white";
+                    two_indicator_mobile.style.background = "black";
+                    three_indicator_mobile.style.background = "white";
+                    break;
+                case 3:
+                    one.style.display = "none";
+                    two.style.display = "none";
+                    three.style.display = "flex";
+                    one_selector.style.background = "black";
+                    one_selector.style.color = "white";
+                    two_selector.style.background = "black";
+                    two_selector.style.color = "white";
+                    three_selector.style.background = "white";
+                    three_selector.style.color = "black";
+                    one_indicator.style.background = "white";
+                    two_indicator.style.background = "white";
+                    three_indicator.style.background = "black";
+                    one_indicator_mobile.style.background = "white";
+                    two_indicator_mobile.style.background = "white";
+                    three_indicator_mobile.style.background = "black";
+                    break;
+
+                default:
+                    one.style.display = "flex";
+                    two.style.display = "none";
+                    three.style.display = "none";
+                    one_selector.style.background = "white";
+                    one_selector.style.color = "black";
+                    two_selector.style.background = "black";
+                    two_selector.style.color = "white";
+                    three_selector.style.background = "black";
+                    three_selector.style.color = "white";
+                    one_indicator.style.background = "white";
+                    two_indicator.style.background = "black";
+                    three_indicator.style.background = "black";
+                    one_indicator_mobile.style.background = "white";
+                    two_indicator_mobile.style.background = "black";
+                    three_indicator_mobile.style.background = "black";
+                    break;
             }
         }
     </script>
