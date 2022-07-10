@@ -1,8 +1,9 @@
 node_modules
 dist
 yarn.lock
-
 wwwroot/css/app.min.css
 wwwroot/faq.html
 .vscode/settings.json
 wwwroot/img/double-arrow.svg
+
+.DS_Store
