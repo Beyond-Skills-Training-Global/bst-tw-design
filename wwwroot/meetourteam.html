@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>BST.coach</title>
+    <meta name="title" content="BST.coach">
+    <meta name="description" content="Sports training platform with a comprehensive exercise library that lets coaches scale their work.">
+    <link href="css/app.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Noto+Emoji:wght@300&family=Orbitron:wght@700&family=Sarpanch&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/data.js"></script>
+</head>
+
+<body class="bg-black">
+
+    <section class="relative h-screen bg-cover bg-center 
+    bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.95)_10%,rgba(64,64,64,0.3),rgba(0,0,0,1)_97%),url('../img/hero-boxer.jpg')]
+    ">
+        <div class=" fixed w-full z-50  top-0  inset-x-0 flex flex-col justify-center
+                bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_40%,rgba(0,0,0,0.3)_100%)]
+                " id="header">
+            <div class="max-w-6xl lg:mx-auto flex-1 flex justify-between text-white py-2 xl:py-4 px-6 md:px-2 gap-3">
+
+                <a class="flex items-center" href="/">
+                    <img class="self-center justify-self-center max-h-16 mr-3" src="img/lion-gold-600-200px.png" loading="lazy">
+                    <div class="font-michroma text-xl sm:text-2xl xl:text-3xl">BST.COACH</div>
+                </a>
+                <a class="flex lg:hidden flex-col justify-center" href="javascript:void(0);" onclick="toggleMenu()">
+                    <div class="flex flex-col items-center justify-center" id="openMenuSvg">
+                        <img src="img/menu.svg" class="w-8" loading="lazy" />
+
+                        <span class="text-[10px] font-sarpanch mt-1">MENU</span>
+                    </div>
+                    <div id="closeMenuSvg" style="display: none;">
+                        <img src="img/close.svg" class="w-6" loading="lazy" />
+                    </div>
+                </a>
+                <div class="hidden lg:flex flex-1">
+                    <div class="flex flex-wrap items-center uppercase text-sm justify-around gap-2 xl:gap-4 flex-1 font-sarpanch ">
+                        <a href="index" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">Home</a>
+                        <a href="features" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">features</a>
+                        <a href="services" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">services</a>
+                        <a href="pricing" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">pricing</a>
+                        <div class="group">
+                            <div class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
+                                about us
+                            </div>
+                            <div class="absolute hidden transition-all duration-200 ease-linear group-hover:block">
+                                <div class="flex flex-col space-y-1 bg-gold-600 text-neutral-750 p-2 shadow-lg transition-all duration-200 ease-linear">
+                                    <a href="gettoknowus" class="hover:underline">
+                                        GET TO KNOW US
+                                    </a>
+                                    <a href="ourstory" class="hover:underline">
+                                        OUR STORY
+                                    </a>
+                                    <a href="meetourteam" class="hover:underline">
+                                        MEET OUR TEAM
+                                    </a>
+                                    <a href="faq" class="hover:underline">
+                                        FAQ
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="contactus" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">contact
+                            us</a>
+                        <a href="registration" class="text-gold-600 border border-gold-600 px-3">join us</a>
+                    </div>
+                    <hr class="w-0.1 h-6 md:h-8 bg-white self-center mx-3" />
+                    <a href="login" class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log
+                        in</a>
+                </div>
+            </div>
+            <div class="hidden" id="menu">
+                <div class="bg-neutral-800 text-white font-sarpanch uppercase px-6 pt-6">
+                    <div class="flex flex-col space-y-4 ml-4">
+                        <a href="index" class="border-b border-neutral-500">home</a>
+                        <a href="features" class="border-b border-neutral-500">features</a>
+                        <a href="services" class="border-b border-neutral-500">services</a>
+                        <a href="principles" class="border-b border-neutral-500">principles</a>
+                        <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleAboutMenu()">
+                            <span>about us</span>
+                            <img src="img/about-menu.svg" class="w-6" id="about-menu" loading="lazy">
+                            <img src="img/about-menu-close.svg" class="hidden w-6" id="about-menu-close" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden bg-gold-600 px-6 py-4 mb-4" id="about-dropdown">
+                    <div class="flex flex-col space-y-4 font-sarpanch ml-4">
+                        <a href="gettoknowus" class="border-b border-neutral-750">
+                            GET TO KNOW US
+                        </a>
+                        <a href="ourstory" class="border-b border-neutral-750">
+                            OUR STORY
+                        </a>
+                        <a href="meetourteam" class="border-b border-neutral-750">
+                            MEET OUR TEAM
+                        </a>
+                        <a href="faq" class="border-b border-neutral-750">
+                            FAQ
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-neutral-800 flex flex-col text-white font-sarpanch uppercase px-6 pb-6" id="secondary-section-menu" style="margin-top: 16px">
+                    <div class="flex flex-col space-y-4 ml-4">
+                        <a href="contactus" class="border-b border-neutral-500">contact us</a>
+                    </div>
+                    <a href="login" class="flex-1 w-full bg-gold-600 text-neutral-800 text-center py-2 rounded-md mt-12 mb-6">LOGIN</a>
+                </div>
+            </div>
+        </div>
+        <div class="font-michroma h-full grid text-gray-100">
+            <div class="mx-auto flex flex-col justify-center md:py-0 md:pl-0 md:pr-72">
+                <h1 class="font-michroma text-left uppercase tracking-widest text-white">
+                    MEET<br />OUR TEAM
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-neutral-800 flex flex-col xl:items-center">
+        <div class="hidden max-w-6xl mx-auto lg:flex flex-col font-sarpanch px-6 xl:px-0">
+
+            <div class="relative flex flex-col items-center bg-neutral-800 py-32 mt-0 lg:mt-16 mb-0 lg:mb-12">
+                <div class="absolute flex items-center justify-center inset-0">
+                    <div class="md:hidden">
+                        <svg width="220px" height="220px">
+                            <use xlink:href='img/claw-mark.svg#claw' color="#333333"></use>
+                        </svg>
+                    </div>
+                    <div class="hidden md:block">
+                        <svg width="350px" height="350px">
+                            <use xlink:href='img/claw-mark.svg#claw' color="#333333"></use>
+                        </svg>
+                    </div>
+                    <div class="hidden md:block">
+                        <svg width="350px" height="350px">
+                            <use xlink:href='img/claw-mark.svg#claw' color="#333333"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center z-10">
+                    <hr class="w-0.5 h-8 md:h-14 bg-gold-600" />
+                    <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-6">
+                        OUR TEAM
+                    </h2>
+                </div>
+            </div>
+
+            <div class="flex flex-col space-y-14 mb-14">
+                <div class="flex space-x-6">
+                    <img src="img/team/mem_one.png" class="h-full" loading="lazy" />
+                    <div class="relative flex-1">
+                        <img src="img/horizontal-orange-two.svg" class="absolute object-contain top-0 bottom-0 right-0 z-0" loading="lazy" />
+                        <div class="flex-1 flex flex-col translate-x-2 z-10">
+                            <h2 class="font-michroma text-white mt-14">REINIS KREGERS</h2>
+                            <h3 class="font-michroma text-gold-600">FOUNDER</h3>
+                            <p class="[font-variant-caps:small-caps] text-white text-base lg:text-2xl text-justify mt-8 max-w-md">
+                                Reinis, a native of Latvia is someone who is always on a mission whatever the task. he
+                                earned B.S. in Kinesiology from Kansas State University in 2016, and gained coaching
+                                wisdom
+                                through out his 18 year decathlon career from world renowned coaches in the U.S., Czech
+                                Republic and Catvia.
+                            </p>
+                            <p class="[font-variant-caps:small-caps] text-white text-base lg:text-2xl text-justify mt-3 max-w-md">
+                                Currently Reinis and his wife reside in Prague where he still continue straining in the
+                                decathlon under the former world record holder, Roman Šebrle, as well as coaching youth
+                                athletes in Czech baseball and basketball.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex space-x-2">
+                    <div class="relative flex-1">
+                        <img src="img/horizontal-orange-two.svg" class="absolute object-contain top-0 bottom-0 left-0 rotate-180 z-0" loading="lazy" />
+                        <div class="flex-1 flex flex-col items-end -translate-x-6 z-10">
+                            <h2 class="font-michroma text-white mt-14">JAN TESAŘ</h2>
+                            <h3 class="font-michroma text-gold-600">DEVELOPMENT</h3>
+                            <p class="[font-variant-caps:small-caps] text-white text-base lg:text-2xl text-justify max-w-md mt-24">
+                                jan is professional 400 m runner and passion ate fullstack developer who is
+                                currently responsible for creating new features and maintaining the existing.
+                            </p>
+                        </div>
+                    </div>
+                    <img src="img/team/mem_two.png" class="h-full rotate-0" loading="lazy" />
+                </div>
+
+                <div class="flex space-x-6">
+                    <img src="img/team/mem_three.png" class="h-full" loading="lazy" />
+                    <div class="relative flex-1">
+                        <img src="img/horizontal-orange-two.svg" class="absolute object-contain top-0 bottom-0 right-0 z-0" loading="lazy" />
+                        <div class="flex-1 flex flex-col translate-x-2 z-10">
+                            <h2 class="font-michroma text-white mt-14">HANNA FRIDRIK</h2>
+                            <h3 class="font-michroma text-gold-600">GRAPHIC DESIGNER</h3>
+                            <p class="[font-variant-caps:small-caps] text-white text-base lg:text-2xl text-justify mt-24 max-w-md">
+                                I am currently a CEMS Masters programme student at the University of Economics and
+                                Business in Prague.
+                            </p>
+                            <p class="[font-variant-caps:small-caps] text-white text-base lg:text-2xl text-justify mt-3 max-w-md">
+                                Being passionate about sport &amp; graphic design, I went all in when an opportunity to
+                                work on an international project came around. Work on the BST.COACH has been an amazing
+                                ride and seeing how my contribution helps the project mature &amp; grow is incredibly
+                                satisfying.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex space-x-2">
+                    <div class="relative flex-1">
+                        <img src="img/horizontal-orange-two.svg" class="absolute object-contain top-0 bottom-0 left-0 rotate-180 z-0" loading="lazy" />
+                        <div class="flex-1 flex flex-col items-end -translate-x-6 z-10">
+                            <h2 class="font-michroma text-white mt-14">REBEKA OZOLNIECE</h2>
+                            <h3 class="font-michroma text-gold-600">MARKETING</h3>
+                            <p class="[font-variant-caps:small-caps] text-white text-base lg:text-2xl text-justify max-w-md mt-24">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et erat ut ex
+                                scelerisque pharetra.
+                                Mauris commodo
+                                viverra nisi ac convallis. Donec odio sapien, porta sit amet augue ac, finibus volutpat
+                                mi. Praesent
+                                eget mollis nisi,
+                                in bibendum mauris.
+                            </p>
+                        </div>
+                    </div>
+                    <img src="img/team/mem_four.png" class="h-full rotate-0" loading="lazy" />
+                </div>
+
+                <div class="flex space-x-6">
+                    <img src="img/team/mem_four.png" class="h-full" loading="lazy" />
+                    <div class="relative flex-1">
+                        <img src="img/horizontal-orange-two.svg" class="absolute object-contain top-0 bottom-0 right-0 z-0" loading="lazy" />
+                        <div class="flex-1 flex flex-col translate-x-2 z-10">
+                            <h2 class="font-michroma text-white mt-14">CHRISTOPHE TUMMERS</h2>
+                            <h3 class="font-michroma text-gold-600">BELIEVER</h3>
+                            <p class="[font-variant-caps:small-caps] text-white text-base lg:text-2xl text-justify mt-24 max-w-md">
+                                Christophe brings over 25 years of operations and technology experience to the team. A
+                                global citizen, born in Belgium, he worked in Zürich, London, Singapore &amp; NY. He now
+                                calls Switzerland home.
+                            </p>
+                            <p class="[font-variant-caps:small-caps] text-white text-base lg:text-2xl text-justify mt-3 max-w-md">
+                                During COVID, he first set step on a track and still tries to master the basics of
+                                running, jumping and throwing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-base lg:text-xl text-center text-white mb-14">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et erat ut ex scelerisque pharetra.
+                Mauris commodo
+                viverra nisi ac convallis. Donec odio sapien, porta sit amet augue ac, finibus volutpat mi. Praesent
+                eget mollis nisi,
+                in bibendum mauris. Nam vulputate faucibus leo quis eleifend. Duis tincidunt pellentesque pulvinar.
+                Nulla ipsum sapien,
+                rutrum a libero vel, vestibulum pulvinar lorem. Nullam vitae dolor erat.
+            </p>
+
+        </div>
+
+        <div class="lg:hidden">
+            <div class="relative flex justify-center py-32">
+                <div class="flex items-center space-x-3">
+                    <div class="button-prev z-10">
+                        <svg width="42px" height="42px" class="rotate-180 z-10">
+                            <use xlink:href='img/arrow.svg#arrow' color="#FBB03A"></use>
+                        </svg>
+                    </div>
+                    <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center z-10">
+                        GET TO KNOW US
+                    </h2>
+                    <div class="button-next z-10">
+                        <svg width="42px" height="42px" class="z-10">
+                            <use xlink:href='img/arrow.svg#arrow' color="#FBB03A"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="absolute flex items-center justify-center inset-0 z-0">
+                    <svg width="220px" height="220px">
+                        <use xlink:href='img/claw-mark.svg#claw' color="#333333"></use>
+                    </svg>
+                </div>
+            </div>
+
+            <div id="swiper" class="swiper-team overflow-hidden mb-8">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex flex-col text-white px-6">
+                        <img src="img/team/mem_one.png" class="w-3/4 self-center" loading="lazy" />
+                        <h2 class="font-michroma text-center mt-4">REINIS KREGERS</h2>
+                        <h3 class="font-michroma text-gold-600 text-center">FOUNDER</h3>
+                        <hr class="self-center w-6 h-0.5 bg-gold-600 border-gold-600 mt-4" />
+                        <p class="font-sarpanch [font-variant-caps:small-caps] mt-4">
+                            Reinis, a native of Latvia is someone who is always on a mission whatever the task. he
+                            earned B.S. in Kinesiology from Kansas State University in 2016, and gained coaching
+                            wisdom
+                            through out his 18 year decathlon career from world renowned coaches in the U.S., Czech
+                            Republic and Catvia.
+                        </p>
+                        <p class="font-sarpanch [font-variant-caps:small-caps] mt-3">
+                            Currently Reinis and his wife reside in Prague where he still continue straining in the
+                            decathlon under the former world record holder, Roman Šebrle, as well as coaching youth
+                            athletes in Czech baseball and basketball.
+                        </p>
+                    </div>
+                    <div class="swiper-slide flex flex-col text-white px-6">
+                        <img src="img/team/mem_two.png" class="w-3/4 self-center" loading="lazy" />
+                        <h2 class="font-michroma text-center mt-4">JAN TESAŘ</h2>
+                        <h3 class="font-michroma text-gold-600 text-center">DEVELOPMENT</h3>
+                        <hr class="self-center w-6 h-0.5 bg-gold-600 border-gold-600 mt-4" />
+                        <p class="font-sarpanch [font-variant-caps:small-caps] mt-4">
+                            jan is professional 400 m runner and passion ate fullstack developer who is
+                            currently responsible for creating new features and maintaining the existing.
+                        </p>
+                    </div>
+                    <div class="swiper-slide flex flex-col text-white px-6">
+                        <img src="img/team/mem_three.png" class="w-3/4 self-center" loading="lazy" />
+                        <h2 class="font-michroma text-center mt-4">HANNA FRIDRIK</h2>
+                        <h3 class="font-michroma text-gold-600 text-center">GRAPHIC DESIGNER</h3>
+                        <hr class="self-center w-6 h-0.5 bg-gold-600 border-gold-600 mt-4" />
+                        <p class="font-sarpanch [font-variant-caps:small-caps] mt-4">
+                            I am currently a CEMS Masters programme student at the University of Economics and
+                            Business in Prague.
+                        </p>
+                        <p class="font-sarpanch [font-variant-caps:small-caps] mt-3">
+                            Being passionate about sport &amp; graphic design, I went all in when an opportunity to
+                            work on an international project came around. Work on the BST.COACH has been an amazing
+                            ride and seeing how my contribution helps the project mature &amp; grow is incredibly
+                            satisfying.
+                        </p>
+                    </div>
+                    <div class="swiper-slide flex flex-col text-white px-6">
+                        <img src="img/team/mem_four.png" class="w-3/4 self-center" loading="lazy" />
+                        <h2 class="font-michroma text-center mt-4">REBEKA OZOLNIECE</h2>
+                        <h3 class="font-michroma text-gold-600 text-center">MARKETING</h3>
+                        <hr class="self-center w-6 h-0.5 bg-gold-600 border-gold-600 mt-4" />
+                        <p class="font-sarpanch [font-variant-caps:small-caps] mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et erat ut ex scelerisque
+                            pharetra.
+                            Mauris commodo
+                            viverra nisi ac convallis. Donec odio sapien, porta sit amet augue ac, finibus volutpat mi.
+                            Praesent
+                            eget mollis nisi,
+                            in bibendum mauris.
+                        </p>
+                    </div>
+                    <div class="swiper-slide flex flex-col text-white px-6">
+                        <img src="img/team/mem_four.png" class="w-3/4 self-center" loading="lazy" />
+                        <h2 class="font-michroma text-center mt-4">CHRISTOPHE TUMMERS</h2>
+                        <h3 class="font-michroma text-gold-600 text-center">BELIEVER</h3>
+                        <hr class="self-center w-6 h-0.5 bg-gold-600 border-gold-600 mt-4" />
+                        <p class="font-sarpanch [font-variant-caps:small-caps] mt-4">
+                            Christophe brings over 25 years of operations and technology experience to the team. A
+                            global citizen, born in Belgium, he worked in Zürich, London, Singapore &amp; NY. He now
+                            calls Switzerland home.
+                        </p>
+                        <p class="font-sarpanch [font-variant-caps:small-caps] mt-3">
+                            During COVID, he first set step on a track and still tries to master the basics of
+                            running, jumping and throwing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-neutral-750 text-white flex flex-col lg:flex-row justify-center px-16 py-12">
+        <div class="max-w-6xl w-full flex flex-col lg:flex-row">
+            <div class="flex flex-col justify-between items-center">
+                <img src="img/footer-logo.svg" loading="lazy">
+                <div class="hidden md:flex flex-col items-center font-sarpanch font-medium">
+                    <span class="[font-variant-caps:small-caps] text-xxs text-center">Passionate collaboration
+                        between</span>
+                    <span class="[font-variant-caps:small-caps] text-xxs text-center">Latvian, Czech, Ukrainian, and
+                        Swiss wisdom</span>
+                    <div class="flex space-x-4 mt-2">
+                        <img src="img/flags/latvian.svg" loading="lazy">
+                        <img src="img/flags/czech.svg" loading="lazy">
+                        <img src="img/flags/ukrainian.svg" loading="lazy">
+                        <img src="img/flags/swiss.svg" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+            </div>
+            <div class="lg:flex-1 flex items-center mt-8 lg:mt-0">
+                <div class="flex-1 flex items-center justify-center">
+                    <a href="https://www.instagram.com/bst.coach/">
+                        <img src="img/socials/instagram.svg" class="w-8 lg:w-11" loading="lazy">
+                    </a>
+                </div>
+                <div class="flex-1 flex items-center justify-center">
+                    <a href="#">
+                        <img src="img/socials/linkedin.svg" class="w-8 lg:w-11" loading="lazy">
+                    </a>
+                </div>
+                <div class="flex-1 flex items-center justify-center">
+                    <a href="#">
+                        <img src="img/socials/facebook.svg" class="w-8 lg:w-11" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col text-center lg:text-start font-michroma">
+            <h3 class="hidden lg:block">HELP</h3>
+            <div class="flex flex-col space-y-1 mt-8 text-xs md:text-sm">
+                <a href="mailto:info@bst.coach" class="uppercase text-gold-600 font-sarpanch">
+                    info@bst.coach
+                </a>
+                <a href="faq" class="[font-variant-caps:small-caps]">Support Center/FAQ</a>
+                <a href="termsandconditions" class="[font-variant-caps:small-caps]">Terms and Conditions</a>
+                <a href="cookies" class="[font-variant-caps:small-caps]">Cookies</a>
+            </div>
+            <div class="flex md:hidden flex-col items-center font-sarpanch font-medium mt-4">
+                <span class="[font-variant-caps:small-caps] text-xs text-center">Passionate collaboration
+                    between</span>
+                <span class="[font-variant-caps:small-caps] text-xs text-center">Latvian, Czech, Ukrainian, and
+                    Swiss
+                    wisdom</span>
+                <div class="flex space-x-4 mt-2">
+                    <img src="img/flags/latvian.svg" loading="lazy">
+                    <img src="img/flags/czech.svg" loading="lazy">
+                    <img src="img/flags/ukrainian.svg" loading="lazy">
+                    <img src="img/flags/swiss.svg" loading="lazy">
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script>
+        function toggleMenu() {
+            var h = document.getElementById("header");
+            var x = document.getElementById("menu");
+            var y = document.getElementById("openMenuSvg");
+            var z = document.getElementById("closeMenuSvg");
+
+            var a = document.getElementById("about-dropdown");
+            var b = document.getElementById("about-menu");
+            var c = document.getElementById("about-menu-close");
+            var d = document.getElementById("secondary-section-menu");
+
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                y.style.display = "block";
+                z.style.display = "none";
+                h.style.background = "linear-gradient(rgba(0,0,0,1) 0%,rgba(0,0,0,0.8) 40%,rgba(0,0,0,0.3) 100%)";
+
+                a.style.display = "none";
+                b.style.display = "block";
+                c.style.display = "none";
+                d.style.marginTop = "16px";
+            } else {
+                x.style.display = "block";
+                y.style.display = "none";
+                z.style.display = "block";
+                h.style.background = "#262626";
+            }
+        }
+
+        function toggleAboutMenu() {
+            var a = document.getElementById("about-dropdown");
+            var b = document.getElementById("about-menu");
+            var c = document.getElementById("about-menu-close");
+            var d = document.getElementById("secondary-section-menu");
+
+            if (a.style.display === "block") {
+                a.style.display = "none";
+                b.style.display = "block";
+                c.style.display = "none";
+                d.style.marginTop = "16px";
+            } else {
+                a.style.display = "block";
+                b.style.display = "none";
+                c.style.display = "block";
+                d.style.marginTop = "0px";
+            }
+        }
+
+        const swiper = new Swiper('.swiper-team', {
+            loop: true,
+            // lazy: true,
+            autoHeight: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+            },
+            navigation: {
+                nextEl: '.button-next',
+                prevEl: '.button-prev',
+            },
+        });
+
+        function goToSlide(num) {
+            swiper.slideTo(num);
+        }
+    </script>
+</body>
+
+</html>
