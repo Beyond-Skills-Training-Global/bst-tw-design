@@ -47,7 +47,24 @@
                     <div class="flex flex-wrap items-center uppercase text-sm justify-around gap-2 xl:gap-4 flex-1 font-sarpanch ">
                         <a href="/" class="px-2 py-1 bg-neutral-800/50 text-gold-600 transition-all ease-in-out duration-300">Home</a>
                         <a href="features" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">features</a>
-                        <a href="services" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">services</a>
+                        <div class="group">
+                            <div class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
+                                services
+                            </div>
+                            <div class="absolute hidden transition-all duration-200 ease-linear group-hover:block">
+                                <div class="flex flex-col space-y-1 bg-gold-600 text-neutral-750 p-2 shadow-lg transition-all duration-200 ease-linear">
+                                    <a href="trainingplatform" class="hover:underline">
+                                        Training Platform
+                                    </a>
+                                    <a href="personaltraining" class="hover:underline">
+                                        Personal Training
+                                    </a>
+                                    <a href="coachingconsultations" class="hover:underline">
+                                        Coaching Consultations
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <a href="pricing" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">pricing</a>
                         <div class="group">
                             <div class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
@@ -74,9 +91,9 @@
                             us</a>
                         <a href="register" class="text-gold-600 border border-gold-600 px-3">join us</a>
                     </div>
-                    <hr class="w-0.1 h-6 md:h-8 bg-white self-center mx-3">
-                    <a href="login" class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log
-                        in</a>
+
+                    <hr class="w-0.1 h-6 md:h-8 bg-white self-center mx-3" />
+                    <a href="login" class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log in</a>
                 </div>
             </div>
             <div class="hidden" id="menu">
@@ -84,8 +101,31 @@
                     <div class="flex flex-col space-y-4 ml-4">
                         <a href="index" class="border-b border-neutral-500">home</a>
                         <a href="features" class="border-b border-neutral-500">features</a>
-                        <a href="services" class="border-b border-neutral-500">services</a>
 
+                        <!-- <a href="services" class="border-b border-neutral-500">services</a> -->
+                        <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleServiceMenu()">
+                            <span>Services</span>
+                            <img src="img/about-menu.svg" class="w-6" id="service-menu" loading="lazy">
+                            <img src="img/about-menu-close.svg" class="hidden w-6" id="service-menu-close" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden bg-gold-600 px-6 py-4 mb-4" id="service-dropdown">
+                    <div class="flex flex-col space-y-4 font-sarpanch ml-4">
+                        <a href="trainingplatform" class="border-b border-neutral-750">
+                            Training Platform
+                        </a>
+                        <a href="personaltraining" class="border-b border-neutral-750">
+                            Personal Training
+                        </a>
+                        <a href="coachingconsultations" class="border-b border-neutral-750">
+                            Coaching Consultations
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-neutral-800 flex flex-col text-white font-sarpanch uppercase px-6" id="services-secondary-section-menu" style="margin-top: 16px">
+                    <div class="flex flex-col space-y-4 ml-4">
+                        <a href="principles" class="border-b border-neutral-500">principles</a>
                         <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleAboutMenu()">
                             <span>about us</span>
                             <img src="img/about-menu.svg" class="w-6" id="about-menu" loading="lazy">
@@ -173,7 +213,7 @@
                     </div>
                     <div class="h-full flex flex-col items-center md:pt-12 pb-16">
                         <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10" src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                            id="vimeoiframe" allowfullscreen="" title="WHAT IS BST.COACH?"></iframe>
+                            id="vimeoiframe" allowfullscreen title="WHAT IS BST.COACH?"></iframe>
                         <h3 class="font-sarpanch text-white text-center mt-8 z-10">
                             OUR TRAINING PLATFORM LETS COACHES
                         </h3>
@@ -662,8 +702,8 @@
                         </svg>
                     </div>
                     <div class="hidden md:flex swiper-pagination !w-auto !relative !self-center !bottom-0 space-x-2 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0"></span><span class="swiper-pagination-bullet" tabindex="0"></span>
-                        <span
-                            class="swiper-pagination-bullet" tabindex="0"></span><span class="swiper-pagination-bullet" tabindex="0"></span><span class="swiper-pagination-bullet" tabindex="0"></span><span class="swiper-pagination-bullet" tabindex="0"></span></div>
+                        <span class="swiper-pagination-bullet" tabindex="0"></span><span class="swiper-pagination-bullet" tabindex="0"></span><span class="swiper-pagination-bullet" tabindex="0"></span><span class="swiper-pagination-bullet" tabindex="0"></span>
+                    </div>
                     <div class="flex items-center justify-center button-next scale-75 z-10" tabindex="0" role="button" aria-label="Next slide" aria-controls="testimonial_container_desktop">
                         <svg width="42px" height="42px">
                             <use xlink:href="img/arrow.svg#arrow" color="white"></use>
@@ -839,11 +879,23 @@
             var y = document.getElementById("openMenuSvg");
             var z = document.getElementById("closeMenuSvg");
 
-            var a = document.getElementById("about-dropdown");
-            var b = document.getElementById("about-menu");
-            var c = document.getElementById("about-menu-close");
-            var d = document.getElementById("secondary-section-menu");
 
+            const swiperDesktop = new Swiper('.swiper-desktop', {
+                loop: true,
+                lazy: true,
+                autoHeight: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function(index, className) {
+                        return '<span class="' + className + '"></span>';
+                    },
+                },
+                navigation: {
+                    nextEl: '.button-next',
+                    prevEl: '.button-prev',
+                },
+            });
             if (x.style.display === "block") {
                 x.style.display = "none";
                 y.style.display = "block";
@@ -859,6 +911,26 @@
                 y.style.display = "none";
                 z.style.display = "block";
                 h.style.background = "#262626";
+            }
+        }
+
+
+        function toggleServiceMenu() {
+            var a = document.getElementById("service-dropdown");
+            var b = document.getElementById("service-menu");
+            var c = document.getElementById("service-menu-close");
+            var d = document.getElementById("service-secondary-section-menu");
+
+            if (a.style.display === "block") {
+                a.style.display = "none";
+                b.style.display = "block";
+                c.style.display = "none";
+                d.style.marginTop = "16px";
+            } else {
+                a.style.display = "block";
+                b.style.display = "none";
+                c.style.display = "block";
+                d.style.marginTop = "0px";
             }
         }
 
