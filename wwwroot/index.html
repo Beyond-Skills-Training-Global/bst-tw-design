@@ -53,7 +53,7 @@
                             </div>
                             <div class="absolute hidden transition-all duration-200 ease-linear group-hover:block">
                                 <div class="flex flex-col space-y-1 bg-gold-600 text-neutral-750 p-2 shadow-lg transition-all duration-200 ease-linear">
-                                    <a href="trainingplatform" class="hover:underline">
+                                    <a href="/" class="hover:underline">
                                         Training Platform
                                     </a>
                                     <a href="personaltraining" class="hover:underline">
@@ -767,7 +767,7 @@
                         </a>
                     </div>
                     <div class="flex-1 flex items-center justify-center">
-                        <a href="#">
+                        <a href="https://www.tiktok.com/@bst.coach">
                             <img src="img/socials/tiktok.svg" class="w-8 lg:w-11" loading="lazy">
                         </a>
                     </div>
@@ -784,9 +784,11 @@
                     <a href="mailto:info@bst.coach" class="uppercase font-sarpanch hover:text-gold-600 transition-all ease-in-out duration-300">
                         info@bst.coach
                     </a>
+
                     <a href="faq" class="[font-variant-caps:small-caps] hover:text-gold-600 transition-all ease-in-out duration-300">Support Center/FAQ</a>
                     <a href="termsandconditions" class="[font-variant-caps:small-caps] hover:text-gold-600 transition-all ease-in-out duration-300">Terms and Conditions</a>
                     <a href="cookies" class="[font-variant-caps:small-caps] hover:text-gold-600 transition-all ease-in-out duration-300">Cookies</a>
+
                 </div>
                 <div class="flex md:hidden flex-col items-center font-sarpanch font-medium mt-4">
                     <span class="[font-variant-caps:small-caps] text-xs text-center">Passionate collaboration between</span>
@@ -880,22 +882,6 @@
                 var z = document.getElementById("closeMenuSvg");
 
 
-                const swiperDesktop = new Swiper('.swiper-desktop', {
-                    loop: true,
-                    lazy: true,
-                    autoHeight: true,
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                        renderBullet: function (index, className) {
-                            return '<span class="' + className + '"></span>';
-                        },
-                    },
-                    navigation: {
-                        nextEl: '.button-next',
-                        prevEl: '.button-prev',
-                    },
-                });
                 if (x.style.display === "block") {
                     x.style.display = "none";
                     y.style.display = "block";
@@ -913,6 +899,45 @@
                     h.style.background = "#262626";
                 }
             }
+
+            function toggleServiceMenu() {
+                var a = document.getElementById("service-dropdown");
+                var b = document.getElementById("service-menu");
+                var c = document.getElementById("service-menu-close");
+                var d = document.getElementById("services-secondary-section-menu");
+
+                if (a.style.display === "block") {
+                    a.style.display = "none";
+                    b.style.display = "block";
+                    c.style.display = "none";
+                    d.style.marginTop = "16px";
+                } else {
+                    a.style.display = "block";
+                    b.style.display = "none";
+                    c.style.display = "block";
+                    d.style.marginTop = "0px";
+                }
+            }
+
+            function toggleAboutMenu() {
+                var a = document.getElementById("about-dropdown");
+                var b = document.getElementById("about-menu");
+                var c = document.getElementById("about-menu-close");
+                var d = document.getElementById("secondary-section-menu");
+
+                if (a.style.display === "block") {
+                    a.style.display = "none";
+                    b.style.display = "block";
+                    c.style.display = "none";
+                    d.style.marginTop = "16px";
+                } else {
+                    a.style.display = "block";
+                    b.style.display = "none";
+                    c.style.display = "block";
+                    d.style.marginTop = "0px";
+                }
+            }
+
         </script>
 
         <script>
