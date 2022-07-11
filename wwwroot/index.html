@@ -877,23 +877,6 @@
                 var y = document.getElementById("openMenuSvg");
                 var z = document.getElementById("closeMenuSvg");
 
-
-                const swiperDesktop = new Swiper('.swiper-desktop', {
-                    loop: true,
-                    lazy: true,
-                    autoHeight: true,
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                        renderBullet: function(index, className) {
-                            return '<span class="' + className + '"></span>';
-                        },
-                    },
-                    navigation: {
-                        nextEl: '.button-next',
-                        prevEl: '.button-prev',
-                    },
-                });
                 if (x.style.display === "block") {
                     x.style.display = "none";
                     y.style.display = "block";
@@ -917,7 +900,7 @@
                 var a = document.getElementById("service-dropdown");
                 var b = document.getElementById("service-menu");
                 var c = document.getElementById("service-menu-close");
-                var d = document.getElementById("service-secondary-section-menu");
+                var d = document.getElementById("services-secondary-section-menu");
 
                 if (a.style.display === "block") {
                     a.style.display = "none";
