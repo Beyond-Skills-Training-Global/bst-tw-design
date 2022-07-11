@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <title>BST.coach</title>
+    <base href="/wwwroot/" />
+
+
     <meta name="title" content="BST.coach">
     <meta name="description" content="Sports training platform with a comprehensive exercise library that lets coaches scale their work.">
     <link href="css/app.min.css" rel="stylesheet">
@@ -248,7 +251,7 @@
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
-                renderBullet: function (index, className) {
+                renderBullet: function(index, className) {
                     return '<span class="' + className + '"></span>';
                 },
             },
