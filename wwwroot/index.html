@@ -211,8 +211,7 @@
                         <img src="img/horizontal-orange.svg" class="w-full" loading="lazy">
                     </div>
                     <div class="h-full flex flex-col items-center md:pt-12 pb-16">
-                        <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10" src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                            id="vimeoiframe" allowfullscreen title="WHAT IS BST.COACH?"></iframe>
+                        <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10" src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" id="vimeoiframe" allowfullscreen title="WHAT IS BST.COACH?"></iframe>
                         <h3 class="font-sarpanch text-white text-center mt-8 z-10">
                             OUR TRAINING PLATFORM LETS COACHES
                         </h3>
@@ -801,48 +800,6 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col">
-            </div>
-            <div class="lg:flex-1 flex items-center mt-8 lg:mt-0">
-                <div class="flex-1 flex items-center justify-center">
-                    <a href="https://www.instagram.com/bst.coach/">
-                        <img src="img/socials/instagram.svg" class="w-8 lg:w-11" loading="lazy">
-                    </a>
-                </div>
-                <div class="flex-1 flex items-center justify-center">
-                    <a href="#">
-                        <img src="img/socials/linkedin.svg" class="w-8 lg:w-11" loading="lazy">
-                    </a>
-                </div>
-                <div class="flex-1 flex items-center justify-center">
-                    <a href="#">
-                        <img src="img/socials/facebook.svg" class="w-8 lg:w-11" loading="lazy">
-                    </a>
-                </div>
-            </div>
-            </div>
-            <div class="flex flex-col text-center lg:text-start font-michroma">
-                <h3 class="hidden lg:block">HELP</h3>
-                <div class="flex flex-col space-y-1 mt-8 text-xs md:text-sm">
-                    <a href="mailto:info@bst.coach" class="uppercase text-gold-600 font-sarpanch">
-                        info@bst.coach
-                    </a>
-                    <a href="faq" class="[font-variant-caps:small-caps]">Support Center/FAQ</a>
-                    <a href="termsandconditions" class="[font-variant-caps:small-caps]">Terms and Conditions</a>
-                    <a href="cookies" class="[font-variant-caps:small-caps]">Cookies</a>
-                </div>
-                <div class="flex md:hidden flex-col items-center font-sarpanch font-medium mt-4">
-                    <span class="[font-variant-caps:small-caps] text-xs text-center">Passionate collaboration between</span>
-                    <span class="[font-variant-caps:small-caps] text-xs text-center">Latvian, Czech, Ukrainian, and Swiss
-                        wisdom</span>
-                    <div class="flex space-x-4 mt-2">
-                        <img src="img/flags/latvian.svg" loading="lazy">
-                        <img src="img/flags/czech.svg" loading="lazy">
-                        <img src="img/flags/ukrainian.svg" loading="lazy">
-                        <img src="img/flags/swiss.svg" loading="lazy">
-                    </div>
-                </div>
-            </div>
 
         </footer>
 
@@ -903,7 +860,7 @@
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
-                    renderBullet: function(index, className) {
+                    renderBullet: function (index, className) {
                         return '<span class="' + className + '"></span>';
                     },
                 },
@@ -928,7 +885,7 @@
                     pagination: {
                         el: ".swiper-pagination",
                         clickable: true,
-                        renderBullet: function(index, className) {
+                        renderBullet: function (index, className) {
                             return '<span class="' + className + '"></span>';
                         },
                     },
@@ -1026,7 +983,7 @@
         <script type="text/javascript">
             // <![CDATA[  <-- For SVG support
             if ('WebSocket' in window) {
-                (function() {
+                (function () {
                     function refreshCSS() {
                         var sheets = [].slice.call(document.getElementsByTagName("link"));
                         var head = document.getElementsByTagName("head")[0];
@@ -1045,7 +1002,7 @@
                     var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
                     var address = protocol + window.location.host + window.location.pathname + '/ws';
                     var socket = new WebSocket(address);
-                    socket.onmessage = function(msg) {
+                    socket.onmessage = function (msg) {
                         if (msg.data == 'reload') window.location.reload();
                         else if (msg.data == 'refreshcss') refreshCSS();
                     };
