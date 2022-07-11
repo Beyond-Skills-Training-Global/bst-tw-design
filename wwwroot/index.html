@@ -2,10 +2,14 @@
 <html>
 
 <head>
+    <base href="/wwwroot/" />
+    <!-- not this in prod ↑↑↑ -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <title>BST.coach</title>
+
     <meta name="title" content="BST.coach">
     <meta name="description" content="Sports training platform with a comprehensive exercise library that lets coaches scale their work.">
     <link href="css/app.min.css" rel="stylesheet">
@@ -42,9 +46,26 @@
                 </a>
                 <div class="hidden lg:flex flex-1">
                     <div class="flex flex-wrap items-center uppercase text-sm justify-around gap-2 xl:gap-4 flex-1 font-sarpanch ">
-                        <a href="index" class="px-2 py-1 bg-neutral-800/50 text-gold-600 transition-all ease-in-out duration-300">Home</a>
+                        <a href="/" class="px-2 py-1 bg-neutral-800/50 text-gold-600 transition-all ease-in-out duration-300">Home</a>
                         <a href="features" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">features</a>
-                        <a href="services" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">services</a>
+                        <div class="group">
+                            <div class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
+                                services
+                            </div>
+                            <div class="absolute hidden transition-all duration-200 ease-linear group-hover:block">
+                                <div class="flex flex-col space-y-1 bg-gold-600 text-neutral-750 p-2 shadow-lg transition-all duration-200 ease-linear">
+                                    <a href="trainingplatform" class="hover:underline">
+                                        Training Platform
+                                    </a>
+                                    <a href="personaltraining" class="hover:underline">
+                                        Personal Training
+                                    </a>
+                                    <a href="coachingconsultations" class="hover:underline">
+                                        Coaching Consultations
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <a href="pricing" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">pricing</a>
                         <div class="group">
                             <div class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
@@ -67,13 +88,12 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="contactus" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">contact
+                        <a href="#footer" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">contact
                             us</a>
-                        <a href="registration" class="text-gold-600 border border-gold-600 px-3">join us</a>
+                        <a href="register" class="text-gold-600 border border-gold-600 px-3">join us</a>
                     </div>
                     <hr class="w-0.1 h-6 md:h-8 bg-white self-center mx-3" />
-                    <a href="login" class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log
-                        in</a>
+                    <a href="login" class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log in</a>
                 </div>
             </div>
             <div class="hidden" id="menu">
@@ -81,7 +101,29 @@
                     <div class="flex flex-col space-y-4 ml-4">
                         <a href="index" class="border-b border-neutral-500">home</a>
                         <a href="features" class="border-b border-neutral-500">features</a>
-                        <a href="services" class="border-b border-neutral-500">services</a>
+                        <!-- <a href="services" class="border-b border-neutral-500">services</a> -->
+                        <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleServiceMenu()">
+                            <span>Services</span>
+                            <img src="img/about-menu.svg" class="w-6" id="service-menu" loading="lazy">
+                            <img src="img/about-menu-close.svg" class="hidden w-6" id="service-menu-close" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden bg-gold-600 px-6 py-4 mb-4" id="service-dropdown">
+                    <div class="flex flex-col space-y-4 font-sarpanch ml-4">
+                        <a href="trainingplatform" class="border-b border-neutral-750">
+                            Training Platform
+                        </a>
+                        <a href="personaltraining" class="border-b border-neutral-750">
+                            Personal Training
+                        </a>
+                        <a href="coachingconsultations" class="border-b border-neutral-750">
+                            Coaching Consultations
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-neutral-800 flex flex-col text-white font-sarpanch uppercase px-6" id="services-secondary-section-menu" style="margin-top: 16px">
+                    <div class="flex flex-col space-y-4 ml-4">
                         <a href="principles" class="border-b border-neutral-500">principles</a>
                         <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleAboutMenu()">
                             <span>about us</span>
@@ -131,7 +173,7 @@
             </div>
         </div>
     </section>
-    <div class="bg-neutral-800 flex flex-col xl:items-center">
+    <main role="main" class="bg-neutral-800 flex flex-col xl:items-center">
         <div class="max-w-6xl mx-auto overflow-x-hidden">
             <section class="section-with-vimeo relative flex flex-col" id="video-platform">
                 <div class="relative flex flex-col items-center bg-neutral-800 py-32">
@@ -179,7 +221,7 @@
                 <div class="bg-white hover:bg-gold-600 group flex flex-col items-center py-9 px-4 md:px-16">
                     <h2 class="text-center font-michroma">
                         BST.COACH<br class="md:hidden" /> IS OPEN FOR COACHES!</h2>
-                    <a href="registration" class="w-full text-center max-w-4xl bg-gold-600 py-2.5 md:py-2 mt-6 font-michroma hover:border  hover:border-neutral-800">
+                    <a href="register" class="w-full text-center max-w-4xl bg-gold-600 py-2.5 md:py-2 mt-6 font-michroma hover:border  hover:border-neutral-800">
                         JOIN BST.COACH NOW
                     </a>
                     <a href="https://bst.coach/training/BST.COACH-DEMO-TRAINING" class="w-full text-center max-w-4xl bg-neutral-800 text-white py-2.5 md:py-2 mt-6 font-michroma hover:text-neutral-800 hover:bg-white">
@@ -483,23 +525,64 @@
                     <span class="text-white text-center md:hidden font-michroma">
                         BST.COACH<br class="md:hidden" />IS OPEN FOR COACHES!</span>
 
-                    <a href="registration" class="w-full text-center max-w-4xl bg-gold-600 py-2.5 md:py-2 mt-6 font-michroma self-center">
+                    <a href="register" class="w-full text-center max-w-4xl bg-gold-600 py-2.5 md:py-2 mt-6 font-michroma self-center">
                         JOIN BST.COACH
                     </a>
                 </div>
             </section>
 
         </div>
-    </div>
-    <footer class="bg-neutral-750 text-white flex flex-col lg:flex-row justify-center px-16 py-12">
-        <div class="max-w-6xl w-full flex flex-col lg:flex-row">
-            <div class="flex flex-col justify-between items-center">
-                <img src="img/footer-logo.svg" loading="lazy">
-                <div class="hidden md:flex flex-col items-center font-sarpanch font-medium">
-                    <span class="[font-variant-caps:small-caps] text-xxs text-center">Passionate collaboration
-                        between</span>
-                    <span class="[font-variant-caps:small-caps] text-xxs text-center">Latvian, Czech, Ukrainian, and
-                        Swiss wisdom</span>
+        <footer id="footer" class="bg-neutral-750 text-white flex flex-col lg:flex-row justify-center px-16 py-12">
+            <div class="max-w-6xl w-full flex flex-col lg:flex-row">
+                <div class="flex flex-col justify-between items-center">
+                    <img src="img/footer-logo.svg" loading="lazy">
+                    <div class="hidden md:flex flex-col items-center font-sarpanch font-medium">
+                        <span class="[font-variant-caps:small-caps] text-xxs text-center">Passionate collaboration
+                            between</span>
+                        <span class="[font-variant-caps:small-caps] text-xxs text-center">Latvian, Czech, Ukrainian, and
+                            Swiss wisdom</span>
+                        <div class="flex space-x-4 mt-2">
+                            <img src="img/flags/latvian.svg" loading="lazy">
+                            <img src="img/flags/czech.svg" loading="lazy">
+                            <img src="img/flags/ukrainian.svg" loading="lazy">
+                            <img src="img/flags/swiss.svg" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                </div>
+                <div class="lg:flex-1 flex items-center mt-8 lg:mt-0">
+                    <div class="flex-1 flex items-center justify-center">
+                        <a href="https://www.instagram.com/bst.coach/">
+                            <img src="img/socials/instagram.svg" class="w-8 lg:w-11" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="flex-1 flex items-center justify-center">
+                        <a href="#">
+                            <img src="img/socials/linkedin.svg" class="w-8 lg:w-11" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="flex-1 flex items-center justify-center">
+                        <a href="#">
+                            <img src="img/socials/facebook.svg" class="w-8 lg:w-11" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col text-center lg:text-start font-michroma">
+                <h3 class="hidden lg:block">HELP</h3>
+                <div class="flex flex-col space-y-1 mt-8 text-xs md:text-sm">
+                    <a href="mailto:info@bst.coach" class="uppercase text-gold-600 font-sarpanch">
+                        info@bst.coach
+                    </a>
+                    <a href="faq" class="[font-variant-caps:small-caps]">Support Center/FAQ</a>
+                    <a href="termsandconditions" class="[font-variant-caps:small-caps]">Terms and Conditions</a>
+                    <a href="cookies" class="[font-variant-caps:small-caps]">Cookies</a>
+                </div>
+                <div class="flex md:hidden flex-col items-center font-sarpanch font-medium mt-4">
+                    <span class="[font-variant-caps:small-caps] text-xs text-center">Passionate collaboration between</span>
+                    <span class="[font-variant-caps:small-caps] text-xs text-center">Latvian, Czech, Ukrainian, and Swiss
+                        wisdom</span>
                     <div class="flex space-x-4 mt-2">
                         <img src="img/flags/latvian.svg" loading="lazy">
                         <img src="img/flags/czech.svg" loading="lazy">
@@ -508,65 +591,23 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col">
             </div>
-            <div class="lg:flex-1 flex items-center mt-8 lg:mt-0">
-                <div class="flex-1 flex items-center justify-center">
-                    <a href="https://www.instagram.com/bst.coach/">
-                        <img src="img/socials/instagram.svg" class="w-8 lg:w-11" loading="lazy">
-                    </a>
-                </div>
-                <div class="flex-1 flex items-center justify-center">
-                    <a href="#">
-                        <img src="img/socials/linkedin.svg" class="w-8 lg:w-11" loading="lazy">
-                    </a>
-                </div>
-                <div class="flex-1 flex items-center justify-center">
-                    <a href="#">
-                        <img src="img/socials/facebook.svg" class="w-8 lg:w-11" loading="lazy">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="flex flex-col text-center lg:text-start font-michroma">
-            <h3 class="hidden lg:block">HELP</h3>
-            <div class="flex flex-col space-y-1 mt-8 text-xs md:text-sm">
-                <a href="mailto:info@bst.coach" class="uppercase text-gold-600 font-sarpanch">
-                    info@bst.coach
-                </a>
-                <a href="faq" class="[font-variant-caps:small-caps]">Support Center/FAQ</a>
-                <a href="termsandconditions" class="[font-variant-caps:small-caps]">Terms and Conditions</a>
-                <a href="cookies" class="[font-variant-caps:small-caps]">Cookies</a>
-            </div>
-            <div class="flex md:hidden flex-col items-center font-sarpanch font-medium mt-4">
-                <span class="[font-variant-caps:small-caps] text-xs text-center">Passionate collaboration between</span>
-                <span class="[font-variant-caps:small-caps] text-xs text-center">Latvian, Czech, Ukrainian, and Swiss
-                    wisdom</span>
-                <div class="flex space-x-4 mt-2">
-                    <img src="img/flags/latvian.svg" loading="lazy">
-                    <img src="img/flags/czech.svg" loading="lazy">
-                    <img src="img/flags/ukrainian.svg" loading="lazy">
-                    <img src="img/flags/swiss.svg" loading="lazy">
-                </div>
-            </div>
-        </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
-    <script>
-        let testimonial_mobile = ``;
-        let testimonial_desktop = ``;
-        let ii = 0;
-        for (const x of testimonials) //defined in data.js
-        {
-            ii++;
-            var imgDesktop = 'img/testimonials/testimonial' + String(ii).padStart(2, '0') + '.jpg';
-            var imgMobile = imgDesktop;
-            if (x.imgDesktop) imgDesktop = x.imgDesktop;
-            if (x.imgMobile) imgMobile = x.imgMobile;
+        <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
+        <script>
+            let testimonial_mobile = ``;
+            let testimonial_desktop = ``;
+            let ii = 0;
+            for (const x of testimonials) //defined in data.js
+            {
+                ii++;
+                var imgDesktop = 'img/testimonials/testimonial' + String(ii).padStart(2, '0') + '.jpg';
+                var imgMobile = imgDesktop;
+                if (x.imgDesktop) imgDesktop = x.imgDesktop;
+                if (x.imgMobile) imgMobile = x.imgMobile;
 
-            testimonial_mobile += `<div class="h-full flex flex-col items-center justify-between swiper-slide bg-gold-600 rounded-2xl p-6">
+                testimonial_mobile += `<div class="h-full flex flex-col items-center justify-between swiper-slide bg-gold-600 rounded-2xl p-6">
                         <img src="${imgMobile}" class="w-2/3 rounded-xl object-cover object-top" loading="lazy">
                         <p class="text-xxs font-michroma text-center mt-6">
                             "${x.text}"
@@ -575,7 +616,7 @@
                         <span class="text-center font-michroma text-xs mt-2">${x.bio}</span>
                     </div>`;
 
-            testimonial_desktop += `<div class="flex items-center swiper-slide">
+                testimonial_desktop += `<div class="flex items-center swiper-slide">
                     <div class="flex-1 flex flex-col items-center justify-center rounded-2xl pl-16 lg:pl-24 pr-36 lg:pr-44 my-12 lg:my-10">
                         <p class="font-sarpanch text-center -mb-4">
                             "${x.text}"
@@ -590,113 +631,132 @@
                     </div>
                 </div>`;
 
-        }
-        document.getElementById("testimonial_container_mobile").innerHTML = testimonial_mobile;
-        document.getElementById("testimonial_container_desktop").innerHTML = testimonial_desktop;
+            }
+            document.getElementById("testimonial_container_mobile").innerHTML = testimonial_mobile;
+            document.getElementById("testimonial_container_desktop").innerHTML = testimonial_desktop;
 
-        const swiperMobile = new Swiper('.swiper', {
-            effect: "cards",
-            loop: true,
-            lazy: true,
-            navigation: {
-                nextEl: '.button-next',
-                prevEl: '.button-prev',
-            },
-        });
-
-        const swiperDesktop = new Swiper('.swiper-desktop', {
-            loop: true,
-            lazy: true,
-            autoHeight: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '"></span>';
+            const swiperMobile = new Swiper('.swiper', {
+                effect: "cards",
+                loop: true,
+                lazy: true,
+                navigation: {
+                    nextEl: '.button-next',
+                    prevEl: '.button-prev',
                 },
-            },
-            navigation: {
-                nextEl: '.button-next',
-                prevEl: '.button-prev',
-            },
-        });
+            });
 
-        function toggleMenu() {
-            var h = document.getElementById("header");
-            var x = document.getElementById("menu");
-            var y = document.getElementById("openMenuSvg");
-            var z = document.getElementById("closeMenuSvg");
+            const swiperDesktop = new Swiper('.swiper-desktop', {
+                loop: true,
+                lazy: true,
+                autoHeight: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '"></span>';
+                    },
+                },
+                navigation: {
+                    nextEl: '.button-next',
+                    prevEl: '.button-prev',
+                },
+            });
 
-            var a = document.getElementById("about-dropdown");
-            var b = document.getElementById("about-menu");
-            var c = document.getElementById("about-menu-close");
-            var d = document.getElementById("secondary-section-menu");
+            function toggleMenu() {
+                var h = document.getElementById("header");
+                var x = document.getElementById("menu");
+                var y = document.getElementById("openMenuSvg");
+                var z = document.getElementById("closeMenuSvg");
 
-            if (x.style.display === "block") {
-                x.style.display = "none";
-                y.style.display = "block";
-                z.style.display = "none";
-                h.style.background = "linear-gradient(rgba(0,0,0,1) 0%,rgba(0,0,0,0.8) 40%,rgba(0,0,0,0.3) 100%)";
+                var a = document.getElementById("about-dropdown");
+                var b = document.getElementById("about-menu");
+                var c = document.getElementById("about-menu-close");
+                var d = document.getElementById("secondary-section-menu");
 
-                a.style.display = "none";
-                b.style.display = "block";
-                c.style.display = "none";
-                d.style.marginTop = "16px";
-            } else {
-                x.style.display = "block";
-                y.style.display = "none";
-                z.style.display = "block";
-                h.style.background = "#262626";
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                    y.style.display = "block";
+                    z.style.display = "none";
+                    h.style.background = "linear-gradient(rgba(0,0,0,1) 0%,rgba(0,0,0,0.8) 40%,rgba(0,0,0,0.3) 100%)";
+
+                    a.style.display = "none";
+                    b.style.display = "block";
+                    c.style.display = "none";
+                    d.style.marginTop = "16px";
+                } else {
+                    x.style.display = "block";
+                    y.style.display = "none";
+                    z.style.display = "block";
+                    h.style.background = "#262626";
+                }
             }
-        }
 
-        function toggleAboutMenu() {
-            var a = document.getElementById("about-dropdown");
-            var b = document.getElementById("about-menu");
-            var c = document.getElementById("about-menu-close");
-            var d = document.getElementById("secondary-section-menu");
+            function toggleServiceMenu() {
+                var a = document.getElementById("service-dropdown");
+                var b = document.getElementById("service-menu");
+                var c = document.getElementById("service-menu-close");
+                var d = document.getElementById("service-secondary-section-menu");
 
-            if (a.style.display === "block") {
-                a.style.display = "none";
-                b.style.display = "block";
-                c.style.display = "none";
-                d.style.marginTop = "16px";
-            } else {
-                a.style.display = "block";
-                b.style.display = "none";
-                c.style.display = "block";
-                d.style.marginTop = "0px";
+                if (a.style.display === "block") {
+                    a.style.display = "none";
+                    b.style.display = "block";
+                    c.style.display = "none";
+                    d.style.marginTop = "16px";
+                } else {
+                    a.style.display = "block";
+                    b.style.display = "none";
+                    c.style.display = "block";
+                    d.style.marginTop = "0px";
+                }
             }
-        }
-    </script>
 
-    <script>
-        // lazy load vimeo iframe
-        const callback = (entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    let vimeoiframe = document.getElementById("vimeoiframe");
-                    if (vimeoiframe) { //when section with .section-with-vimeo
-                        //starts to be in view, switch value from data-src to src
-                        //thus load the iframe
-                        let srcDatatext = vimeoiframe.getAttribute("data-src");
-                        if (srcDatatext) {
-                            vimeoiframe.setAttribute("src", srcDatatext);
-                            vimeoiframe.setAttribute("data-src", ""); //not loading again
+            function toggleAboutMenu() {
+                var a = document.getElementById("about-dropdown");
+                var b = document.getElementById("about-menu");
+                var c = document.getElementById("about-menu-close");
+                var d = document.getElementById("secondary-section-menu");
+
+                if (a.style.display === "block") {
+                    a.style.display = "none";
+                    b.style.display = "block";
+                    c.style.display = "none";
+                    d.style.marginTop = "16px";
+                } else {
+                    a.style.display = "block";
+                    b.style.display = "none";
+                    c.style.display = "block";
+                    d.style.marginTop = "0px";
+                }
+            }
+        </script>
+
+        <script>
+            // lazy load vimeo iframe
+            const callback = (entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let vimeoIframe = document.getElementById("vimeoiframe");
+                        if (vimeoIframe) { //when section with .section-with-vimeo
+                            //starts to be in view, switch value from data-src to src
+                            //thus load the iframe
+                            let srcDatatext = vimeoIframe.getAttribute("data-src");
+                            if (srcDatatext) {
+                                vimeoIframe.setAttribute("src", srcDatatext);
+                                vimeoIframe.setAttribute("data-src", ""); //not loading again
+                            }
                         }
                     }
-                }
-            });
-        };
+                });
+            };
 
-        const options = {
-            threshold: 0.01 //just when 1% of the element appears 
-        }
+            const options = {
+                threshold: 0.01 //just when 1% of the element appears 
+            }
 
-        const observer = new IntersectionObserver(callback, options);
+            const observer = new IntersectionObserver(callback, options);
 
-        document.querySelectorAll(".section-with-vimeo").forEach(shape => observer.observe(shape));
-    </script>
+            document.querySelectorAll(".section-with-vimeo").forEach(shape => observer.observe(shape));
+        </script>
 </body>
 
 </html>
