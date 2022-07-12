@@ -23,30 +23,47 @@
     <section class="relative h-screen bg-cover bg-center 
     bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.95)_10%,rgba(64,64,64,0.3),rgba(0,0,0,1)_97%),url('../img/hero-boxer.jpg')]
     ">
-        <div class=" fixed w-full z-50  top-0  inset-x-0 flex flex-col justify-center
-                bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_40%,rgba(0,0,0,0.3)_100%)]
-                " id="header">
+        <div class="fixed w-full z-50  top-0  inset-x-0 flex flex-col justify-center
+                        bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_40%,rgba(0,0,0,0.3)_100%)]
+                        " id="header">
             <div class="max-w-6xl lg:mx-auto flex-1 flex justify-between text-white py-2 xl:py-4 px-6 md:px-2 gap-3">
 
-                <a class="flex items-center" href="/">
+                <a class="flex items-center" href="./">
                     <img class="self-center justify-self-center max-h-16 mr-3" src="img/lion-gold-600-200px.png" loading="lazy">
                     <div class="font-michroma text-xl sm:text-2xl xl:text-3xl">BST.COACH</div>
                 </a>
                 <a class="flex lg:hidden flex-col justify-center" href="javascript:void(0);" onclick="toggleMenu()">
                     <div class="flex flex-col items-center justify-center" id="openMenuSvg">
-                        <img src="img/menu.svg" class="w-8" loading="lazy" />
+                        <img src="img/menu.svg" class="w-8" loading="lazy">
 
                         <span class="text-[10px] font-sarpanch mt-1">MENU</span>
                     </div>
                     <div id="closeMenuSvg" style="display: none;">
-                        <img src="img/close.svg" class="w-6" loading="lazy" />
+                        <img src="img/close.svg" class="w-6" loading="lazy">
                     </div>
                 </a>
                 <div class="hidden lg:flex flex-1">
                     <div class="flex flex-wrap items-center uppercase text-sm justify-around gap-2 xl:gap-4 flex-1 font-sarpanch ">
-                        <a href="index" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">Home</a>
+                        <a href="/" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">Home</a>
                         <a href="features" class="px-2 py-1 bg-neutral-800/50 text-gold-600 transition-all ease-in-out duration-300">features</a>
-                        <a href="services" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">services</a>
+                        <div class="group">
+                            <div class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
+                                services
+                            </div>
+                            <div class="absolute hidden transition-all duration-200 ease-linear group-hover:block">
+                                <div class="flex flex-col space-y-1 bg-gold-600 text-neutral-750 p-2 shadow-lg transition-all duration-200 ease-linear">
+                                    <a href="/" class="hover:underline">
+                                        Training Platform
+                                    </a>
+                                    <a href="personaltraining" class="hover:underline">
+                                        Personal Training
+                                    </a>
+                                    <a href="coachingconsultations" class="hover:underline">
+                                        Coaching Consultations
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <a href="pricing" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">pricing</a>
                         <div class="group">
                             <div class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
@@ -69,13 +86,13 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="contactus" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">contact
+                        <a href="#footer" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">contact
                             us</a>
-                        <a href="registration" class="text-gold-600 border border-gold-600 px-3">join us</a>
+                        <a href="register" class="text-gold-600 border border-gold-600 px-3">join us</a>
                     </div>
+
                     <hr class="w-0.1 h-6 md:h-8 bg-white self-center mx-3" />
-                    <a href="login" class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log
-                        in</a>
+                    <a href="login" class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log in</a>
                 </div>
             </div>
             <div class="hidden" id="menu">
@@ -83,9 +100,31 @@
                     <div class="flex flex-col space-y-4 ml-4">
                         <a href="index" class="border-b border-neutral-500">home</a>
                         <a href="features" class="border-b border-neutral-500">features</a>
-                        <a href="services" class="border-b border-neutral-500">services</a>
-                        <a href="principles" class="border-b border-neutral-500">principles</a>
-                        <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleAboutMenu()">
+
+                        <!-- <a href="services" class="border-b border-neutral-500">services</a> -->
+                        <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleSubMenu('service-dropdown', 'service-menu', 'service-menu-close', 'services-secondary-section-menu')">
+                            <span>Services</span>
+                            <img src="img/about-menu.svg" class="w-6" id="service-menu" loading="lazy">
+                            <img src="img/about-menu-close.svg" class="hidden w-6" id="service-menu-close" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden bg-gold-600 px-6 py-4 mb-4" id="service-dropdown">
+                    <div class="flex flex-col space-y-4 font-sarpanch ml-4">
+                        <a href="trainingplatform" class="border-b border-neutral-750">
+                            Training Platform
+                        </a>
+                        <a href="personaltraining" class="border-b border-neutral-750">
+                            Personal Training
+                        </a>
+                        <a href="coachingconsultations" class="border-b border-neutral-750">
+                            Coaching Consultations
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-neutral-800 flex flex-col text-white font-sarpanch uppercase px-6" id="services-secondary-section-menu" style="margin-top: 16px">
+                    <div class="flex flex-col space-y-4 ml-4">
+                        <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleSubMenu('about-dropdown', 'about-menu', 'about-menu-close', 'secondary-section-menu')">
                             <span>about us</span>
                             <img src="img/about-menu.svg" class="w-6" id="about-menu" loading="lazy">
                             <img src="img/about-menu-close.svg" class="hidden w-6" id="about-menu-close" loading="lazy">
@@ -110,7 +149,7 @@
                 </div>
                 <div class="bg-neutral-800 flex flex-col text-white font-sarpanch uppercase px-6 pb-6" id="secondary-section-menu" style="margin-top: 16px">
                     <div class="flex flex-col space-y-4 ml-4">
-                        <a href="contactus" class="border-b border-neutral-500">contact us</a>
+                        <a href="#footer" class="border-b border-neutral-500">contact us</a>
                     </div>
                     <a href="login" class="flex-1 w-full bg-gold-600 text-neutral-800 text-center py-2 rounded-md mt-12 mb-6">LOGIN</a>
                 </div>
@@ -447,55 +486,8 @@
         </div>
     </footer>
 
+    <script src="js/app.js"></script>
     <script>
-        function toggleMenu() {
-            var h = document.getElementById("header");
-            var x = document.getElementById("menu");
-            var y = document.getElementById("openMenuSvg");
-            var z = document.getElementById("closeMenuSvg");
-
-            var a = document.getElementById("about-dropdown");
-            var b = document.getElementById("about-menu");
-            var c = document.getElementById("about-menu-close");
-            var d = document.getElementById("secondary-section-menu");
-
-            if (x.style.display === "block") {
-                x.style.display = "none";
-                y.style.display = "block";
-                z.style.display = "none";
-                h.style.background = "linear-gradient(rgba(0,0,0,1) 0%,rgba(0,0,0,0.8) 40%,rgba(0,0,0,0.3) 100%)";
-
-                a.style.display = "none";
-                b.style.display = "block";
-                c.style.display = "none";
-                d.style.marginTop = "16px";
-            } else {
-                x.style.display = "block";
-                y.style.display = "none";
-                z.style.display = "block";
-                h.style.background = "#262626";
-            }
-        }
-
-        function toggleAboutMenu() {
-            var a = document.getElementById("about-dropdown");
-            var b = document.getElementById("about-menu");
-            var c = document.getElementById("about-menu-close");
-            var d = document.getElementById("secondary-section-menu");
-
-            if (a.style.display === "block") {
-                a.style.display = "none";
-                b.style.display = "block";
-                c.style.display = "none";
-                d.style.marginTop = "16px";
-            } else {
-                a.style.display = "block";
-                b.style.display = "none";
-                c.style.display = "block";
-                d.style.marginTop = "0px";
-            }
-        }
-
         const swiperLib = new Swiper('.swiper-lib', {
             loop: true,
             // lazy: true,
