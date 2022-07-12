@@ -769,6 +769,7 @@
         </div>
     </footer>
 
+    <script src="js/app.js"></script>
     <script>
         function toggleMenu() {
             var h = document.getElementById("header");
@@ -827,7 +828,7 @@
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
-                renderBullet: function(index, className) {
+                renderBullet: function (index, className) {
                     return '<span class="' + className + '"></span>';
                 },
             },
@@ -839,30 +840,6 @@
 
         function goToSlide(num) {
             swiper.slideTo(num);
-        }
-
-        function toggleFaq(element) {
-            let toggleId = element.dataset.controls;
-            let toggleState = element.dataset.expanded;
-            let toggleElement = document.getElementById(toggleId);
-            // let iconElement = element.querySelector(".icon");
-            let plusElement = element.querySelector(".plus");
-            let minusElement = element.querySelector(".minus");
-            if (toggleState == "true") {
-                element.dataset.expanded = false;
-                toggleElement.classList.add("hidden");
-                toggleElement.classList.remove("block");
-                element.classList.remove("!bg-gold-600");
-                plusElement.classList.remove("hidden");
-                minusElement.classList.add("hidden");
-            } else {
-                element.dataset.expanded = true;
-                toggleElement.classList.remove("hidden");
-                toggleElement.classList.add("block");
-                element.classList.add("!bg-gold-600");
-                plusElement.classList.add("hidden");
-                minusElement.classList.remove("hidden");
-            }
         }
     </script>
 </body>
