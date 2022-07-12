@@ -263,7 +263,7 @@
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script src="js/site.js"></script>
     <script>
         let faqs = ``;
         let ii = 0;
@@ -307,11 +307,10 @@
                         </dt>`;
 
             if (x.qna[0].question !== 'COMING SOON') {
-                faq_body = `<dd class="bg-gold-600 space-y-2 transition-all duration-200 ease-linear hidden" id="faq-${ii}">`
-                    + sub_faq +
+                faq_body = `<dd class="bg-gold-600 space-y-2 transition-all duration-200 ease-linear hidden" id="faq-${ii}">` +
+                    sub_faq +
                     `</dd>`
-            }
-            else {
+            } else {
                 faq_body = `<dd class="bg-gold-600 space-y-2 transition-all duration-200 ease-linear hidden" id="faq-${ii}">
                     <div class="text-lg" >
                         <div class="flex w-full items-center space-x-14 text-left text-gray-400 !bg-white transition-all ease-in-out px-4 md:px-16 py-2 md:py-4">
