@@ -165,12 +165,12 @@
                 <span class="text-left text-xs md:text-sm lg:text-lg tracking-widest text-gold-600 mt-2">
                     helping develop future olympians
                 </span>
-                <button class="btn-outline uppercase text-xxs max-w-max px-6 py-2 mt-4 hidden sm:block border border-white rounded">
+                <a href="register" class="btn-outline uppercase text-xxs max-w-max px-6 py-2 mt-4 hidden sm:block border border-white rounded">
                     start here
-                </button>
-                <button class="bg-gold-600 uppercase text-xxs max-w-max px-4 py-2 mx-auto mt-14 sm:hidden">
+                </a>
+                <a href="register" class="bg-gold-600 uppercase text-xxs max-w-max px-4 py-2 mx-auto mt-14 sm:hidden">
                     joint bst.coach now
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -212,7 +212,8 @@
                         <img src="img/horizontal-orange.svg" class="w-full" loading="lazy">
                     </div>
                     <div class="h-full flex flex-col items-center md:pt-12 pb-16">
-                        <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10" src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" id="vimeoiframe" allowfullscreen title="WHAT IS BST.COACH?"></iframe>
+                        <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10" src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                            id="vimeoiframe" allowfullscreen title="WHAT IS BST.COACH?"></iframe>
                         <h3 class="font-sarpanch text-white text-center mt-8 z-10 uppercase">
                             create organise and send training <span class="inline-block">to your athletes</span>
                         </h3>
@@ -425,18 +426,16 @@
                                     <div class="flex flex-col space-y-2 text-gold-600 font-sarpanch mt-8">
                                         <div class="flex items-start space-x-4">
                                             <img src="img/tick.svg" class="mt-2 w-5 h-4" loading="lazy">
-                                            <span class="[font-variant-caps:small-caps] leading-4">Customized plan for
-                                                teams and sports
-                                                organizations</span>
+                                            <span class="[font-variant-caps:small-caps] leading-4">
+                                                Customized plan for teams and sports organizations
+                                            </span>
                                         </div>
                                         <div class="flex items-start space-x-4">
                                             <img src="img/tick.svg" class="mt-2 w-5 h-4" loading="lazy">
                                             <span class="uppercase text-xs">multiple coach accounts per team</span>
                                         </div>
                                     </div>
-
-                                    <span class="font-michroma text-white text-center uppercase text-lg mt-16">coming
-                                        soon</span>
+                                    <span class="font-michroma text-white text-center uppercase text-lg mt-16">coming soon</span>
                                 </div>
                             </div>
                         </div>
@@ -844,7 +843,7 @@
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
-                    renderBullet: function (index, className) {
+                    renderBullet: function(index, className) {
                         return '<span class="' + className + '"></span>';
                     },
                 },
@@ -882,43 +881,7 @@
 
             document.querySelectorAll(".section-with-vimeo").forEach(shape => observer.observe(shape));
         </script>
-        <!-- Code injected by live-server -->
-        <script type="text/javascript">
-            // <![CDATA[  <-- For SVG support
-            if ('WebSocket' in window) {
-                (function () {
-                    function refreshCSS() {
-                        var sheets = [].slice.call(document.getElementsByTagName("link"));
-                        var head = document.getElementsByTagName("head")[0];
-                        for (var i = 0; i < sheets.length; ++i) {
-                            var elem = sheets[i];
-                            var parent = elem.parentElement || head;
-                            parent.removeChild(elem);
-                            var rel = elem.rel;
-                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                            }
-                            parent.appendChild(elem);
-                        }
-                    }
-                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                    var address = protocol + window.location.host + window.location.pathname + '/ws';
-                    var socket = new WebSocket(address);
-                    socket.onmessage = function (msg) {
-                        if (msg.data == 'reload') window.location.reload();
-                        else if (msg.data == 'refreshcss') refreshCSS();
-                    };
-                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                        console.log('Live reload enabled.');
-                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                    }
-                })();
-            } else {
-                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-            }
-            // ]]>
-        </script>
+
 
 </body>
 
