@@ -16,30 +16,3 @@ function toggleSubMenu(dropdownId, menuId, menuCloseId, sectionMenuId) {
         d.style.marginTop = "0px";
     }
 }
-
-function toggleFaq(element) {
-    let toggleId = element.dataset.controls;
-    let toggleState = element.dataset.expanded;
-    let toggleElement = document.getElementById(toggleId);
-    let plusElement = element.querySelector(".plus");
-    let minusElement = element.querySelector(".minus");
-    if (toggleState == "true") {
-        element.dataset.expanded = false;
-        toggleElement.classList.add("hidden");
-        toggleElement.classList.remove("block");
-        element.classList.remove("!bg-gold-600");
-        if (plusElement) {
-            plusElement.classList.remove("hidden");
-            minusElement.classList.add("hidden");
-        }
-    } else {
-        element.dataset.expanded = true;
-        toggleElement.classList.remove("hidden");
-        toggleElement.classList.add("block");
-        element.classList.add("!bg-gold-600");
-        if (plusElement) {
-            plusElement.classList.add("hidden");
-            minusElement.classList.remove("hidden");
-        }
-    }
-}

@@ -211,8 +211,7 @@
                         <img src="img/horizontal-orange.svg" class="w-full" loading="lazy">
                     </div>
                     <div class="h-full flex flex-col items-center md:pt-12 pb-16">
-                        <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10" src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                            id="vimeoiframe" allowfullscreen title="WHAT IS BST.COACH?"></iframe>
+                        <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10" src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" id="vimeoiframe" allowfullscreen title="WHAT IS BST.COACH?"></iframe>
                         <h3 class="font-sarpanch text-white text-center mt-8 z-10">
                             OUR TRAINING PLATFORM LETS COACHES
                         </h3>
@@ -773,7 +772,7 @@
                         </a>
                     </div>
                     <div class="flex-1 flex items-center justify-center">
-                        <a href="#">
+                        <a href="https://www.facebook.com/bst.coach">
                             <img src="img/socials/facebook.svg" class="w-8 lg:w-11" loading="lazy">
                         </a>
                     </div>
@@ -865,7 +864,7 @@
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
-                    renderBullet: function(index, className) {
+                    renderBullet: function (index, className) {
                         return '<span class="' + className + '"></span>';
                     },
                 },
@@ -971,7 +970,7 @@
         <script type="text/javascript">
             // <![CDATA[  <-- For SVG support
             if ('WebSocket' in window) {
-                (function() {
+                (function () {
                     function refreshCSS() {
                         var sheets = [].slice.call(document.getElementsByTagName("link"));
                         var head = document.getElementsByTagName("head")[0];
@@ -990,7 +989,7 @@
                     var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
                     var address = protocol + window.location.host + window.location.pathname + '/ws';
                     var socket = new WebSocket(address);
-                    socket.onmessage = function(msg) {
+                    socket.onmessage = function (msg) {
                         if (msg.data == 'reload') window.location.reload();
                         else if (msg.data == 'refreshcss') refreshCSS();
                     };
