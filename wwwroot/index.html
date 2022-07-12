@@ -24,7 +24,7 @@
     <section class="relative h-screen bg-cover bg-center 
     bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.95)_10%,rgba(64,64,64,0.3),rgba(0,0,0,1)_97%),url('../img/hero-boxer.jpg')]
     ">
-        <div class=" fixed w-full z-50  top-0  inset-x-0 flex flex-col justify-center
+        <div class="fixed w-full z-50  top-0  inset-x-0 flex flex-col justify-center
         bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_40%,rgba(0,0,0,0.3)_100%)]
         " id="header">
             <div class="max-w-6xl lg:mx-auto flex-1 flex justify-between text-white py-2 xl:py-4 px-6 md:px-2 gap-3">
@@ -874,70 +874,6 @@
                     prevEl: '.button-prev',
                 },
             });
-        </script>
-        <script>
-            function toggleMenu() {
-                var h = document.getElementById("header");
-                var x = document.getElementById("menu");
-                var y = document.getElementById("openMenuSvg");
-                var z = document.getElementById("closeMenuSvg");
-
-
-                if (x.style.display === "block") {
-                    x.style.display = "none";
-                    y.style.display = "block";
-                    z.style.display = "none";
-                    h.style.background = "linear-gradient(rgba(0,0,0,1) 0%,rgba(0,0,0,0.8) 40%,rgba(0,0,0,0.3) 100%)";
-
-                    a.style.display = "none";
-                    b.style.display = "block";
-                    c.style.display = "none";
-                    d.style.marginTop = "16px";
-                } else {
-                    x.style.display = "block";
-                    y.style.display = "none";
-                    z.style.display = "block";
-                    h.style.background = "#262626";
-                }
-            }
-
-            function toggleServiceMenu() {
-                var a = document.getElementById("service-dropdown");
-                var b = document.getElementById("service-menu");
-                var c = document.getElementById("service-menu-close");
-                var d = document.getElementById("services-secondary-section-menu");
-
-                if (a.style.display === "block") {
-                    a.style.display = "none";
-                    b.style.display = "block";
-                    c.style.display = "none";
-                    d.style.marginTop = "16px";
-                } else {
-                    a.style.display = "block";
-                    b.style.display = "none";
-                    c.style.display = "block";
-                    d.style.marginTop = "0px";
-                }
-            }
-
-            function toggleAboutMenu() {
-                var a = document.getElementById("about-dropdown");
-                var b = document.getElementById("about-menu");
-                var c = document.getElementById("about-menu-close");
-                var d = document.getElementById("secondary-section-menu");
-
-                if (a.style.display === "block") {
-                    a.style.display = "none";
-                    b.style.display = "block";
-                    c.style.display = "none";
-                    d.style.marginTop = "16px";
-                } else {
-                    a.style.display = "block";
-                    b.style.display = "none";
-                    c.style.display = "block";
-                    d.style.marginTop = "0px";
-                }
-            }
         </script>
 
         <script>
