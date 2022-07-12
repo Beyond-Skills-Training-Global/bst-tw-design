@@ -19,12 +19,13 @@
     <script src="js/data.js"></script>
 </head>
 
-<body class="bg-black ">
+<body class="bg-black">
+    <div id="menu-underlay" class="hidden fixed h-full inset-0 bg-neutral-900/70 z-40" href="javascript:void(0);" onclick="toggleMenu()"></div>
 
     <section class="relative h-screen bg-cover bg-center 
     bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.95)_10%,rgba(64,64,64,0.3),rgba(0,0,0,1)_97%),url('../img/hero-boxer.jpg')]
     ">
-        <div class="fixed w-full z-50  top-0  inset-x-0 flex flex-col justify-center
+        <div class="fixed w-full z-50 top-0  inset-x-0 flex flex-col justify-center
         bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_40%,rgba(0,0,0,0.3)_100%)]
         " id="header">
             <div class="max-w-6xl lg:mx-auto flex-1 flex justify-between text-white py-2 xl:py-4 px-6 md:px-2 gap-3">
