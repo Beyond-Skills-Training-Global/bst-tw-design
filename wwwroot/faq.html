@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/data.js"></script>
+    <script src="js/site.js"></script>
 </head>
 
 <body class="bg-black">
@@ -194,12 +194,14 @@
             </div>
         </div>
 
-        <dl class="relative max-w-6xl w-full mx-auto font-sarpanch mb-6 flex flex-col items-stretch space-y-2 md:space-y-4 pb-14" id="faq-container">
+        <dl class="relative max-w-6xl w-full mx-auto font-sarpanch mb-6 items-stretch pb-14">
 
             <img src="img/horizontal-orange-mobile.svg" class="md:hidden absolute top-0 inset-x-0 object-contain">
             <img src="img/horizontal-orange-mobile.svg" class="md:hidden absolute bottom-0 inset-x-0 object-contain rotate-180">
 
-            <!-- FAQs will be auto populated -->
+            <div class="flex flex-col space-y-2 md:space-y-4" id="faq-container">
+                <!-- FAQs will be auto populated -->
+            </div>
         </dl>
 
     </div>
@@ -263,7 +265,7 @@
         </div>
     </footer>
 
-    <script src="js/site.js"></script>
+    <script src="js/data-faq.js"></script>
     <script>
         let faqs = ``;
         let ii = 0;
