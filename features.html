@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Noto+Emoji:wght@300&family=Orbitron:wght@700&family=Sarpanch&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/site.js"></script>
 </head>
 
@@ -487,6 +486,8 @@
         </div>
     </footer>
 
+    <!-- page specific js -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
         const swiperLib = new Swiper('.swiper-lib', {
             loop: true,
@@ -497,7 +498,7 @@
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
-                renderBullet: function (index, className) {
+                renderBullet: function(index, className) {
                     return '<span class="' + className + '"></span>';
                 },
             },
@@ -511,7 +512,7 @@
             swiperLib.slideTo(num);
         }
 
-        swiperLib.on('slideChange', function (e) {
+        swiperLib.on('slideChange', function(e) {
             console.log('*** swiperLib.activeIndex', swiperLib.activeIndex);
             var one_selector = document.getElementById("exercise_slide_button");
             var two_selector = document.getElementById("routine_slide_button");
