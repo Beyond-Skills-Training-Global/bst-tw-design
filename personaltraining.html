@@ -1,0 +1,298 @@
+<html>
+
+<head>
+    <!-- <base href="/wwwroot/"> -->
+    <!-- not this in prod ↑↑↑ -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>BST.coach</title>
+
+    <meta name="title" content="BST.coach">
+    <meta name="description" content="Get FREE ACCESS To The World's Most Applicable Sports Exercise Video Library. Hudreds Of Videos. Tailored For Coaches &amp; Athletes.">
+    <link href="css/app.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&amp;family=Noto+Emoji:wght@300&amp;family=Orbitron:wght@700&amp;family=Sarpanch&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/site.js"></script>
+</head>
+
+<body class="bg-black">
+    <div id="menu-underlay" class="hidden fixed h-full inset-0 bg-neutral-900/70 z-40" href="javascript:void(0);" onclick="toggleMenu()"></div>
+
+    <section class="relative h-screen bg-cover bg-center 
+    bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.95)_10%,rgba(64,64,64,0.3),rgba(0,0,0,1)_97%),url('../img/hero-boxer.jpg')]
+    ">
+        <div class="fixed w-full z-50 top-0  inset-x-0 flex flex-col justify-center
+        bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_40%,rgba(0,0,0,0.3)_100%)]
+        " id="header">
+            <div class="max-w-6xl lg:mx-auto flex-1 flex justify-between text-white py-2 xl:py-4 px-6 md:px-2 gap-3">
+
+                <a class="flex items-center" href="./">
+                    <img class="self-center justify-self-center max-h-16 mr-3" src="img/lion-gold-600-200px.png" loading="lazy">
+                    <div class="font-michroma text-xl sm:text-2xl xl:text-3xl">BST.COACH</div>
+                </a>
+                <a class="flex lg:hidden flex-col justify-center" href="javascript:void(0);" onclick="toggleMenu()">
+                    <div class="flex flex-col items-center justify-center" id="openMenuSvg">
+                        <img src="img/menu.svg" class="w-8" loading="lazy">
+
+                        <span class="text-[10px] font-sarpanch mt-1">MENU</span>
+                    </div>
+                    <div id="closeMenuSvg" style="display: none;">
+                        <img src="img/close.svg" class="w-6" loading="lazy">
+                    </div>
+                </a>
+                <div class="hidden lg:flex flex-1">
+                    <div class="flex flex-wrap items-center uppercase text-sm justify-around gap-2 xl:gap-4 flex-1 font-sarpanch ">
+                        <a href="/" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">Home</a>
+                        <a href="features" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">features</a>
+                        <div class="group">
+                            <div class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
+                                services
+                            </div>
+                            <div class="absolute hidden transition-all duration-200 ease-linear group-hover:block">
+                                <div class="flex flex-col space-y-1 bg-gold-600 text-neutral-750 p-2 shadow-lg transition-all duration-200 ease-linear">
+                                    <a href="/" class="hover:underline">
+                                        Training Platform
+                                    </a>
+                                    <a href="personaltraining" class="hover:underline">
+                                        Personal Training
+                                    </a>
+                                    <a href="coachingconsultations" class="hover:underline">
+                                        Coaching Consultations
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="pricing" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">pricing</a>
+                        <div class="group">
+                            <div class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
+                                about us
+                            </div>
+                            <div class="absolute hidden transition-all duration-200 ease-linear group-hover:block">
+                                <div class="flex flex-col space-y-1 bg-gold-600 text-neutral-750 p-2 shadow-lg transition-all duration-200 ease-linear">
+                                    <a href="gettoknowus" class="hover:underline">
+                                        GET TO KNOW US
+                                    </a>
+                                    <a href="ourstory" class="hover:underline">
+                                        OUR STORY
+                                    </a>
+                                    <a href="meetourteam" class="hover:underline">
+                                        MEET OUR TEAM
+                                    </a>
+                                    <a href="faq" class="hover:underline">
+                                        FAQ
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#footer" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">contact
+                            us</a>
+                        <a href="register" class="text-gold-600 border border-gold-600 px-3">join us</a>
+                    </div>
+
+                    <hr class="w-0.1 h-6 md:h-8 bg-white self-center mx-3" />
+                    <a href="login" class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log in</a>
+                </div>
+            </div>
+            <div class="hidden" id="menu">
+                <div class="bg-neutral-800 text-white font-sarpanch uppercase px-6 pt-6">
+                    <div class="flex flex-col space-y-4 ml-4">
+                        <a href="index" class="border-b border-neutral-500">home</a>
+                        <a href="features" class="border-b border-neutral-500">features</a>
+
+                        <!-- <a href="services" class="border-b border-neutral-500">services</a> -->
+                        <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleSubMenu('service-dropdown', 'service-menu', 'service-menu-close', 'services-secondary-section-menu')">
+                            <span>Services</span>
+                            <img src="img/about-menu.svg" class="w-6" id="service-menu" loading="lazy">
+                            <img src="img/about-menu-close.svg" class="hidden w-6" id="service-menu-close" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden bg-gold-600 px-6 py-4 mb-4" id="service-dropdown">
+                    <div class="flex flex-col space-y-4 font-sarpanch ml-4">
+                        <a href="trainingplatform" class="border-b border-neutral-750">
+                            Training Platform
+                        </a>
+                        <a href="personaltraining" class="border-b border-neutral-750">
+                            Personal Training
+                        </a>
+                        <a href="coachingconsultations" class="border-b border-neutral-750">
+                            Coaching Consultations
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-neutral-800 flex flex-col text-white font-sarpanch uppercase px-6" id="services-secondary-section-menu" style="margin-top: 16px">
+                    <div class="flex flex-col space-y-4 ml-4">
+                        <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleSubMenu('about-dropdown', 'about-menu', 'about-menu-close', 'secondary-section-menu')">
+                            <span>about us</span>
+                            <img src="img/about-menu.svg" class="w-6" id="about-menu" loading="lazy">
+                            <img src="img/about-menu-close.svg" class="hidden w-6" id="about-menu-close" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden bg-gold-600 px-6 py-4 mb-4" id="about-dropdown">
+                    <div class="flex flex-col space-y-4 font-sarpanch ml-4">
+                        <a href="gettoknowus" class="border-b border-neutral-750">
+                            GET TO KNOW US
+                        </a>
+                        <a href="ourstory" class="border-b border-neutral-750">
+                            OUR STORY
+                        </a>
+                        <a href="meetourteam" class="border-b border-neutral-750">
+                            MEET OUR TEAM
+                        </a>
+                        <a href="faq" class="border-b border-neutral-750">
+                            FAQ
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-neutral-800 flex flex-col text-white font-sarpanch uppercase px-6 pb-6" id="secondary-section-menu" style="margin-top: 16px">
+                    <div class="flex flex-col space-y-4 ml-4">
+                        <a href="#footer" class="border-b border-neutral-500">contact us</a>
+                    </div>
+                    <a href="login" class="flex-1 w-full bg-gold-600 text-neutral-800 text-center py-2 rounded-md mt-12 mb-6">LOGIN</a>
+                </div>
+            </div>
+        </div>
+        <div class="font-michroma h-full grid text-gray-100">
+            <div class="mx-auto flex flex-col justify-center md:py-0 md:pl-0 md:pr-72">
+                <h1 class="font-michroma  text-left uppercase tracking-widest text-white">
+                    personal <br /> training
+                </h1>
+            </div>
+        </div>
+    </section>
+    <main role="main" class="bg-neutral-800 flex flex-col">
+        <div class="max-w-6xl mx-auto overflow-x-hidden">
+
+            <section class="relative flex flex-col px-4 md:px-6 lg:px-0">
+                <div class="relative flex flex-col items-center bg-neutral-800 py-32">
+                    <div class="absolute flex items-center justify-center inset-0">
+                        <div class="md:hidden">
+                            <svg width="220px" height="220px">
+                                <use xlink:href="img/claw-mark.svg#claw" color="#333333"></use>
+                            </svg>
+                        </div>
+                        <div class="hidden md:block">
+                            <svg width="350px" height="350px">
+                                <use xlink:href="img/claw-mark.svg#claw" color="#333333"></use>
+                            </svg>
+                        </div>
+                        <div class="hidden md:block">
+                            <svg width="350px" height="350px">
+                                <use xlink:href="img/claw-mark.svg#claw" color="#333333"></use>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center z-10">
+                        <hr class="w-0.5 h-8 md:h-14 bg-gold-600">
+                        <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-6">
+                            CHOOSE YOUR PLAN
+                        </h2>
+                        <h4 class="font-sarpanch text-gold-600 text-center mt-1 md:mt-3">
+                            WE CAN BECOME YOUR PERSONAL TRAINER
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="font-sarpanch bg-neutral-750 rounded-xl md:rounded-3xl">
+                    <div class="md:max-w-4xl mx-auto px-8 lg:px-0 pt-6 md:pt-14">
+                        <p class="[font-variant-caps:small-caps] md:text-start text-lg leading-none text-white">
+                            Recognizing the demand for online strength training, BST.COACH also offers affordable online training plans. Tell us a little bit about yourself that would help us build an optimal training program tailored for your specific needs.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-6 md:gap-y-14 content-between mt-6 md:mt-14">
+                            <input type="text" name="" id="" class="col-span-2 md:col-span-1 p-4" placeholder="NAME">
+                            <input type="text" name="" id="" class="col-span-2 md:col-span-1 p-4" placeholder="SURNAME">
+                            <input type="email" name="" id="" class="col-span-2 p-4" placeholder="EMAIL">
+                            <textarea name="message" id="" cols="30" rows="8" class="col-span-2 p-4" placeholder="LEAVE A MESSAGE..."></textarea>
+
+                            <button class="col-span-2 text-center text-white max-w-4xl bg-gold-600 py-2.5 md:py-3 font-michroma">
+                                SUBMIT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col font-sarpanch text-white py-8 md:py-14">
+                    <h2 class="flex justify-center font-michroma text-center md:text-start text-gold-600"><span class="hidden md:flex">*</span>LIABILITY DISCLAIMER</h2>
+                    <p class="[font-variant-caps:small-caps] !leading-tight text-justify md:text-start text-lg md:text-xl mt-2">
+                        Injuries of all types are always a possibility when participating in vigorous activities, including when following online fitness programs. BST.COACH recommends that you obtain a comprehensive health examination from a licensed physician prior to undertaking any of our training plans.
+                    </p>
+                    <p class="[font-variant-caps:small-caps] !leading-tight text-justify md:text-start text-lg md:text-xl mt-6">
+                        BST.COACH does not take liability for any injury or health problem caused during or after execution of our training plans. each individual is responsible to practice caution when following ANY of our exercise video demonstrations and training prescriptions.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+        <footer id="footer" class="bg-neutral-750 text-white flex flex-col lg:flex-row justify-center px-16 py-12">
+            <div class="max-w-6xl w-full flex flex-col lg:flex-row">
+                <div class="flex flex-col justify-between items-center">
+                    <img src="img/footer-logo.svg" loading="lazy">
+                    <div class="hidden md:flex flex-col items-center font-sarpanch font-medium">
+                        <span class="[font-variant-caps:small-caps] text-xxs text-center">Passionate collaboration
+                            between</span>
+                        <span class="[font-variant-caps:small-caps] text-xxs text-center">Latvian, Czech, Ukrainian, and
+                            Swiss wisdom</span>
+                        <div class="flex space-x-4 mt-2">
+                            <img src="img/flags/latvian.svg" loading="lazy">
+                            <img src="img/flags/czech.svg" loading="lazy">
+                            <img src="img/flags/ukrainian.svg" loading="lazy">
+                            <img src="img/flags/swiss.svg" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                </div>
+                <div class="lg:flex-1 flex items-center mt-8 lg:mt-0">
+                    <div class="flex-1 flex items-center justify-center">
+                        <a href="https://www.instagram.com/bst.coach/">
+                            <img src="img/socials/instagram.svg" class="w-8 lg:w-11" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="flex-1 flex items-center justify-center">
+                        <a href="https://www.tiktok.com/@bst.coach">
+                            <img src="img/socials/tiktok.svg" class="w-8 lg:w-11" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="flex-1 flex items-center justify-center">
+                        <a href="https://www.facebook.com/bst.coach">
+                            <img src="img/socials/facebook.svg" class="w-8 lg:w-11" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col text-center lg:text-start font-michroma">
+                <h3 class="hidden lg:block">HELP</h3>
+                <div class="flex flex-col space-y-1 mt-8 text-xs md:text-sm">
+                    <a href="mailto:info@bst.coach" class="uppercase font-sarpanch hover:text-gold-600 transition-all ease-in-out duration-300">
+                        info@bst.coach
+                    </a>
+
+                    <a href="faq" class="[font-variant-caps:small-caps] hover:text-gold-600 transition-all ease-in-out duration-300">Support Center/FAQ</a>
+                    <a href="termsandconditions" class="[font-variant-caps:small-caps] hover:text-gold-600 transition-all ease-in-out duration-300">Terms and Conditions</a>
+                    <a href="cookies" class="[font-variant-caps:small-caps] hover:text-gold-600 transition-all ease-in-out duration-300">Cookies</a>
+
+                </div>
+                <div class="flex md:hidden flex-col items-center font-sarpanch font-medium mt-4">
+                    <span class="[font-variant-caps:small-caps] text-xs text-center">Passionate collaboration between</span>
+                    <span class="[font-variant-caps:small-caps] text-xs text-center">Latvian, Czech, Ukrainian, and Swiss
+                        wisdom</span>
+                    <div class="flex space-x-4 mt-2">
+                        <img src="img/flags/latvian.svg" loading="lazy">
+                        <img src="img/flags/czech.svg" loading="lazy">
+                        <img src="img/flags/ukrainian.svg" loading="lazy">
+                        <img src="img/flags/swiss.svg" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+</body>
+
+</html>
