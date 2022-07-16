@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: "Michroma";
+    src: url("../fonts/Michroma-Regular.ttf");
+  }
 @layer base {
     h1 {
         @apply text-[2rem] sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl;
