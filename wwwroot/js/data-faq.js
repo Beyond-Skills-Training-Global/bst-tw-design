@@ -1,8 +1,6 @@
-let FAQs = [
-    {
+let FAQs = [{
         "title": "FAQ: BST COACH PLATFORM",
-        "qna": [
-            {
+        "qna": [{
                 "question": "How is BST COACH better than the good-old pen and paper?",
                 "answer": "This seems obvious but it is actually a hard question to answer if we are very honest with ourselves. Writing a note to an athlete on a piece of paper wins the simplicity contest. Learning a new platform is unquestionably harder. But a piece of paper has its limits. It doesn't scale, it doesn't demonstrate exercises, it doesn't offer training ideas, and you cannot automate it.",
             },
@@ -34,8 +32,7 @@ let FAQs = [
     },
     {
         "title": "FAQ: BST LIBRARY & FEATURES",
-        "qna": [
-            {
+        "qna": [{
                 "question": "What age range BST COACH exercises are intended for?",
                 "answer": "The critical age we focus on is 12-16 where most of the general athleticism foundations are built. We estimate that until about 12, athletes mostly prefer game-format training. However, our exercises have been effectively applied to train 7-year-olds and 70-year - olds alike.",
             },
@@ -67,8 +64,7 @@ let FAQs = [
     },
     {
         "title": "FAQ: PLAN CREATION & SHARING",
-        "qna": [
-            {
+        "qna": [{
                 "question": "Do I have to use videos to build my own plan?",
                 "answer": "No. You have complete freedom in how you communicate your training to your athletes. You can simply write text notes and describe what you want your athletes to do. Whatever is the most effective. Our videos will be mostly applied when the coach cannot be present or demonstrate the exercises.",
             },
@@ -90,35 +86,29 @@ let FAQs = [
             },
             {
                 "question": "What is Team Sharing and how to use it effectively?",
-                "answer": "Team Sharing is a unique feature for our Team Plan clients. It lets coaches within a sports organization or coaching cooperation share and exchange resources. Coaches can build and share training routines and plans that fit the overarching philosophy of the training group or organization.Each coach will have their own corner on the Group Page and every coach within the Team will be able to draw from all posted resources within the Group Page.",
+                "answer": "Team Sharing is a unique feature for our Team Plan clients. It lets coaches within a sports organization or coaching cooperation share and exchange resources. Coaches can build and share training routines and plans that fit the overarching philosophy of the training group or organization. Each coach will have their own corner on the Group Page and every coach within the Team will be able to draw from all posted resources within the Group Page.",
             }
         ]
     },
     {
         "title": "FAQ: ACCOUNT & PAYMENTS",
-        "qna": [
-            {
-                "question": "COMING SOON",
-                "answer": "",
-            },
-        ]
+        "qna": [{
+            "question": "COMING SOON",
+            "answer": "",
+        }, ]
     },
     {
         "title": "FAQ: PERSONAL TRAINING",
-        "qna": [
-            {
-                "question": "COMING SOON",
-                "answer": "",
-            },
-        ]
+        "qna": [{
+            "question": "COMING SOON",
+            "answer": "",
+        }, ]
     },
     {
         "title": "FAQ: COACHING CONSULTATIONS",
-        "qna": [
-            {
-                "question": "COMING SOON",
-                "answer": "",
-            },
-        ]
+        "qna": [{
+            "question": "COMING SOON",
+            "answer": "",
+        }, ]
     },
 ]
