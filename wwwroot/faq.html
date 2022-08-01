@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/data.js"></script>
+    <script src="js/site.js"></script>
 </head>
 
 <body class="bg-black">
@@ -187,19 +187,21 @@
             </div>
 
             <div class="flex flex-col items-center z-10">
-                <hr class="w-0.5 h-8 md:h-14 bg-gold-600" />
+                <hr class="w-0.5 h-8 md:h-14 bg-gold-600 border-gold-600" />
                 <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-6">
                     FREQUENTLY ASKED QUESTIONS
                 </h2>
             </div>
         </div>
 
-        <dl class="relative max-w-6xl w-full mx-auto font-sarpanch mb-6 flex flex-col items-stretch space-y-2 md:space-y-4 pb-14" id="faq-container">
+        <dl class="relative max-w-6xl w-full mx-auto font-sarpanch mb-6 items-stretch pb-14">
 
             <img src="img/horizontal-orange-mobile.svg" class="md:hidden absolute top-0 inset-x-0 object-contain">
             <img src="img/horizontal-orange-mobile.svg" class="md:hidden absolute bottom-0 inset-x-0 object-contain rotate-180">
 
-            <!-- FAQs will be auto populated -->
+            <div class="flex flex-col space-y-2 md:space-y-4" id="faq-container">
+                <!-- FAQs will be auto populated -->
+            </div>
         </dl>
 
     </div>
@@ -263,7 +265,7 @@
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script src="js/data-faq.js"></script>
     <script>
         let faqs = ``;
         let ii = 0;
@@ -307,11 +309,10 @@
                         </dt>`;
 
             if (x.qna[0].question !== 'COMING SOON') {
-                faq_body = `<dd class="bg-gold-600 space-y-2 transition-all duration-200 ease-linear hidden" id="faq-${ii}">`
-                    + sub_faq +
+                faq_body = `<dd class="bg-gold-600 space-y-2 transition-all duration-200 ease-linear hidden" id="faq-${ii}">` +
+                    sub_faq +
                     `</dd>`
-            }
-            else {
+            } else {
                 faq_body = `<dd class="bg-gold-600 space-y-2 transition-all duration-200 ease-linear hidden" id="faq-${ii}">
                     <div class="text-lg" >
                         <div class="flex w-full items-center space-x-14 text-left text-gray-400 !bg-white transition-all ease-in-out px-4 md:px-16 py-2 md:py-4">
