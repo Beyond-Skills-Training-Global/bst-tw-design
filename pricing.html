@@ -1,0 +1,407 @@
+<html>
+
+<head>
+    <!-- <base href="/wwwroot/"> -->
+    <!-- not this in prod ↑↑↑ -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>BST.coach</title>
+
+    <meta name="title" content="BST.coach">
+    <meta name="description" content="Get FREE ACCESS To The World's Most Applicable Sports Exercise Video Library. Hudreds Of Videos. Tailored For Coaches &amp; Athletes.">
+    <link href="css/app.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300&amp;family=Orbitron:wght@700&amp;family=Sarpanch&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/site.js"></script>
+</head>
+
+<body class="bg-black">
+    <div id="menu-underlay" class="hidden fixed h-full inset-0 bg-neutral-900/70 z-40" href="javascript:void(0);" onclick="toggleMenu()"></div>
+
+    <section class="relative h-screen bg-cover bg-center 
+    bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.95)_10%,rgba(64,64,64,0.3),rgba(0,0,0,1)_97%),url('../img/hero-boxer.jpg')]
+    ">
+        <div class="fixed w-full z-50 top-0  inset-x-0 flex flex-col justify-center
+        bg-[image:linear-gradient(rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_40%,rgba(0,0,0,0.3)_100%)]
+        " id="header">
+            <div class="max-w-6xl lg:mx-auto flex-1 flex justify-between text-white py-2 xl:py-4 px-6 md:px-2 gap-3">
+
+                <a class="flex items-center" href="./">
+                    <img class="self-center justify-self-center max-h-16 mr-3" src="img/lion-gold-600-200px.png" loading="lazy">
+                    <div class="font-michroma text-xl sm:text-2xl xl:text-3xl">BST.COACH</div>
+                </a>
+                <a class="flex lg:hidden flex-col justify-center" href="javascript:void(0);" onclick="toggleMenu()">
+                    <div class="flex flex-col items-center justify-center" id="openMenuSvg">
+                        <img src="img/menu.svg" class="w-8" loading="lazy">
+
+                        <span class="text-[10px] font-sarpanch mt-1">MENU</span>
+                    </div>
+                    <div id="closeMenuSvg" style="display: none;">
+                        <img src="img/close.svg" class="w-6" loading="lazy">
+                    </div>
+                </a>
+                <div class="hidden lg:flex flex-1">
+                    <div class="flex flex-wrap items-center uppercase text-sm justify-around gap-2 xl:gap-4 flex-1 font-sarpanch ">
+                        <a href="/" class="px-2 py-1 bg-neutral-800/50 text-gold-600 transition-all ease-in-out duration-300">Home</a>
+                        <a href="features" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">features</a>
+                        <div class="group">
+                            <div class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
+                                services
+                            </div>
+                            <div class="absolute hidden transition-all duration-200 ease-linear group-hover:block">
+                                <div class="flex flex-col space-y-1 bg-gold-600 text-neutral-750 p-2 shadow-lg transition-all duration-200 ease-linear">
+                                    <a href="/" class="hover:underline">
+                                        Training Platform
+                                    </a>
+                                    <a href="personaltraining" class="hover:underline">
+                                        Personal Training
+                                    </a>
+                                    <a href="coachingconsultations" class="hover:underline">
+                                        Coaching Consultations
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="pricing" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">pricing</a>
+                        <div class="group">
+                            <div class="cursor-pointer py-2 px-3 group-hover:bg-neutral-800/50 group-hover:text-gold-600 transition-all ease-in-out duration-300">
+                                about us
+                            </div>
+                            <div class="absolute hidden transition-all duration-200 ease-linear group-hover:block">
+                                <div class="flex flex-col space-y-1 bg-gold-600 text-neutral-750 p-2 shadow-lg transition-all duration-200 ease-linear">
+                                    <a href="gettoknowus" class="hover:underline">
+                                        GET TO KNOW US
+                                    </a>
+                                    <a href="ourstory" class="hover:underline">
+                                        OUR STORY
+                                    </a>
+                                    <a href="meetourteam" class="hover:underline">
+                                        MEET OUR TEAM
+                                    </a>
+                                    <a href="faq" class="hover:underline">
+                                        FAQ
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#footer" class="px-2 py-1 hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">contact
+                            us</a>
+                        <a href="register" class="text-gold-600 border border-gold-600 px-3">join us</a>
+                    </div>
+
+                    <hr class="w-0.1 h-6 md:h-8 bg-white self-center mx-3" />
+                    <a href="login" class="uppercase self-center text-sm font-sarpanch hover:bg-neutral-800/50 hover:text-gold-600 transition-all ease-in-out duration-300">log in</a>
+                </div>
+            </div>
+            <div class="hidden" id="menu">
+                <div class="bg-neutral-800 text-white font-sarpanch uppercase px-6 pt-6">
+                    <div class="flex flex-col space-y-4 ml-4">
+                        <a href="index" class="border-b border-neutral-500">home</a>
+                        <a href="features" class="border-b border-neutral-500">features</a>
+
+                        <!-- <a href="services" class="border-b border-neutral-500">services</a> -->
+                        <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleSubMenu('service-dropdown', 'service-menu', 'service-menu-close', 'services-secondary-section-menu')">
+                            <span>Services</span>
+                            <img src="img/about-menu.svg" class="w-6" id="service-menu" loading="lazy">
+                            <img src="img/about-menu-close.svg" class="hidden w-6" id="service-menu-close" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden bg-gold-600 px-6 py-4 mb-4" id="service-dropdown">
+                    <div class="flex flex-col space-y-4 font-sarpanch ml-4">
+                        <a href="trainingplatform" class="border-b border-neutral-750">
+                            Training Platform
+                        </a>
+                        <a href="personaltraining" class="border-b border-neutral-750">
+                            Personal Training
+                        </a>
+                        <a href="coachingconsultations" class="border-b border-neutral-750">
+                            Coaching Consultations
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-neutral-800 flex flex-col text-white font-sarpanch uppercase px-6" id="services-secondary-section-menu" style="margin-top: 16px">
+                    <div class="flex flex-col space-y-4 ml-4">
+                        <div class="flex justify-between border-b border-neutral-500 py-1" href="javascript:void(0);" onclick="toggleSubMenu('about-dropdown', 'about-menu', 'about-menu-close', 'secondary-section-menu')">
+                            <span>about us</span>
+                            <img src="img/about-menu.svg" class="w-6" id="about-menu" loading="lazy">
+                            <img src="img/about-menu-close.svg" class="hidden w-6" id="about-menu-close" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden bg-gold-600 px-6 py-4 mb-4" id="about-dropdown">
+                    <div class="flex flex-col space-y-4 font-sarpanch ml-4">
+                        <a href="gettoknowus" class="border-b border-neutral-750">
+                            GET TO KNOW US
+                        </a>
+                        <a href="ourstory" class="border-b border-neutral-750">
+                            OUR STORY
+                        </a>
+                        <a href="meetourteam" class="border-b border-neutral-750">
+                            MEET OUR TEAM
+                        </a>
+                        <a href="faq" class="border-b border-neutral-750">
+                            FAQ
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-neutral-800 flex flex-col text-white font-sarpanch uppercase px-6 pb-6" id="secondary-section-menu" style="margin-top: 16px">
+                    <div class="flex flex-col space-y-4 ml-4">
+                        <a href="#footer" class="border-b border-neutral-500">contact us</a>
+                    </div>
+                    <a href="login" class="flex-1 w-full bg-gold-600 text-neutral-800 text-center py-2 rounded-md mt-12 mb-6">LOGIN</a>
+                </div>
+            </div>
+        </div>
+        <div class="font-michroma h-full grid text-gray-100">
+            <div class="mx-auto flex flex-col justify-center md:py-0 md:pl-0 md:pr-72">
+                <h1 class="font-michroma  text-left uppercase tracking-widest text-white">
+                    sports <br> platform
+                </h1>
+                <span class="text-left text-xs md:text-sm lg:text-lg tracking-widest text-gold-600 mt-2">
+                    helping develop future olympians
+                </span>
+                <a href="register" class="btn-outline uppercase text-xxs max-w-max px-6 py-2 mt-4 hidden sm:block border border-white hover:border-gold-600 hover:bg-gold-600 hover:text-white transition-all ease-in-out rounded">
+                    start here
+                </a>
+                <a href="register" class="bg-gold-600 uppercase text-xxs max-w-max px-4 py-2 mx-auto mt-14 sm:hidden">
+                    joint bst.coach now
+                </a>
+            </div>
+        </div>
+    </section>
+    <main role="main" class="bg-neutral-800 flex flex-col">
+        <div class="max-w-6xl mx-auto ">
+
+
+            <section class="mt-14">
+                <div class="flex-1 text-neutral-800">
+                    <div class="relative flex flex-col items-center bg-neutral-800 py-16 md:py-36">
+                        <div class="absolute flex items-center justify-center inset-0">
+                            <div class="md:hidden">
+                                <svg width="220px" height="220px">
+                                    <use xlink:href="img/claw-mark.svg#claw" color="#333333"></use>
+                                </svg>
+                            </div>
+                            <div class="hidden md:block">
+                                <svg width="350px" height="350px">
+                                    <use xlink:href="img/claw-mark.svg#claw" color="#333333"></use>
+                                </svg>
+                            </div>
+                            <div class="hidden md:block">
+                                <svg width="350px" height="350px">
+                                    <use xlink:href="img/claw-mark.svg#claw" color="#333333"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center z-10 pb-12">
+                            <hr class="w-0.5 h-8 md:h-14 bg-gold-600 border-gold-600">
+                            <h2 class="font-michroma text-white text-center text-2xl md:text-5xl [word-spacing:0.5rem] mt-6">
+                                TRY THE MOST AFFORDABLE
+                                <br /> TRAINING PLATFORM <br /> IN THE WORLD
+                            </h2>
+                            <h3 class=" px-3 text-justify font-sarpanch text-gold-600  mt-1 md:mt-3 [font-variant-caps:small-caps]">
+                                When we say things like “We are the most affordable training platform in the world." We mean it quite literally. And by a significant margin! We expect that the amount of possibilities our platform offers for this price will send shockwaves in the sea
+                                of online fitness industry.
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="relative md:pb-12">
+                        <div class="absolute md:hidden inset-x-0 top-14">
+                            <img src="img/horizontal-orange-mobile.svg" loading="lazy">
+                        </div>
+                        <div class="absolute md:hidden inset-x-0 bottom-36">
+                            <img src="img/horizontal-orange-mobile.svg" class="rotate-180" loading="lazy">
+                        </div>
+
+                        <div class="hidden md:flex items-end absolute inset-0 -bottom-1">
+                            <img src="img/valley-triangle-white.svg" loading="lazy" />
+                        </div>
+
+                        <div class="flex justify-center ">
+                            <div class="price-month flex z-10">
+                                <button onclick="changePrice('month')" class="z-[2] font-michroma mt-8 rounded-full bg-white px-8 py-3 text-xs md:mt-0">Monthly</button>
+                                <button onclick="changePrice('year')" class="z-[1] -ml-10 font-michroma mt-8 rounded-full bg-neutral-700 text-white pl-16 px-8 py-3 text-xs md:mt-0">Annually</button>
+                            </div>
+                            <div style="display:none" class="price-year z-10">
+                                <button onclick="changePrice('month')" class="z-[1] -mr-10 pr-16 font-michroma mt-8 text-white rounded-full bg-neutral-700 px-8 py-3 text-xs md:mt-0">Monthly</button>
+                                <button onclick="changePrice('year')" class="z-[2] font-michroma mt-8 rounded-full bg-white text-neutral-700  px-8 py-3 text-xs md:mt-0">Annually</button>
+                            </div>
+                        </div>
+
+                        <div class="h-full grid grid-cols-1 md:grid-cols-3 md:pt-12 pb-8 md:pb-20 px-14">
+                            <div class="h-full col-span-2 flex flex-col-reverse md:flex-row md:space-x-4">
+                                <div class="flex flex-col items-center bg-white z-10 p-8 lg:p-10 xl:p-14 rounded-lg">
+                                    <img src="img/open-library.svg" loading="lazy">
+                                    <div class="flex-1 flex flex-col items-center justify-between">
+                                        <span class="font-michroma text-center text-neutral-750">Open Library</span>
+                                        <div class="flex items-start space-x-4 font-sarpanch mt-10 md:mt-0">
+                                            <img src="img/tick-dark.svg" loading="lazy" class="mt-2 w-5 h-4">
+                                            <span class="[font-variant-caps:small-caps] leading-4">Free access to hundreds of bst exercise videos</span>
+                                        </div>
+                                        <span class="font-sarpanch text-neutral-750 uppercase md:text-xl text-center mt-10 md:mt-0">€0.00 / month</span>
+                                        <a href="register" class="font-michroma text-xs text-white bg-neutral-750 px-8 py-4 rounded-2xl mt-8 md:mt-0">Get now!</a>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-center bg-gold-600 z-10 p-8 lg:p-10 xl:p-14 rounded-lg mt-4 md:mt-0 mb-5">
+                                    <img src="img/coach-plan-dark.svg" loading="lazy">
+                                    <div class="flex-1 flex flex-col items-center justify-between mt-1">
+                                        <span class="font-michroma text-center text-neutral-750">Coach plan</span>
+                                        <div class="flex flex-col space-y-2 text-neutral-750 font-sarpanch mt-8 mb-4">
+                                            <div class="flex items-start space-x-4">
+                                                <img src="img/tick-dark.svg" class="mt-2 w-5 h-4" loading="lazy">
+                                                <span class="[font-variant-caps:small-caps] leading-4">
+                                                    Access to bst library: exercises, routines, training plans
+                                                </span>
+                                            </div>
+                                            <div class="flex items-start space-x-4">
+                                                <img src="img/tick-dark.svg" class="mt-2 w-5 h-4" loading="lazy">
+                                                <span class="text-xs leading-4">UP TO 5 TRAINING GROUPS &amp; 20
+                                                    ATHLETES
+                                                    PER
+                                                    GROUP</span>
+                                            </div>
+                                        </div>
+                                        <span class="price-month my-5 font-sarpanch text-neutral-750 uppercase md:text-xl text-center mt-10 md:mt-0">€5.00 / month</span>
+
+                                        <form class="price-month" method="POST" asp-route-interval="month">
+                                            <button class="font-michroma text-xs bg-white px-8 py-4 rounded-2xl mt-8 md:mt-0" id="checkout-and-portal-button" type="submit">Get Now!</button>
+                                        </form>
+
+                                        <span style="display:none" class=" price-year my-5 font-sarpanch text-neutral-750 uppercase md:text-xl text-center mt-10 md:mt-0">€50.00 / month</span>
+
+                                        <form style="display:none" class=" price-year" method="POST" asp-route-interval="year">
+                                            <button class="font-michroma text-xs bg-white px-8 py-4 rounded-2xl mt-8 md:mt-0" id="checkout-and-portal-button" type="submit">Get Now!</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="flex flex-col items-center bg-neutral-750 z-10 p-8 lg:p-10 xl:p-14 rounded-lg mt-4 md:mt-0 md:ml-4">
+                                <img src="img/team-plan.svg" loading="lazy">
+                                <div class="flex-1 flex flex-col items-center justify-between mt-1">
+                                    <span class="font-michroma text-center text-gold-600">Team plan</span>
+                                    <div class="flex flex-col space-y-2 text-gold-600 font-sarpanch mt-8">
+                                        <div class="flex items-start space-x-4">
+                                            <img src="img/tick.svg" class="mt-2 w-5 h-4" loading="lazy">
+                                            <span class="[font-variant-caps:small-caps] leading-4">
+                                                Customized plan for teams and sports organizations
+                                            </span>
+                                        </div>
+                                        <div class="flex items-start space-x-4">
+                                            <img src="img/tick.svg" class="mt-2 w-5 h-4" loading="lazy">
+                                            <span class="uppercase text-xs">multiple coach accounts per team</span>
+                                        </div>
+                                    </div>
+                                    <span class="font-michroma text-white text-center uppercase text-lg mt-16">coming soon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer id="footer" class="bg-neutral-750 text-white flex flex-col lg:flex-row justify-center px-16 py-12">
+        <div class="max-w-6xl w-full flex flex-col lg:flex-row">
+            <div class="flex flex-col justify-between items-center">
+                <img src="img/footer-logo.svg" loading="lazy">
+                <div class="hidden md:flex flex-col items-center font-sarpanch font-medium">
+                    <span class="[font-variant-caps:small-caps] text-xxs text-center">Passionate collaboration
+                        between</span>
+                    <span class="[font-variant-caps:small-caps] text-xxs text-center">Latvian, Czech, Ukrainian, and
+                        Swiss wisdom</span>
+                    <div class="flex space-x-4 mt-2">
+                        <img src="img/flags/latvian.svg" loading="lazy">
+                        <img src="img/flags/czech.svg" loading="lazy">
+                        <img src="img/flags/ukrainian.svg" loading="lazy">
+                        <img src="img/flags/swiss.svg" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+            </div>
+            <div class="lg:flex-1 flex items-center mt-8 lg:mt-0">
+                <div class="flex-1 flex items-center justify-center">
+                    <a href="https://www.instagram.com/bst.coach/" class="text-white hover:text-gold-600 border-2 border-white hover:border-gold-600 p-2 rounded transition-all ease-in-out duration-300">
+                        <svg width="24px" height="24px">
+                            <use xlink:href="img/socials/instagram.svg#svg"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="flex-1 flex items-center justify-center">
+                    <a href="https://www.tiktok.com/@bst.coach" class="text-white hover:text-gold-600 border-2 border-white hover:border-gold-600 p-2 rounded transition-all ease-in-out duration-300">
+                        <svg width="24px" height="24px">
+                            <use xlink:href="img/socials/tiktok.svg#svg"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="flex-1 flex items-center justify-center">
+                    <a href="https://www.facebook.com/bst.coach" class="text-white hover:text-gold-600 border-2 border-white hover:border-gold-600 p-2 rounded transition-all ease-in-out duration-300">
+                        <svg width="24px" height="24px">
+                            <use xlink:href="img/socials/facebook.svg#svg"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col text-center lg:text-start font-michroma">
+            <h3 class="hidden lg:block">HELP</h3>
+            <div class="flex flex-col space-y-1 mt-8 text-xs md:text-sm">
+                <a href="mailto:info@bst.coach" class="uppercase font-sarpanch hover:text-gold-600 transition-all ease-in-out duration-300">
+                    info@bst.coach
+                </a>
+
+                <a href="faq" class="[font-variant-caps:small-caps] hover:text-gold-600 transition-all ease-in-out duration-300">Support Center/FAQ</a>
+                <a href="termsandconditions" class="[font-variant-caps:small-caps] hover:text-gold-600 transition-all ease-in-out duration-300">Terms and Conditions</a>
+                <a href="cookies" class="[font-variant-caps:small-caps] hover:text-gold-600 transition-all ease-in-out duration-300">Cookies</a>
+
+            </div>
+            <div class="flex md:hidden flex-col items-center font-sarpanch font-medium mt-4">
+                <span class="[font-variant-caps:small-caps] text-xs text-center">Passionate collaboration between</span>
+                <span class="[font-variant-caps:small-caps] text-xs text-center">Latvian, Czech, Ukrainian, and Swiss
+                    wisdom</span>
+                <div class="flex space-x-4 mt-2">
+                    <img src="img/flags/latvian.svg" loading="lazy">
+                    <img src="img/flags/czech.svg" loading="lazy">
+                    <img src="img/flags/ukrainian.svg" loading="lazy">
+                    <img src="img/flags/swiss.svg" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script>
+        function changePrice(monthOrYear) {
+            var classToHide = ".price-month";
+            var classToShow = ".price-year";
+            if (monthOrYear == "year") {
+                let temp = classToHide;
+                classToHide = classToShow;
+                classToShow = temp;
+            }
+            document.querySelectorAll(classToShow).forEach((item) => {
+                item.style.display = 'none';
+            })
+            document.querySelectorAll(classToHide).forEach((item) => {
+                item.removeAttribute("style");
+            })
+
+        }
+    </script>
+
+
+</body>
+
+</html>

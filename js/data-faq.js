@@ -50,7 +50,7 @@ let FAQs = [{
             },
             {
                 "question": "Can I request the BST COACH team to film new exercises?",
-                "answer": "Actually yes! Just count that we will make them publicly available for everyone... Periodically we plan to film new exercises based on our knowledge and coaches&apos; requests. You will not miss when we post a new batch of videos!",
+                "answer": "Actually yes! Contact us - <a class=\"text-gold-600\" href=\"mailto:info@bst.coach\">info@bst.coach</a>",
             },
             {
                 "question": "How can I deal with changing variables, such as training facilities, weather, equipment availability?",
