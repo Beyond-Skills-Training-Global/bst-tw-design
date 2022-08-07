@@ -212,7 +212,8 @@
                         <img src="img/horizontal-orange.svg" class="w-full" loading="lazy">
                     </div>
                     <div class="h-full flex flex-col items-center md:pt-12 pb-16">
-                        <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10" src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" id="vimeoiframe" allowfullscreen title="WHAT IS BST.COACH?"></iframe>
+                        <iframe class="aspect-video w-2/3 md:w-1/2 max-w-xl bg-black z-10" src="https://player.vimeo.com/video/695469786?h=6009f762b3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                            id="vimeoiframe" allowfullscreen title="WHAT IS BST.COACH?"></iframe>
                         <h3 class="font-sarpanch text-white text-center mt-8 z-10 uppercase">
                             create, organise, and send training <span class="inline-block">to your athletes</span>
                         </h3>
@@ -379,56 +380,85 @@
                             <img src="img/valley-triangle-white.svg" loading="lazy" />
                         </div>
 
-                        <div class="h-full grid grid-cols-1 md:grid-cols-3 gap-4 md:pt-12 pb-8 md:pb-20 px-14">
-                            <div class="flex flex-col items-center bg-neutral-750 z-10 p-8 lg:p-10 xl:p-14 rounded-lg">
+                        <div class="h-full grid grid-cols-1 md:grid-cols-3 gap-4 md:pt-12 pb-8 md:pb-20 sm:px-14 px-4 ">
+                            <div class="flex flex-col items-center bg-white text-neutral-750 z-10 p-8 lg:p-10 xl:p-14 rounded-lg">
                                 <img src="img/open-library.svg" class="h-44" loading="lazy">
                                 <div class="flex-1 flex flex-col items-center justify-between mt-1">
-                                    <span class="font-michroma text-center text-gold-600">Open Library</span>
-                                    <div class="flex-1 flex items-start space-x-4 font-sarpanch text-gold-600 mt-8">
-                                        <img src="img/tick.svg" loading="lazy" class="mt-2 w-5 h-4">
-                                        <span class="[font-variant-caps:small-caps] leading-4">Free access to hundreds of bst exercise videos</span>
+                                    <span class="font-michroma text-center ">Open Library</span>
+                                    <div class="flex-1 flex items-start space-x-4 font-sarpanch mt-8 [font-variant-caps:small-caps]">
+                                        <img src="img/tick-dark.svg" loading="lazy" class="mt-2 w-5 h-4">
+                                        <span class=" leading-4">
+                                            Free access to hundreds of bst exercise videos
+                                        </span>
                                     </div>
-                                    <span class="font-sarpanch text-neutral-750 uppercase md:text-xl text-center mt-10 md:my-6">€0.00 / month</span>
-                                    <a href="register" class="font-michroma text-xs bg-white px-8 py-4 rounded-2xl mt-8 md:mt-0">Get now!</a>
+                                    <span class="font-sarpanch  uppercase md:text-xl text-center mt-10 md:my-6">€0.00 / month</span>
+                                    <a href="register" class="font-michroma text-xs bg-neutral-750 text-white px-8 py-4 rounded-2xl mt-8 md:mt-0">Get now!</a>
                                 </div>
                             </div>
                             <div class="flex flex-col items-center bg-gold-600 z-10 p-8 lg:p-10 xl:p-14 rounded-lg mt-4 md:mt-0">
                                 <img src="img/coach-plan.svg" class="h-44" loading="lazy">
                                 <div class="flex-1 flex flex-col items-center justify-between mt-1">
                                     <span class="font-michroma text-center text-neutral-750">Coach plan</span>
-                                    <div class="flex flex-col space-y-2 text-neutral-750 font-sarpanch mt-8">
-                                        <div class="flex items-start space-x-4">
+                                    <div class="uppercase text-xs flex flex-col space-y-2 text-neutral-750 font-sarpanch mt-8">
+                                        <div class="flex items-center space-x-4 ">
                                             <img src="img/tick-dark.svg" class="mt-2 w-5 h-4" loading="lazy">
-                                            <span class="[font-variant-caps:small-caps] leading-4">
-                                                Access to bst library: exercises, routines, training plans
+                                            <span class="leading-4">
+                                                Extended bst library: exercises, routines, training plans
                                             </span>
                                         </div>
-                                        <div class="flex items-start space-x-4">
+                                        <div class="flex items-center space-x-4 ">
                                             <img src="img/tick-dark.svg" class="mt-2 w-5 h-4" loading="lazy">
-                                            <span class="text-xs leading-4">UP TO 5 TRAINING GROUPS &amp; 20 ATHLETES PER GROUP</span>
+                                            <span class="leading-4">
+                                                Your own library with exercises, routines and training plans
+                                            </span>
                                         </div>
+                                        <div class="flex items-center space-x-4">
+                                            <img src="img/tick-dark.svg" class="mt-2 w-5 h-4" loading="lazy">
+                                            <span class="leading-4">
+                                                create, send & automate training plans
+                                            </span>
+                                        </div>
+                                        <div class="flex items-center space-x-4">
+                                            <img src="img/tick-dark.svg" class="mt-2 w-5 h-4" loading="lazy">
+                                            <span class="leading-4">
+                                                up to 5 training groups &amp; 20 athletes per group
+                                            </span>
+                                        </div>
+
+
                                     </div>
-                                    <span class="font-sarpanch text-gold-600 uppercase md:text-xl text-center mt-10 md:my-6">€8.99 / month</span>
-                                    <a href="register" class="font-michroma text-xs bg-white px-8 py-4 rounded-2xl mt-8 md:mt-0">Get now!</a>
+                                    <span class="font-sarpanch text-neutral-750 uppercase md:text-xl text-center mt-10 md:my-6">€8.99 / month</span>
+                                    <a href="register" class="font-michroma text-xs bg-white px-8 py-4 rounded-2xl mt-8 md:mt-0">Learn more!</a>
                                 </div>
                             </div>
                             <div class="flex flex-col items-center bg-neutral-750 z-10 p-8 lg:p-10 xl:p-14 rounded-lg mt-4 md:mt-0">
                                 <img src="img/team-plan.svg" class="h-44" loading="lazy">
                                 <div class="flex-1 flex flex-col items-center justify-between mt-1">
                                     <span class="font-michroma text-center text-gold-600">Team plan</span>
-                                    <div class="flex-1 flex flex-col space-y-2 text-gold-600 font-sarpanch mt-8">
-                                        <div class="flex items-start space-x-4">
+                                    <div class="uppercase text-xs flex-1 flex flex-col space-y-2 text-gold-600 font-sarpanch mt-8">
+                                        <div class="flex items-center space-x-4">
                                             <img src="img/tick.svg" class="mt-2 w-5 h-4" loading="lazy">
-                                            <span class="[font-variant-caps:small-caps] leading-4">
-                                                Customized plan for teams and sports organizations
+                                            <span class=" leading-4">
+                                                Everything from coach plan
                                             </span>
                                         </div>
-                                        <div class="flex items-start space-x-4">
+                                        <div class="mx-auto text-xl">
+                                            +
+                                        </div>
+                                        <div class="flex items-center space-x-4">
                                             <img src="img/tick.svg" class="mt-2 w-5 h-4" loading="lazy">
-                                            <span class="uppercase text-xs">multiple coach accounts per team</span>
+                                            <span class="leading-4">customized plans for teams and sports organizations</span>
+                                        </div>
+                                        <div class="flex items-center space-x-4">
+                                            <img src="img/tick.svg" class="mt-2 w-5 h-4" loading="lazy">
+                                            <span class="leading-4">team resources sharing</span>
+                                        </div>
+                                        <div class="flex items-center space-x-4">
+                                            <img src="img/tick.svg" class="mt-2 w-5 h-4" loading="lazy">
+                                            <span class="leading-4">personalized URL links</span>
                                         </div>
                                     </div>
-                                    <a href="register" class="font-michroma text-xs bg-white px-8 py-4 rounded-2xl mt-8 md:mt-0">Request Now</a>
+                                    <a href="register" class="font-michroma text-xs bg-white px-8 py-4 rounded-2xl mt-8 md:mt-0">Learn more!</a>
                                 </div>
                             </div>
                         </div>
@@ -636,7 +666,7 @@
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
-                    renderBullet: function (index, className) {
+                    renderBullet: function(index, className) {
                         return '<span class="' + className + '"></span>';
                     },
                 },
