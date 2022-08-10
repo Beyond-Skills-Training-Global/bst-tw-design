@@ -158,8 +158,8 @@
             </div>
         </div>
         <div class="font-michroma h-full grid text-gray-100">
-            <div class="mx-auto flex flex-col justify-center md:py-0 md:pl-0 md:pr-72">
-                <h1 class="font-michroma text-left uppercase tracking-widest text-white">
+            <div class="mx-auto flex flex-col justify-center px-4 sm:px-0 md:py-0 md:pl-0 md:pr-72">
+                <h1 class="font-michroma text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-left uppercase tracking-widest text-white">
                     choose <span class="text-gold-600">your</span> <br /> training plan
                 </h1>
             </div>
@@ -168,8 +168,8 @@
     <main role="main" class="bg-neutral-800 flex flex-col">
         <div class="max-w-6xl mx-auto ">
 
-            <section class="relative flex flex-col px-4 md:px-6 xl:px-0">
-                <div class="relative flex flex-col items-center bg-neutral-800 py-32">
+            <section class="relative flex flex-col">
+                <div class="relative flex flex-col items-center bg-neutral-800 pt-32 pb-24 md:py-32">
                     <div class="absolute flex items-center justify-center inset-0">
                         <div class="md:hidden">
                             <svg width="220px" height="220px">
@@ -190,15 +190,15 @@
 
                     <div class="flex flex-col items-center z-10">
                         <hr class="w-0.5 h-8 md:h-14 bg-gold-600 border-gold-600">
-                        <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-6">
+                        <h3 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-6">
                             TRY THE MOST AFFORDABLE
-                        </h2>
-                        <h2 class="font-michroma [word-spacing:0.5rem] text-gold-600 text-center mt-1">
+                        </h3>
+                        <h3 class="font-michroma [word-spacing:0.5rem] text-gold-600 text-center md:mt-1">
                             TRAINING PLATFORM
-                        </h2>
-                        <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-1">
+                        </h3>
+                        <h3 class="font-michroma [word-spacing:0.5rem] text-white text-center md:mt-1">
                             IN THE WORLD
-                        </h2>
+                        </h3>
                     </div>
                 </div>
 
@@ -207,91 +207,97 @@
                         <img src="img/horizontal-orange.svg" class="w-full" loading="lazy">
                     </div>
                     <div class="h-full flex flex-col md:pt-12 pb-16">
-                        <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-64 z-10">
+                        <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-24 md:mt-64 z-10">
                             COACH PLAN DETAILS
                         </h2>
-                        <div class="my-3 w-full flex-1 flex space-x-16 items-center justify-items-center container mx-auto px-4 sm:px-6 md:px-12 z-10 mt-14">
-                            <div class="flex-1 bg-gold-600 rounded-2xl px-8 py-6">
+
+                        <div class="md:hidden self-center flex font-michroma text-xs bg-neutral-700 text-white rounded-full overflow-hidden mt-8 z-10">
+                            <button onclick="showTab('monthly')" class="rounded-full px-8 py-4" id="monthly-tab-btn">Monthly</button>
+                            <button onclick="showTab('annually')" class="rounded-full px-8 py-4" id="annually-tab-btn">Annually</button>
+                        </div>
+
+                        <div class="my-3 w-full flex-1 flex md:space-x-16 items-center justify-items-center container mx-auto px-4 sm:px-6 md:px-12 z-10 mt-8 md:mt-14">
+                            <div class="md:!block flex-1 bg-gold-600 rounded-2xl px-8 py-6" id="monthly-card">
                                 <div class="relative flex items-center justify-center text-neutral-750" id="checkout-and-portal-button" type="submit">
                                     <div>
                                         <svg width="150px" height="150px">
-                                            <use xlink:href="img/claw-mark.svg#claw" color="#33333333"></use>
+                                            <use xlink:href="img/claw-mark.svg#claw" color="#33333315"></use>
                                         </svg>
                                     </div>
-                                    <h3 class="absolute font-michroma [word-spacing:0.5rem] mt-14">8.99 EUR / month</h3>
+                                    <span class="absolute font-sarpanch uppercase text-2xl md:text-3xl mt-14">8.99 EUR / month</span>
                                 </div>
                                 <button class="hover:bg-gold-600  w-full font-michroma text-xs bg-white text-neutral-750 px-8 py-4 rounded-xl mt-4 uppercase" type="submit">
                                     Get Now
                                 </button>
                             </div>
-                            <div class="flex-1 bg-gold-600 rounded-2xl px-8 py-6">
+                            <div class="md:!block flex-1 bg-gold-600 rounded-2xl px-8 py-6" id="annually-card">
                                 <div class="relative flex items-center justify-center text-neutral-750" id="checkout-and-portal-button" type="submit">
                                     <div>
                                         <svg width="150px" height="150px">
-                                            <use xlink:href="img/claw-mark.svg#claw" color="#33333333"></use>
+                                            <use xlink:href="img/claw-mark.svg#claw" color="#33333315"></use>
                                         </svg>
                                     </div>
-                                    <h3 class="absolute font-michroma [word-spacing:0.5rem] mt-14">8.99 EUR / month</h3>
+                                    <span class="absolute font-sarpanch uppercase text-2xl md:text-3xl mt-14">8.99 EUR / annually</span>
                                 </div>
-                                <button class="hover:bg-gold-600 w-full font-michroma text-xs bg-white text-neutral-750 px-8 py-4 rounded-xl mt-4" id="checkout-and-portal-button" type="submit">
-                                    Get Now!
+                                <button class="hover:bg-gold-600  w-full font-michroma text-xs bg-white text-neutral-750 px-8 py-4 rounded-xl mt-4 uppercase" type="submit">
+                                    Get Now
                                 </button>
                             </div>
                         </div>
-                        <div class="my-3 w-full flex-1 flex space-x-16 items-center justify-items-center container mx-auto px-4 sm:px-6 md:px-12 z-10 mt-4">
-                            <button class="hover:bg-gold-600  w-full font-michroma text-xs border border-white text-white px-8 py-4 rounded-xl mt-4 uppercase" type="submit">
+                        <div class="my-3 w-full flex-1 flex md:space-x-16 items-center justify-items-center container mx-auto px-4 sm:px-6 md:px-12 z-10 mt-4 md:mt-8">
+                            <button class="md:!block hover:bg-gold-600 w-full font-michroma text-xs border border-white text-white px-8 py-4 rounded-xl uppercase" type="submit" id="monthly-btn">
                                 Start 2-weeks trial
                             </button>
-                            <button class="hover:bg-gold-600 w-full font-michroma text-xs border border-white text-white px-8 py-4 rounded-xl mt-4 uppercase" type="submit">
+                            <button class="md:!block hover:bg-gold-600 w-full font-michroma text-xs border border-white text-white px-8 py-4 rounded-xl uppercase" type="submit" id="annually-btn">
                                 Start 2-weeks trial
                             </button>
                         </div>
 
-                        <div class="flex flex-col gap-4 container mx-auto px-4 sm:px-6 md:px-12 mt-14 z-10 text-white">
-                            <div class="flex items-start space-x-4">
-                                <img class="w-9 h-9 mt-2" src="img/double-arrow-orange.svg" loading="lazy">
-                                <div class="flex flex-col space-y-4">
-                                    <h3 class="font-michroma [word-spacing:0.5rem] text-gold-600 uppercase">
+                        <div class="flex flex-col space-y-6 md:space-y-4 container mx-auto px-4 sm:px-6 md:px-12 mt-8 md:mt-14 z-10 text-white">
+                            <div class="flex items-start space-x-2 md:space-x-4">
+                                <img class="w-5 md:w-9 h-5 md:h-9 md:mt-2" src="img/double-arrow-orange.svg" loading="lazy">
+                                <div class="flex flex-col space-y-2 md:space-y-4">
+                                    <h4 class="font-michroma text-xs md:text-3xl [word-spacing:0.5rem] text-gold-600 uppercase">
                                         EXTENDED BST LIBRARY: EXERCISES, ROUTINES, TRAINING PLANS
-                                    </h3>
-                                    <div class="font-michroma text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
+                                    </h4>
+                                    <div class="font-michroma text-xs md:text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
                                         Search through and apply nearly 700 exercise video demos (and growing), 150+ pre-made exercise routines, covering all essential athleticism aspects, and 30+ weekly training plan templates. Our exercise videos are designed in a way to serve coaches and
                                         athletes in real-time during training. Each video is a short, bite-size 8-10 second demonstration to remind athletes of the exercise.
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-start space-x-4 mt-4">
-                                <img class="w-9 h-9 mt-2" src="img/double-arrow-orange.svg" loading="lazy">
-                                <div class="flex flex-col space-y-4">
-                                    <h3 class="font-michroma [word-spacing:0.5rem] text-gold-600 uppercase">
+                            <div class="flex items-start space-x-2 md:space-x-4 mt-4">
+                                <img class="w-5 md:w-9 h-5 md:h-9 md:mt-2" src="img/double-arrow-orange.svg" loading="lazy">
+                                <div class="flex flex-col space-y-2 md:space-y-4">
+                                    <h4 class="font-michroma text-xs md:text-3xl [word-spacing:0.5rem] text-gold-600 uppercase">
                                         BUILD YOUR OWN LIBRARY WITH EXERCISES, ROUTINES, AND TRAINING PLANS
-                                    </h3>
-                                    <div class="font-michroma text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
+                                    </h4>
+                                    <div class="font-michroma text-xs md:text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
                                         Add unlimited amounts of videos through YouTube or Vimeo links and create your own exercise library. This comes in handy, especially if you are a sports coach with some favorite sport-specific exercises that you want to include in your athletes' training
                                         plans. You can also edit the BST training routines & plans and save these resources in your personal library.
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-start space-x-4 mt-4">
-                                <img class="w-9 h-9 mt-2" src="img/double-arrow-orange.svg" loading="lazy">
-                                <div class="flex flex-col space-y-4">
-                                    <h3 class="font-michroma [word-spacing:0.5rem] text-gold-600 uppercase">
+                            <div class="flex items-start space-x-2 md:space-x-4 mt-4">
+                                <img class="w-5 md:w-9 h-5 md:h-9 md:mt-2" src="img/double-arrow-orange.svg" loading="lazy">
+                                <div class="flex flex-col space-y-2 md:space-y-4">
+                                    <h4 class="font-michroma text-xs md:text-3xl [word-spacing:0.5rem] text-gold-600 uppercase">
                                         CREATE, SEND & AUTOMATE TRAINING PLANS
-                                    </h3>
-                                    <div class="font-michroma text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
+                                    </h4>
+                                    <div class="font-michroma text-xs md:text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
                                         Filter exercises or training routines by category and apply the right ones directly to your training plan. Once you are satisfied with the plan, send it to your athletes by sharing a link. Athletes will only have to plug in a password to see your training
                                         plan. No registrations are needed for your athletes. In some situations, there could be a need to create several plans in a row - to save time, you can simply apply the appropriate dates to each plan, and they will
                                         show up and change automatically under your athletes' training link (group page).
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-start space-x-4 mt-4">
-                                <img class="w-9 h-9 mt-2" src="img/double-arrow-orange.svg" loading="lazy">
-                                <div class="flex flex-col space-y-4">
-                                    <h3 class="font-michroma [word-spacing:0.5rem] text-gold-600 uppercase">
+                            <div class="flex items-start space-x-2 md:space-x-4 mt-4">
+                                <img class="w-5 md:w-9 h-5 md:h-9 md:mt-2" src="img/double-arrow-orange.svg" loading="lazy">
+                                <div class="flex flex-col space-y-2 md:space-y-4">
+                                    <h4 class="font-michroma text-xs md:text-3xl [word-spacing:0.5rem] text-gold-600 uppercase">
                                         UP TO 5 TRAINING GROUPS & 20 ATHLETES PER GROUP
-                                    </h3>
-                                    <div class="font-michroma text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
+                                    </h4>
+                                    <div class="font-michroma text-xs md:text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
                                         Create serve up to 5 separate training groups simultaneously. Apply an unlimited amount of training plans for each group. You can always delete your old training groups and create new ones. Each training group page can be accessed by up to 20 athletes
                                         from various devices. If you need to serve more athletes per group, please let us know, and we will find a solution.
                                     </div>
@@ -306,7 +312,7 @@
                         <img src="img/horizontal-orange.svg" class="w-full" loading="lazy">
                     </div>
                     <div class="h-full flex flex-col md:pt-12 pb-16">
-                        <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-64 z-10">
+                        <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-24 md:mt-64 z-10">
                             TEAM PLAN DETAILS
                         </h2>
                         <div class="my-3 w-full flex-1 flex justify-center container mx-auto px-4 sm:px-6 md:px-12 z-10 mt-14">
@@ -314,59 +320,59 @@
                                 <div class="relative flex items-center justify-center text-neutral-750" id="checkout-and-portal-button" type="submit">
                                     <div>
                                         <svg width="150px" height="150px">
-                                            <use xlink:href="img/claw-mark.svg#claw" color="#33333333"></use>
+                                            <use xlink:href="img/claw-mark.svg#claw" color="#33333315"></use>
                                         </svg>
                                     </div>
-                                    <h3 class="absolute font-michroma [word-spacing:0.5rem] mt-14">Interested?</h3>
+                                    <span class="absolute font-sarpanch uppercase text-2xl md:text-3xl mt-14">Interested?</span>
                                 </div>
-                                <a href="contact" class="hover:bg-gold-600  w-full font-michroma text-xs bg-white text-neutral-750 px-8 py-4 rounded-xl mt-4 uppercase" type="submit">
+                                <a href="contact" class="hover:bg-gold-600  w-full font-michroma text-xxs md:text-xs bg-white text-neutral-750 px-8 py-4 rounded-xl mt-4 uppercase" type="submit">
                                     contact us for more info
                                 </a>
                             </div>
                         </div>
 
-                        <div class="flex flex-col gap-4 container mx-auto px-4 sm:px-6 md:px-12 mt-14 z-10 text-white">
-                            <div class="flex items-start space-x-4">
-                                <img class="w-9 h-9 mt-2" src="img/double-arrow-orange.svg" loading="lazy">
-                                <div class="flex flex-col space-y-4">
-                                    <h3 class="font-michroma [word-spacing:0.5rem] text-gold-600 uppercase">
+                        <div class="flex flex-col gap-4 container mx-auto px-4 sm:px-6 md:px-12 mt-8 md:mt-14 z-10 text-white">
+                            <div class="flex items-start space-x-2 md:space-x-4">
+                                <img class="w-5 md:w-9 h-5 md:h-9 md:mt-2" src="img/double-arrow-orange.svg" loading="lazy">
+                                <div class="flex flex-col space-y-2 md:space-y-4">
+                                    <h4 class="font-michroma text-xs md:text-3xl [word-spacing:0.5rem] text-gold-600 uppercase">
                                         EVERYTHING FROM THE COACH PLAN
-                                    </h3>
-                                    <div class="font-michroma text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
+                                    </h4>
+                                    <div class="font-michroma text-xs md:text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
                                         The Team Plan includes all the features from the Coach Plan and everything else that coaches within one organization or team might need to find the best coaching solutions together.
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-start space-x-4">
-                                <img class="w-9 h-9 mt-2" src="img/double-arrow-orange.svg" loading="lazy">
-                                <div class="flex flex-col space-y-4">
-                                    <h3 class="font-michroma [word-spacing:0.5rem] text-gold-600 uppercase">
+                            <div class="flex items-start space-x-2 md:space-x-4">
+                                <img class="w-5 md:w-9 h-5 md:h-9 md:mt-2" src="img/double-arrow-orange.svg" loading="lazy">
+                                <div class="flex flex-col space-y-2 md:space-y-4">
+                                    <h4 class="font-michroma text-xs md:text-3xl [word-spacing:0.5rem] text-gold-600 uppercase">
                                         CUSTOMIZED PLANS FOR TEAMS AND SPORTS ORGANIZATIONS
-                                    </h3>
-                                    <div class="font-michroma text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
+                                    </h4>
+                                    <div class="font-michroma text-xs md:text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
                                         It means that we can tailor your experience at BST.COACH specifically to your coaching staff, athletes, and sports needs. Sports organizations vary in size and capacity - we can make our platform fit your situation.
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-start space-x-4">
-                                <img class="w-9 h-9 mt-2" src="img/double-arrow-orange.svg" loading="lazy">
-                                <div class="flex flex-col space-y-4">
-                                    <h3 class="font-michroma [word-spacing:0.5rem] text-gold-600 uppercase">
+                            <div class="flex items-start space-x-2 md:space-x-4">
+                                <img class="w-5 md:w-9 h-5 md:h-9 md:mt-2" src="img/double-arrow-orange.svg" loading="lazy">
+                                <div class="flex flex-col space-y-2 md:space-y-4">
+                                    <h4 class="font-michroma text-xs md:text-3xl [word-spacing:0.5rem] text-gold-600 uppercase">
                                         TEAM RESOURCES SHARING
-                                    </h3>
-                                    <div class="font-michroma text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
+                                    </h4>
+                                    <div class="font-michroma text-xs md:text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
                                         If you have 3-5-10 or any amount of coaches collaborating within the same team, while serving the same athletes, we can make that a powerful experience for the whole team. Athletes will get to learn from the collective wisdom accumulated from their coaches’
                                         effective collaboration.
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex items-start space-x-4">
-                                <img class="w-9 h-9 mt-2" src="img/double-arrow-orange.svg" loading="lazy">
-                                <div class="flex flex-col space-y-4">
-                                    <h3 class="font-michroma [word-spacing:0.5rem] text-gold-600 uppercase">
+                            <div class="flex items-start space-x-2 md:space-x-4">
+                                <img class="w-5 md:w-9 h-5 md:h-9 md:mt-2" src="img/double-arrow-orange.svg" loading="lazy">
+                                <div class="flex flex-col space-y-2 md:space-y-4">
+                                    <h4 class="font-michroma text-xs md:text-3xl [word-spacing:0.5rem] text-gold-600 uppercase">
                                         PERSONALIZED URL LINKS
-                                    </h3>
-                                    <div class="font-michroma text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
+                                    </h4>
+                                    <div class="font-michroma text-xs md:text-lg [font-variant-caps:small-caps] leading-snug  [word-spacing:0.8ex]">
                                         Team Plan coaches get to personalize their Group Page. You will be able to make is a digital “homeroom” for your athletes.
                                     </div>
                                 </div>
@@ -465,6 +471,25 @@
                 item.removeAttribute("style");
             })
 
+        }
+
+        showTab();
+        function showTab(tab = "monthly") {
+            if (tab === "monthly") {
+                document.getElementById("monthly-tab-btn").classList.add("bg-white", "text-neutral-750");
+                document.getElementById("annually-tab-btn").classList.remove("bg-white", "text-neutral-750");
+                document.getElementById("monthly-card").classList.remove("hidden");
+                document.getElementById("annually-card").classList.add("hidden");
+                document.getElementById("monthly-btn").classList.remove("hidden");
+                document.getElementById("annually-btn").classList.add("hidden");
+            } else if (tab === "annually") {
+                document.getElementById("monthly-tab-btn").classList.remove("bg-white", "text-neutral-750");
+                document.getElementById("annually-tab-btn").classList.add("bg-white", "text-neutral-750");
+                document.getElementById("monthly-card").classList.add("hidden");
+                document.getElementById("annually-card").classList.remove("hidden");
+                document.getElementById("monthly-btn").classList.add("hidden");
+                document.getElementById("annually-btn").classList.remove("hidden");
+            }
         }
     </script>
 
