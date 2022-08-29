@@ -474,41 +474,20 @@
 
 
     <script>
-        function changePrice(monthOrYear) {
-            var classToHide = ".price-month";
-            var classToShow = ".price-year";
-            if (monthOrYear == "year") {
-                let temp = classToHide;
-                classToHide = classToShow;
-                classToShow = temp;
-            }
-            document.querySelectorAll(classToShow).forEach((item) => {
-                item.style.display = 'none';
-            })
-            document.querySelectorAll(classToHide).forEach((item) => {
-                item.removeAttribute("style");
-            })
-
-        }
-
         showTab();
 
         function showTab(tab = "monthly") {
-            if (tab === "monthly") {
-                document.getElementById("monthly-tab-btn").classList.add("bg-white", "text-neutral-750");
-                document.getElementById("annually-tab-btn").classList.remove("bg-white", "text-neutral-750");
-                document.getElementById("monthly-card").classList.remove("hidden");
-                document.getElementById("annually-card").classList.add("hidden");
-                document.getElementById("monthly-btn").classList.remove("hidden");
-                document.getElementById("annually-btn").classList.add("hidden");
-            } else if (tab === "annually") {
-                document.getElementById("monthly-tab-btn").classList.remove("bg-white", "text-neutral-750");
-                document.getElementById("annually-tab-btn").classList.add("bg-white", "text-neutral-750");
-                document.getElementById("monthly-card").classList.add("hidden");
-                document.getElementById("annually-card").classList.remove("hidden");
-                document.getElementById("monthly-btn").classList.add("hidden");
-                document.getElementById("annually-btn").classList.remove("hidden");
-            }
+            var on = "monthly";
+            var off = "annually";
+            if (tab === "annually")
+                [on, off] = [off, on]
+
+            document.getElementById(on + "-tab-btn").classList.add("bg-white", "text-neutral-750");
+            document.getElementById(off + "-tab-btn").classList.remove("bg-white", "text-neutral-750");
+            document.getElementById(on + "-card").classList.remove("hidden");
+            document.getElementById(off + "-card").classList.add("hidden");
+            document.getElementById(on + "-trial-form").classList.remove("hidden");
+            document.getElementById(off + "-trial-form").classList.add("hidden");
         }
     </script>
 
