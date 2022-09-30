@@ -1,17 +1,16 @@
 <svg width="641" height="310" viewBox="0 0 641 310" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2363_1445)">
-<path d="M640.1 1.92004H0V309.33H640.1V1.92004Z" fill="url(#paint0_linear_2363_1445)"/>
+<g clip-path="url(#clip0_2476_1370)">
+<path d="M640.1 1.92H0V309.33H640.1V1.92Z" fill="url(#paint0_linear_2476_1370)"/>
 <path d="M640.1 13.05V17.9L320.05 121.75V116.89L640.1 13.05Z" fill="#262626"/>
 <path d="M320.05 116.89V121.75L0 17.9V13.05L320.05 116.89Z" fill="#262626"/>
-<path d="M640.1 25.8101V30.6601L320.05 134.51V129.65L640.1 25.8101Z" fill="#262626"/>
-<path d="M320.05 129.65V134.51L0 30.6601V25.8101L320.05 129.65Z" fill="#262626"/>
-<path d="M640.1 38.4399V43.2999L320.05 147.14V142.28L640.1 38.4399Z" fill="#262626"/>
-<path d="M320.05 142.28V147.14L0 43.2999V38.4399L320.05 142.28Z" fill="#262626"/>
-<path d="M640.1 4.9V0L320.05 0.05V108.74L640.1 4.9Z" fill="#262626"/>
-<path d="M0 4.9V0L320.05 0.05V108.74L0 4.9Z" fill="#262626"/>
+<path d="M640.1 25.81V30.66L320.05 134.51V129.65L640.1 25.81Z" fill="#262626"/>
+<path d="M320.05 129.65V134.51L0 30.66V25.81L320.05 129.65Z" fill="#262626"/>
+<path d="M640.1 38.44V43.3L320.05 147.14V142.28L640.1 38.44Z" fill="#262626"/>
+<path d="M320.05 142.28V147.14L0 43.3V38.44L320.05 142.28Z" fill="#262626"/>
+<path d="M320.05 0.05L0 0V4.9L320.05 108.74L640.1 4.9V0L320.05 0.05Z" fill="#262626"/>
 </g>
 <defs>
-<linearGradient id="paint0_linear_2363_1445" x1="320.05" y1="309.32" x2="320.05" y2="1.92004" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_2476_1370" x1="320.05" y1="309.32" x2="320.05" y2="1.92" gradientUnits="userSpaceOnUse">
 <stop stop-color="#262626"/>
 <stop offset="0.15" stop-color="#2E2C27"/>
 <stop offset="0.27" stop-color="#393328"/>
@@ -21,7 +20,7 @@
 <stop offset="0.82" stop-color="#BF8935"/>
 <stop offset="1" stop-color="#FBB03B"/>
 </linearGradient>
-<clipPath id="clip0_2363_1445">
+<clipPath id="clip0_2476_1370">
 <rect width="640.1" height="309.32" fill="white"/>
 </clipPath>
 </defs>

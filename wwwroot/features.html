@@ -14,8 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Noto+Emoji:wght@300&family=Orbitron:wght@700&family=Sarpanch&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/data.js"></script>
+    <script src="js/site.js"></script>
 </head>
 
 <body class="bg-black">
@@ -160,7 +159,7 @@
             <div class="mx-auto flex flex-col justify-center md:py-0 md:pl-0 md:pr-72">
                 <div class="hidden md:flex items-center space-x-1">
                     <hr class="w-6 h-0.5 bg-gold-600 border-gold-600 mt-1" />
-                    <span class="text-xs md:text-sm lg:text-lg text-gold-600">all of BST.coach</span>
+                    <span class="text-xs md:text-sm lg:text-lg text-gold-600">all of BST.COACH</span>
                 </div>
                 <h1 class="font-michroma text-left uppercase tracking-widest text-white">
                     OUR<br />FEATURES
@@ -193,7 +192,7 @@
                     </div>
 
                     <div class="flex flex-col items-center z-10">
-                        <hr class="w-0.5 h-8 md:h-14 bg-gold-600" />
+                        <hr class="w-0.5 h-8 md:h-14 bg-gold-600 border-gold-600" />
                         <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-6">
                             CHOOSE WHAT FITS YOU
                         </h2>
@@ -290,8 +289,9 @@
                                 <hr class="w-6 h-0.5 bg-gold-600 border-gold-600 mt-1" />
                             </div>
                             <h2 class="hidden lg:block font-michroma text-right mt-4">MY LIBRARY</h2>
-                            <span class="text-xs lg:text-lg text-center lg:text-right font-michroma underline mt-1">EXERCISE,
-                                ROUTINES, PLANS</span>
+                            <span class="text-xs lg:text-lg text-center lg:text-right font-michroma underline mt-1">
+                                EXERCISES, ROUTINES, PLANS
+                            </span>
                             <div class="lg:hidden flex justify-center bg-gradient-to-t from-white/30 via-transparent rounded-2xl p-4 mt-4">
                                 <img src="img/phone2.png" loading="lazy" />
                             </div>
@@ -487,7 +487,8 @@
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <!-- page specific js -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
         const swiperLib = new Swiper('.swiper-lib', {
             loop: true,

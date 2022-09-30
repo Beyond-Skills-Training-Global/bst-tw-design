@@ -11,10 +11,7 @@
     <meta name="description" content="Sports training platform with a comprehensive exercise library that lets coaches scale their work.">
     <link href="css/app.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Noto+Emoji:wght@300&family=Orbitron:wght@700&family=Sarpanch&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/data.js"></script>
+    <script src="js/site.js"></script>
 </head>
 
 <body class="bg-black">
@@ -188,16 +185,16 @@
                     </div>
 
                     <div class="flex flex-col items-center z-10">
-                        <hr class="w-0.5 h-8 md:h-14 bg-gold-600" />
+                        <hr class="w-0.5 h-8 md:h-14 bg-gold-600 border-gold-600" />
                         <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-6">
                             OUR MISSION
                         </h2>
                     </div>
                 </div>
 
-                <div class="flex justify-between items-center">
+                <div class="w-full flex justify-between items-center">
                     <img src="img/vertical-orange.svg" class="h-44 hidden lg:block" loading="lazy" />
-                    <span class="font-michroma text-xs md:text-sm lg:text-xl text-center text-white [word-spacing:0.8ex]">
+                    <span class="font-michroma text-xs md:text-sm lg:text-base text-center text-white [word-spacing:0.8ex]">
                         TO EMPOWER COACHES IN BUILDING<br />
                         RESILIENT YOUTH ATHLETES
                     </span>
@@ -224,18 +221,18 @@
                     </div>
 
                     <div class="flex flex-col items-center z-10">
-                        <hr class="w-0.5 h-8 md:h-14 bg-gold-600" />
+                        <hr class="w-0.5 h-8 md:h-14 bg-gold-600 border-gold-600" />
                         <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-6">
                             OUR VISION
                         </h2>
                     </div>
                 </div>
 
-                <div class="flex justify-between items-center">
+                <div class="w-full flex justify-between items-center">
                     <img src="img/vertical-orange.svg" class="h-44 hidden lg:block" loading="lazy" />
-                    <span class="font-michroma text-xs md:text-sm lg:text-xl text-center text-white [word-spacing:0.8ex]">TO BECOME THE STAPLE SPORTS
-                        PLATFORM<br /> IN
-                        THE YOUTH COACHING ARSENAL ACROSS<br /> THE GLOBE</span>
+                    <span class="font-michroma text-xs md:text-sm lg:text-base text-center text-white [word-spacing:0.8ex]">
+                        TO BECOME THE STAPLE SPORTS PLATFORM IN THE YOUTH COACHING ARSENAL ACROSS THE GLOBE
+                    </span>
                     <img src="img/vertical-orange.svg" class="h-44 rotate-180 hidden lg:block" loading="lazy" />
                 </div>
 
@@ -262,25 +259,23 @@
                     </div>
 
                     <div class="flex flex-col items-center z-10">
-                        <hr class="w-0.5 h-8 md:h-14 bg-gold-600" />
+                        <hr class="w-0.5 h-8 md:h-14 bg-gold-600 border-gold-600" />
                         <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-6">
                             OUR GOAL
                         </h2>
                     </div>
                 </div>
 
-                <div class="flex-1 flex items-center justify-center relative text-neutral-800 pb-52 lg:pb-80">
-                    <img src="img/horizontal-orange.svg" class="w-full" loading="lazy" />
-                    <div class="absolute inset-0 -top-1 flex flex-col justify-center items-center">
-                        <span class="font-michroma text-white text-xs md:text-sm lg:text-xl text-center z-10 px-4 md:px-0 [word-spacing:0.8ex]">
+                <div class="flex-1 flex items-center justify-center relative text-neutral-800 pb-24 lg:pb-80">
+                    <img src="img/horizontal-orange.svg" class="absolute w-full" loading="lazy" />
+                    <div class="max-w-4xl flex flex-col justify-center items-center self-center mt-44 md:mt-52 lg:mt-72">
+                        <span class="font-michroma text-white text-xxs md:text-sm lg:text-base text-center z-10 px-4 md:px-0 [word-spacing:0.8ex]">
                             TO HELP BUILD FOUNDATIONS FOR HEALTHY<br class="hidden lg:block" /> AND RESILIENT YOUTH
                             ATHLETES
                         </span>
                         <hr class="w-16 h-0.5 bg-gold-600 border-transparent z-10 mt-8" />
-                        <span class="font-michroma text-white text-xs md:text-sm lg:text-xl text-center mt-8 z-10 px-4 md:px-0 [word-spacing:0.8ex]">
-                            TO EQUIP COACHES WITH AN EASY-TO-USE TRAINING<br class="hidden lg:block" /> PLATFORM THAT
-                            MAKES THE COACHING PROCESS
-                            MORE<br class="hidden lg:block" /> EFFECTIVE AND ECONOMIC
+                        <span class="font-michroma text-white text-xxs md:text-sm lg:text-base text-center mt-8 z-10 px-4 md:px-0 [word-spacing:0.8ex]">
+                            TO EQUIP COACHES WITH AN EASY-TO-USE TRAINING PLATFORM THAT MAKES THE COACHING PROCESS MORE EFFECTIVE AND ECONOMIC
                         </span>
                     </div>
                 </div>
@@ -307,7 +302,7 @@
                     </div>
 
                     <div class="flex flex-col items-center z-10">
-                        <hr class="w-0.5 h-8 md:h-14 bg-gold-600" />
+                        <hr class="w-0.5 h-8 md:h-14 bg-gold-600 border-gold-600" />
                         <h2 class="font-michroma [word-spacing:0.5rem] text-white text-center mt-6">
                             OUR CORE PRINCIPLES
                         </h2>
@@ -464,7 +459,6 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
     <script>
         function toggleReadMore(element) {
             let toggleId = element.dataset.controls;

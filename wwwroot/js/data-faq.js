@@ -1,47 +1,6 @@
-let testimonials = [{
-    "name": "Petr Pech",
-    "text": "BST.COACH exercise library has allowed me to do more work and still feel good at the end of the day because I no longer need to demonstrate every exercise.",
-    "bio": "Strength & Conditioning coach of ATP & WTA Tennis Players",
-},
-{
-    "name": "Blanka L. Navratilova",
-    "text": "Our dance club is spread across Europe and there is no way we can provide a consistent conditioning base to all our youth dancers in person. BST.COACH exercise video sharing solves it for us elegantly!",
-    "bio": "Mcgahan Lees Irish Dance Academy Europe",
-},
-{
-    "name": "Adam Helcelet",
-    "text": "BST.COACH sharable exercise library allows us to bring consistency and athlete engagement across 30 youth sports summer camps.",
-    "bio": "Two-Time Olympic Decathlete | Patron at Kemp Vitezu Youth Sports Camps",
-},
-{
-    "name": "Aaron Riekenberg",
-    "text": "I've personally witnessed Reinis overcome crippling injuries and accomplish impossible things. BST.COACH is a direct extension from his passion for sports and desire to help coaches.",
-    "bio": "Strength & Conditioning Coach at Konza Strength",
-},
-{
-    "name": "Pauls Pujats",
-    "text": "If you're a coach or an athlete this platform is the ideal guide for getting clarity on your workouts and your training stage preparation. When I saw the amount of value this platform provides for FREE, I instantly realized that these guys are on a mission to change the world of youth sports for the better! ",
-    "bio": "Olympian | Sports Influencer | Trigger Point Therapy Specialist | Mindfulness & Yoga teacher ",
-    "imgMobile": "img/testimonials/testimonial05-mobile.jpg"
-},
-{
-    "name": "Pavel Kalcev",
-    "text": "It has given my players an opportunity for consistent strength & conditioning training that otherwise would not be possible.",
-    "bio": "SaBaT U18 Head Baseball Coach",
-},
-{
-    "name": "Sintija Grišule",
-    "text": "This platform has helped me build thought-through training plans for groups and individual athletes when I cannot be present. Very easy to create, save and send training.",
-    "bio": "Youth Track & Field Coach | Kuldiga, Latvia",
-},
-
-];
-
-let FAQs = [
-    {
+let FAQs = [{
         "title": "FAQ: BST COACH PLATFORM",
-        "qna": [
-            {
+        "qna": [{
                 "question": "How is BST COACH better than the good-old pen and paper?",
                 "answer": "This seems obvious but it is actually a hard question to answer if we are very honest with ourselves. Writing a note to an athlete on a piece of paper wins the simplicity contest. Learning a new platform is unquestionably harder. But a piece of paper has its limits. It doesn't scale, it doesn't demonstrate exercises, it doesn't offer training ideas, and you cannot automate it.",
             },
@@ -73,8 +32,7 @@ let FAQs = [
     },
     {
         "title": "FAQ: BST LIBRARY & FEATURES",
-        "qna": [
-            {
+        "qna": [{
                 "question": "What age range BST COACH exercises are intended for?",
                 "answer": "The critical age we focus on is 12-16 where most of the general athleticism foundations are built. We estimate that until about 12, athletes mostly prefer game-format training. However, our exercises have been effectively applied to train 7-year-olds and 70-year - olds alike.",
             },
@@ -92,7 +50,7 @@ let FAQs = [
             },
             {
                 "question": "Can I request the BST COACH team to film new exercises?",
-                "answer": "Actually yes! Just count that we will make them publicly available for everyone... Periodically we plan to film new exercises based on our knowledge and coaches&apos; requests. You will not miss when we post a new batch of videos!",
+                "answer": "Actually yes! Contact us - <a class=\"text-gold-600\" href=\"mailto:info@bst.coach\">info@bst.coach</a>",
             },
             {
                 "question": "How can I deal with changing variables, such as training facilities, weather, equipment availability?",
@@ -106,8 +64,7 @@ let FAQs = [
     },
     {
         "title": "FAQ: PLAN CREATION & SHARING",
-        "qna": [
-            {
+        "qna": [{
                 "question": "Do I have to use videos to build my own plan?",
                 "answer": "No. You have complete freedom in how you communicate your training to your athletes. You can simply write text notes and describe what you want your athletes to do. Whatever is the most effective. Our videos will be mostly applied when the coach cannot be present or demonstrate the exercises.",
             },
@@ -129,35 +86,29 @@ let FAQs = [
             },
             {
                 "question": "What is Team Sharing and how to use it effectively?",
-                "answer": "Team Sharing is a unique feature for our Team Plan clients. It lets coaches within a sports organization or coaching cooperation share and exchange resources. Coaches can build and share training routines and plans that fit the overarching philosophy of the training group or organization.Each coach will have their own corner on the Group Page and every coach within the Team will be able to draw from all posted resources within the Group Page.",
+                "answer": "Team Sharing is a unique feature for our Team Plan clients. It lets coaches within a sports organization or coaching cooperation share and exchange resources. Coaches can build and share training routines and plans that fit the overarching philosophy of the training group or organization. Each coach will have their own corner on the Group Page and every coach within the Team will be able to draw from all posted resources within the Group Page.",
             }
         ]
     },
     {
         "title": "FAQ: ACCOUNT & PAYMENTS",
-        "qna": [
-            {
-                "question": "COMING SOON",
-                "answer": "",
-            },
-        ]
+        "qna": [{
+            "question": "COMING SOON",
+            "answer": "",
+        }, ]
     },
     {
         "title": "FAQ: PERSONAL TRAINING",
-        "qna": [
-            {
-                "question": "COMING SOON",
-                "answer": "",
-            },
-        ]
+        "qna": [{
+            "question": "COMING SOON",
+            "answer": "",
+        }, ]
     },
     {
         "title": "FAQ: COACHING CONSULTATIONS",
-        "qna": [
-            {
-                "question": "COMING SOON",
-                "answer": "",
-            },
-        ]
+        "qna": [{
+            "question": "COMING SOON",
+            "answer": "",
+        }, ]
     },
 ]
