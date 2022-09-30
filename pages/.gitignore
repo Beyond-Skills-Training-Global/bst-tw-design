@@ -1,0 +1,7 @@
+node_modules
+dist
+yarn.lock
+wwwroot/css/app.min.css
+.vscode/settings.json
+
+.DS_Store
